@@ -1,0 +1,17 @@
+[package]
+name = "rust-netbox"
+version = "0.1.0"
+edition = "2018"
+authors = [
+  "Toni Peltonen <peltzi@peltzi.fi>"
+]
+repository = "https://github.com/peltzi/rust-netbox"
+license = "Apache-2.0"
+readme = "README.md"
+
+[dependencies]
+serde = "^1.0"
+serde_derive = "^1.0"
+serde_json = "^1.0"
+url = "1.5"
+reqwest = "~0.9"
