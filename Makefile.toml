@@ -1,0 +1,81 @@
+[env]
+NETBOX_VERSION = "v2.7"
+NETBOX_DOCKER_VERSION = "0.23.0"
+NETBOX_DOCKER_REPO_URL = "https://github.com/netbox-community/netbox-docker.git"
+OPENAPI_GENERATOR_DOCKER_IMAGE = "openapitools/openapi-generator-cli:v4.3.0"
+
+[tasks.clean_all]
+run_task = [
+  { name = "clean_build_generated_client" },
+  { name = "clean_build_netbox_docker" }
+]
+
+[tasks.generate-client]
+run_task = [
+  { name = ["generate_spec_with_netbox_docker", "generate_code"], fork = true }
+]
+
+# Clean the build dir for generated code
+[tasks.clean_build_generated_client]
+private = true
+script = ["rm -rf ${PWD}/build/client"]
+
+# Cleanup Netbox docker-compose
+[tasks.clean_build_netbox_docker_compose]
+private = true
+script = [
+  "cd ${PWD}/build/netbox-docker",
+  "docker-compose rm -f"
+]
+
+# Clean Netbox docker build directory
+[tasks.clean_build_netbox_docker]
+private = true
+dependencies = ["clean_build_netbox_docker_compose"]
+script = [
+  "rm -rf ${PWD}/build/netbox-docker"
+]
+
+# Setup Netbox docker and fetch swagger.json
+[tasks.generate_spec_with_netbox_docker]
+private = true
+dependencies = ["clean_build_netbox_docker"]
+script = [
+  "git clone --branch ${NETBOX_DOCKER_VERSION} ${NETBOX_DOCKER_REPO_URL} ${PWD}/build/netbox-docker",
+  "cd ${PWD}/build/netbox-docker",
+  "docker-compose pull",
+  "docker-compose up --detach",
+  "curl --connect-timeout 30 --retry 6 --retry-delay 10 --retry-connrefused http://127.0.0.1:$(docker-compose port nginx 8080 | cut -d':' -f 2)/api/swagger.json -o ../swagger.json",
+  "docker-compose stop"
+]
+
+# Generate new client code from spec
+[tasks.generate_code]
+private = true
+dependencies = ["clean_build_generated_client"]
+script = [
+  "export RUNUSER_UID=$(id -u); export RUNUSER_GID=$(id -g)",
+  "mkdir -p ${PWD}/build/client",
+  "${GEN_DOCKER_CMDLINE} --user ${RUNUSER_UID}:${RUNUSER_GID} ${GEN_DOCKER_VOLUMES} ${OPENAPI_GENERATOR_DOCKER_IMAGE} ${GEN_CMDLINE}"
+]
+
+  [tasks.generate_code.env]
+  "GEN_DOCKER_VOLUMES" = "-v ${PWD}/build:/build -v ${PWD}/build/swagger.json:/swagger.json"
+  "GEN_DOCKER_CMDLINE" = "docker run --rm"
+  "GEN_CMDLINE" = "generate -i /swagger.json -g rust --library reqwest --package-name ${CARGO_MAKE_PROJECT_NAME} --additional-properties=packageVersion=${CARGO_MAKE_PROJECT_VERSION} -o /build"
+
+# Rustfmt the generate code
+[tasks.format_generated]
+private = true
+command = "rustfmt"
+args = ["-v build/src/lib.rs"]
+
+# Copy the genereted code over repo
+[tasks.copy_generated]
+private = true
+dependencies = ["format_generated"]
+command = "cp"
+script = [
+  "cp -TRv ${PWD}/build/src ${PWD}/",
+  "cp ${PWD}/build/swagger.json ${PWD}/swagger.json"
+]
