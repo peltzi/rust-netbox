@@ -19,6 +19,24 @@ run_task = [
   { name = ["clean_build_generated_client", "clean_build_netbox_docker"] }
 ]
 
+# Full upgrade metatask
+[tasks.full-upgrade]
+condition = { fail_message = "Don't try to upgrade in master / dirty repo!" }
+condition_script = [
+  "git status --porcelain | wc -l | grep '^0$'",
+  "git rev-parse --abbrev-ref HEAD | grep -vE '^master$'"
+]
+run_task = { name = ["clean-generated", "generate-client", "full-sync"], fork = true }
+
+# Full copy
+[tasks.full-sync]
+condition = { fail_message = "Don't try to full-sync in master / dirty repo!" }
+condition_script = [
+  "git status --porcelain | wc -l | grep '^0$'",
+  "git rev-parse --abbrev-ref HEAD | grep -vE '^master$'"
+]
+run_task = { name = ["copy-generated-code", "copy-generated-spec", "sync-cargo-toml"], fork = true }
+
 # Copy the genereted code over repo
 [tasks.copy-generated-code]
 dependencies = ["check_generated_code"]
