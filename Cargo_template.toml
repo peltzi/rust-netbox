@@ -1,6 +1,5 @@
 [package]
 edition = "2018"
-esa = "vesa"
 authors = [
   "Toni Peltonen <peltzi@peltzi.fi>"
 ]
