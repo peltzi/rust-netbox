@@ -1,5 +1,5 @@
 [env]
-NETBOX_VERSION = "v2.7"
+NETBOX_VERSION = "2.7"
 NETBOX_DOCKER_VERSION = "0.23.0"
 NETBOX_DOCKER_REPO_URL = "https://github.com/netbox-community/netbox-docker.git"
 OPENAPI_GENERATOR_DOCKER_IMAGE = "openapitools/openapi-generator-cli:v4.3.0"
@@ -43,10 +43,11 @@ dependencies = ["clean_build_netbox_docker"]
 script = [
   "git clone --branch ${NETBOX_DOCKER_VERSION} ${NETBOX_DOCKER_REPO_URL} ${PWD}/build/netbox-docker",
   "cd ${PWD}/build/netbox-docker",
-  "docker-compose pull",
-  "docker-compose up --detach",
+  "VERSION=v${NETBOX_VERSION} docker-compose pull",
+  "VERSION=v${NETBOX_VERSION} docker-compose up --detach",
   "curl --connect-timeout 30 --retry 6 --retry-delay 10 --retry-connrefused http://127.0.0.1:$(docker-compose port nginx 8080 | cut -d':' -f 2)/api/swagger.json -o ../swagger.json",
-  "docker-compose stop"
+  "docker-compose stop",
+  "grep -E \"version.*${NETBOX_VERSION}\" ../swagger.json"
 ]
 
 # Generate new client code from spec
