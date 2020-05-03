@@ -18,6 +18,31 @@ run_task = [
   { name = ["clean_build_generated_client", "clean_build_netbox_docker"] }
 ]
 
+# Copy the genereted code over repo
+[tasks.copy-generated-code]
+dependencies = ["check_generated_code"]
+condition = { fail_message = "Generated code doesn't exist!" }
+condition_script = [
+    "test ${PWD}/build/src/lib.rs"
+]
+script = [
+  "cp -TRv ${PWD}/build/src ${PWD}/",
+  "git diff --stat"
+  "cp ${PWD}/build/swagger.json ${PWD}/swagger.json"
+]
+
+# Copy the genereted code over repo
+[tasks.copy-generated-spec]
+condition = { fail_message = "Generated swagger.json doesn't exist!" }
+condition_script = [
+    "test ${PWD}/build/swagger.json"
+]
+script = [
+  "cp ${PWD}/build/swagger.json ${PWD}/swagger.json",
+  "git diff --stat"
+]
+
+
 ## Private tasks
 
 # Clean the build dir for generated code
@@ -46,7 +71,8 @@ script = [
 private = true
 dependencies = ["clean_build_netbox_docker_compose"]
 script = [
-  "rm -rf ${PWD}/build/netbox-docker"
+  "rm -rf ${PWD}/build/netbox-docker",
+  "rm -f ${PWD}/build/swagger.json"
 ]
 
 # Setup Netbox docker and fetch swagger.json
@@ -80,26 +106,17 @@ script = [
   "GEN_CMDLINE" = "generate -i /swagger.json -g rust --library reqwest --package-name ${CARGO_MAKE_PROJECT_NAME} --additional-properties=packageVersion=${CARGO_MAKE_PROJECT_VERSION} -o /build"
 
 # Rustfmt the generate code
-[tasks.format_generated]
+[tasks.format_generated_code]
 private = true
 command = "rustfmt"
 args = ["-v", "build/client/src/lib.rs"]
 
 # Check the generated client code
-[tasks.check_generated]
+[tasks.check_generated_code]
 private = true
-dependencies = ["format_generated"]
+dependencies = ["format_generated_code"]
 script = [
   "cd ${PWD}/build/client",
   "cargo check",
   "echo '[OK] Cargo check on generated code completed!'"
-]
-
-# Copy the genereted code over repo
-[tasks.copy_generated]
-private = true
-command = "cp"
-script = [
-  "cp -TRv ${PWD}/build/src ${PWD}/",
-  "cp ${PWD}/build/swagger.json ${PWD}/swagger.json"
 ]
