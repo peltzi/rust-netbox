@@ -26,7 +26,7 @@ condition_script = [
     "test ${PWD}/build/src/lib.rs"
 ]
 script = [
-  "cp -TRv ${PWD}/build/client/src ${PWD}/",
+  "cp -TRv ${PWD}/build/client/src ${PWD}/src/",
   "git diff --stat"
 ]
 
