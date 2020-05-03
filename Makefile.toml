@@ -26,9 +26,8 @@ condition_script = [
     "test ${PWD}/build/src/lib.rs"
 ]
 script = [
-  "cp -TRv ${PWD}/build/src ${PWD}/",
+  "cp -TRv ${PWD}/build/client/src ${PWD}/",
   "git diff --stat"
-  "cp ${PWD}/build/swagger.json ${PWD}/swagger.json"
 ]
 
 # Copy the genereted code over repo
@@ -40,6 +39,15 @@ condition_script = [
 script = [
   "cp ${PWD}/build/swagger.json ${PWD}/swagger.json",
   "git diff --stat"
+]
+
+# Sync Cargo.toml from generated client. This was we can keep up generated code
+# without having to manually transfer dependencies around if they change.
+# See Cargo_template.toml for our "static" values.
+# Cargo_template.toml will be merged on top of genereted Cargo.toml.
+[tasks.sync-cargo-toml]
+run_task = [
+  { name = "merge_cargo_tomls" }
 ]
 
 
@@ -120,3 +128,81 @@ script = [
   "cargo check",
   "echo '[OK] Cargo check on generated code completed!'"
 ]
+
+# Merge Cargo.tomls, use Rust script since we already required Rust as a build
+# dependency so using it makes sense. And merging TOML files isn't too hard.
+# (TODO): Not the prettiest script, works though... -peltzi
+[tasks.merge_cargo_tomls]
+private = true
+script_runner = "@rust"
+script = [
+'''
+//! ```cargo
+//! [dependencies]
+//! toml = { version = "0.5", features = ["preserve_order"] }
+//! serde = { version = "1.0", features = ["derive"] }
+//! ```
+extern crate serde;
+extern crate toml;
+
+use serde::ser::Serialize;
+use std::env;
+use std::fs::File;
+use std::io::prelude::*;
+use toml::Value;
+
+fn merge(a: &mut Value, b: &Value) {
+    match (a, b) {
+        (&mut Value::Table(ref mut a), &Value::Table(ref b)) => {
+            for (k, v) in b {
+                merge(a.entry(k.clone()).or_insert(Value::Boolean(false)), v);
+            }
+        }
+        (a, b) => {
+            *a = b.clone();
+        }
+    }
+}
+
+fn main() {
+    let file1 = match env::var("GENERATED_CARGO_TOML") {
+        Ok(val) => val,
+        Err(e) => panic!("Problem with GENERATED_CARGO_TOML env: {:?}", e),
+    };
+    let file2 = match env::var("CARGO_TOML_TEMPLATE") {
+        Ok(val) => val,
+        Err(e) => panic!("Problem with CARGO_TOML_TEMPLATE env: {:?}", e),
+    };
+    let mut file1 = File::open(file1).expect("Unable to open the generated file.");
+    let mut contents1 = String::new();
+    file1
+        .read_to_string(&mut contents1)
+        .expect("Unable to read the generated Cargo.toml!");
+
+    let mut file2 = File::open(file2).expect("Unable to open the template file.");
+    let mut contents2 = String::new();
+    file2
+        .read_to_string(&mut contents2)
+        .expect("Unable to read the Cargo.toml template!");
+
+    let mut cargo_generated: Value = toml::from_str(&contents1).unwrap();
+    let cargo_template: Value = toml::from_str(&contents2).unwrap();
+
+    merge(&mut cargo_generated, &cargo_template);
+
+    let mut result = String::new();
+
+    cargo_generated
+        .serialize(&mut toml::Serializer::new(&mut result))
+        .unwrap();
+
+    let mut newfile = File::create("Cargo.toml").unwrap();
+    newfile.write_all(&result.as_bytes()).unwrap();
+
+    println!("Wrote new Cargo.toml!");
+}
+'''
+]
+  [tasks.merge_cargo_tomls.env]
+  GENERATED_CARGO_TOML = "${PWD}/build/client/Cargo.toml"
+  CARGO_TOML_TEMPLATE = "${PWD}/Cargo_template.toml"
