@@ -31,19 +31,19 @@ pub fn urlencode<T: AsRef<str>>(s: T) -> String {
 }
 
 mod circuits_api;
-pub use self::circuits_api::{ CircuitsApi, CircuitsApiClient };
+pub use self::circuits_api::{CircuitsApi, CircuitsApiClient};
 mod dcim_api;
-pub use self::dcim_api::{ DcimApi, DcimApiClient };
+pub use self::dcim_api::{DcimApi, DcimApiClient};
 mod extras_api;
-pub use self::extras_api::{ ExtrasApi, ExtrasApiClient };
+pub use self::extras_api::{ExtrasApi, ExtrasApiClient};
 mod ipam_api;
-pub use self::ipam_api::{ IpamApi, IpamApiClient };
+pub use self::ipam_api::{IpamApi, IpamApiClient};
 mod secrets_api;
-pub use self::secrets_api::{ SecretsApi, SecretsApiClient };
+pub use self::secrets_api::{SecretsApi, SecretsApiClient};
 mod tenancy_api;
-pub use self::tenancy_api::{ TenancyApi, TenancyApiClient };
+pub use self::tenancy_api::{TenancyApi, TenancyApiClient};
 mod virtualization_api;
-pub use self::virtualization_api::{ VirtualizationApi, VirtualizationApiClient };
+pub use self::virtualization_api::{VirtualizationApi, VirtualizationApiClient};
 
-pub mod configuration;
 pub mod client;
+pub mod configuration;

@@ -27,32 +27,31 @@ impl APIClient {
         }
     }
 
-    pub fn circuits_api(&self) -> &dyn crate::apis::CircuitsApi{
+    pub fn circuits_api(&self) -> &dyn crate::apis::CircuitsApi {
         self.circuits_api.as_ref()
     }
 
-    pub fn dcim_api(&self) -> &dyn crate::apis::DcimApi{
+    pub fn dcim_api(&self) -> &dyn crate::apis::DcimApi {
         self.dcim_api.as_ref()
     }
 
-    pub fn extras_api(&self) -> &dyn crate::apis::ExtrasApi{
+    pub fn extras_api(&self) -> &dyn crate::apis::ExtrasApi {
         self.extras_api.as_ref()
     }
 
-    pub fn ipam_api(&self) -> &dyn crate::apis::IpamApi{
+    pub fn ipam_api(&self) -> &dyn crate::apis::IpamApi {
         self.ipam_api.as_ref()
     }
 
-    pub fn secrets_api(&self) -> &dyn crate::apis::SecretsApi{
+    pub fn secrets_api(&self) -> &dyn crate::apis::SecretsApi {
         self.secrets_api.as_ref()
     }
 
-    pub fn tenancy_api(&self) -> &dyn crate::apis::TenancyApi{
+    pub fn tenancy_api(&self) -> &dyn crate::apis::TenancyApi {
         self.tenancy_api.as_ref()
     }
 
-    pub fn virtualization_api(&self) -> &dyn crate::apis::VirtualizationApi{
+    pub fn virtualization_api(&self) -> &dyn crate::apis::VirtualizationApi {
         self.virtualization_api.as_ref()
     }
-
 }
