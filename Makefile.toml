@@ -56,7 +56,7 @@ condition_script = [
     "test ${PWD}/build/swagger.json"
 ]
 script = [
-  "cp ${PWD}/build/swagger.json ${PWD}/swagger.json",
+  "cp ${PWD}/build/swagger_pretty.json ${PWD}/swagger.json",
   "git diff --stat"
 ]
 
@@ -90,6 +90,7 @@ condition_script = [
 ]
 script = [
   "cd ${PWD}/build/netbox-docker",
+  "docker-compose stop",
   "docker-compose rm -f"
 ]
 
@@ -120,7 +121,7 @@ script = [
 # Generate new client code from spec
 [tasks.generate_code]
 private = true
-dependencies = ["clean_build_generated_client"]
+dependencies = ["clean_build_generated_client", "prettify_swagger_json"]
 script = [
   "export RUNUSER_UID=$(id -u); export RUNUSER_GID=$(id -g)",
   "mkdir -p ${PWD}/build/client",
@@ -128,9 +129,21 @@ script = [
 ]
 
   [tasks.generate_code.env]
-  "GEN_DOCKER_VOLUMES" = "-v ${PWD}/build/client:/build -v ${PWD}/build/swagger.json:/swagger.json"
+  "GEN_DOCKER_VOLUMES" = "-v ${PWD}/build/client:/build -v ${PWD}/build/swagger_pretty.json:/swagger.json"
   "GEN_DOCKER_CMDLINE" = "docker run --rm"
   "GEN_CMDLINE" = "generate -i /swagger.json -g rust --library reqwest --package-name ${CARGO_MAKE_PROJECT_NAME} --additional-properties=packageVersion=${CARGO_MAKE_PROJECT_VERSION} -o /build"
+
+# Prettify generated swagger.json
+# (TODO): Convert to Rust script to drop jq dependency
+[tasks.prettify_swagger_json]
+private = true
+script = [
+  "test ${PWD}/build/swagger.json",
+  "jq '.' ${SWAGGER_SOURCE} > ${SWAGGER_TARGET}"
+]
+  [tasks.prettify_swagger_json.env]
+  SWAGGER_SOURCE = "${PWD}/build/swagger.json"
+  SWAGGER_TARGET = "${PWD}/build/swagger_pretty.json"
 
 # Rustfmt the generate code
 [tasks.format_generated_code]
