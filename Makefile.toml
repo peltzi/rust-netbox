@@ -4,25 +4,38 @@ NETBOX_DOCKER_VERSION = "0.23.0"
 NETBOX_DOCKER_REPO_URL = "https://github.com/netbox-community/netbox-docker.git"
 OPENAPI_GENERATOR_DOCKER_IMAGE = "openapitools/openapi-generator-cli:v4.3.0"
 
-[tasks.clean_all]
-run_task = [
-  { name = "clean_build_generated_client" },
-  { name = "clean_build_netbox_docker" }
-]
+# Tasks
 
+# Generate the client code, see ${PWD}/build for results
 [tasks.generate-client]
 run_task = [
-  { name = ["generate_spec_with_netbox_docker", "generate_code"], fork = true }
+  { name = ["generate_spec_with_netbox_docker", "generate_code", "check_generated"], fork = true }
 ]
+
+# Clean the build depris from client code generation
+[tasks.clean-generated]
+run_task = [
+  { name = ["clean_build_generated_client", "clean_build_netbox_docker"] }
+]
+
+## Private tasks
 
 # Clean the build dir for generated code
 [tasks.clean_build_generated_client]
 private = true
+condition = { fail_message = "Nothing to clean, client builddir doesn't exist." }
+condition_script = [
+    "test -d ${PWD}/build/client"
+]
 script = ["rm -rf ${PWD}/build/client"]
 
 # Cleanup Netbox docker-compose
 [tasks.clean_build_netbox_docker_compose]
 private = true
+condition = { fail_message = "Nothing to clean, netbox-docker builddir doesn't exist." }
+condition_script = [
+    "test -d ${PWD}/build/netbox-docker"
+]
 script = [
   "cd ${PWD}/build/netbox-docker",
   "docker-compose rm -f"
@@ -41,6 +54,7 @@ script = [
 private = true
 dependencies = ["clean_build_netbox_docker"]
 script = [
+  "mkdir -p ${PWD}/build/netbox-docker",
   "git clone --branch ${NETBOX_DOCKER_VERSION} ${NETBOX_DOCKER_REPO_URL} ${PWD}/build/netbox-docker",
   "cd ${PWD}/build/netbox-docker",
   "VERSION=v${NETBOX_VERSION} docker-compose pull",
@@ -61,7 +75,7 @@ script = [
 ]
 
   [tasks.generate_code.env]
-  "GEN_DOCKER_VOLUMES" = "-v ${PWD}/build:/build -v ${PWD}/build/swagger.json:/swagger.json"
+  "GEN_DOCKER_VOLUMES" = "-v ${PWD}/build/client:/build -v ${PWD}/build/swagger.json:/swagger.json"
   "GEN_DOCKER_CMDLINE" = "docker run --rm"
   "GEN_CMDLINE" = "generate -i /swagger.json -g rust --library reqwest --package-name ${CARGO_MAKE_PROJECT_NAME} --additional-properties=packageVersion=${CARGO_MAKE_PROJECT_VERSION} -o /build"
 
@@ -69,12 +83,21 @@ script = [
 [tasks.format_generated]
 private = true
 command = "rustfmt"
-args = ["-v build/src/lib.rs"]
+args = ["-v", "build/client/src/lib.rs"]
+
+# Check the generated client code
+[tasks.check_generated]
+private = true
+dependencies = ["format_generated"]
+script = [
+  "cd ${PWD}/build/client",
+  "cargo check",
+  "echo '[OK] Cargo check on generated code completed!'"
+]
 
 # Copy the genereted code over repo
 [tasks.copy_generated]
 private = true
-dependencies = ["format_generated"]
 command = "cp"
 script = [
   "cp -TRv ${PWD}/build/src ${PWD}/",
