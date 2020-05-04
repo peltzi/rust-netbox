@@ -11,13 +11,22 @@
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct ConnectionStatus {
     #[serde(rename = "label")]
-    pub label: String,
+    pub label: Label,
     #[serde(rename = "value")]
-    pub value: Option<bool>,
+    pub value: i32,
 }
 
 impl ConnectionStatus {
-    pub fn new(label: String, value: Option<bool>) -> ConnectionStatus {
+    pub fn new(label: Label, value: i32) -> ConnectionStatus {
         ConnectionStatus { label, value }
     }
+}
+
+///
+#[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
+pub enum Label {
+    #[serde(rename = "Not Connected")]
+    Not_Connected,
+    #[serde(rename = "Connected")]
+    Connected,
 }

@@ -1,6 +1,6 @@
 # \CircuitsApi
 
-All URIs are relative to *http://localhost:8000/api*
+All URIs are relative to *http://localhost:32815/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -145,7 +145,7 @@ Name | Type | Description  | Required | Notes
 
 ## circuits_circuit_terminations_list
 
-> crate::models::InlineResponse200 circuits_circuit_terminations_list(term_side, port_speed, upstream_speed, xconnect_id, q, circuit_id, site_id, site, limit, offset)
+> crate::models::InlineResponse200 circuits_circuit_terminations_list(term_side, port_speed, upstream_speed, xconnect_id, q, circuit_id, site_id, site, term_side__n, port_speed__n, port_speed__lte, port_speed__lt, port_speed__gte, port_speed__gt, upstream_speed__n, upstream_speed__lte, upstream_speed__lt, upstream_speed__gte, upstream_speed__gt, xconnect_id__n, xconnect_id__ic, xconnect_id__nic, xconnect_id__iew, xconnect_id__niew, xconnect_id__isw, xconnect_id__nisw, xconnect_id__ie, xconnect_id__nie, circuit_id__n, site_id__n, site__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -163,6 +163,29 @@ Name | Type | Description  | Required | Notes
 **circuit_id** | Option<**String**> |  |  |
 **site_id** | Option<**String**> |  |  |
 **site** | Option<**String**> |  |  |
+**term_side__n** | Option<**String**> |  |  |
+**port_speed__n** | Option<**String**> |  |  |
+**port_speed__lte** | Option<**String**> |  |  |
+**port_speed__lt** | Option<**String**> |  |  |
+**port_speed__gte** | Option<**String**> |  |  |
+**port_speed__gt** | Option<**String**> |  |  |
+**upstream_speed__n** | Option<**String**> |  |  |
+**upstream_speed__lte** | Option<**String**> |  |  |
+**upstream_speed__lt** | Option<**String**> |  |  |
+**upstream_speed__gte** | Option<**String**> |  |  |
+**upstream_speed__gt** | Option<**String**> |  |  |
+**xconnect_id__n** | Option<**String**> |  |  |
+**xconnect_id__ic** | Option<**String**> |  |  |
+**xconnect_id__nic** | Option<**String**> |  |  |
+**xconnect_id__iew** | Option<**String**> |  |  |
+**xconnect_id__niew** | Option<**String**> |  |  |
+**xconnect_id__isw** | Option<**String**> |  |  |
+**xconnect_id__nisw** | Option<**String**> |  |  |
+**xconnect_id__ie** | Option<**String**> |  |  |
+**xconnect_id__nie** | Option<**String**> |  |  |
+**circuit_id__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -328,7 +351,7 @@ Name | Type | Description  | Required | Notes
 
 ## circuits_circuit_types_list
 
-> crate::models::InlineResponse2001 circuits_circuit_types_list(id, name, slug, q, limit, offset)
+> crate::models::InlineResponse2001 circuits_circuit_types_list(id, name, slug, q, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, limit, offset)
 
 
 Call to super to allow for caching
@@ -342,6 +365,29 @@ Name | Type | Description  | Required | Notes
 **name** | Option<**String**> |  |  |
 **slug** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -507,7 +553,7 @@ Name | Type | Description  | Required | Notes
 
 ## circuits_circuits_list
 
-> crate::models::InlineResponse2002 circuits_circuits_list(cid, install_date, commit_rate, tenant_group_id, tenant_group, tenant_id, tenant, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, provider_id, provider, type_id, _type, status, site_id, site, region_id, region, tag, limit, offset)
+> crate::models::InlineResponse2002 circuits_circuits_list(cid, install_date, commit_rate, tenant_group_id, tenant_group, tenant_id, tenant, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, provider_id, provider, type_id, _type, status, site_id, site, region_id, region, tag, cid__n, cid__ic, cid__nic, cid__iew, cid__niew, cid__isw, cid__nisw, cid__ie, cid__nie, install_date__n, install_date__lte, install_date__lt, install_date__gte, install_date__gt, commit_rate__n, commit_rate__lte, commit_rate__lt, commit_rate__gte, commit_rate__gt, tenant_group_id__n, tenant_group__n, tenant_id__n, tenant__n, provider_id__n, provider__n, type_id__n, type__n, status__n, site_id__n, site__n, region_id__n, region__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -542,6 +588,39 @@ Name | Type | Description  | Required | Notes
 **region_id** | Option<**String**> |  |  |
 **region** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**cid__n** | Option<**String**> |  |  |
+**cid__ic** | Option<**String**> |  |  |
+**cid__nic** | Option<**String**> |  |  |
+**cid__iew** | Option<**String**> |  |  |
+**cid__niew** | Option<**String**> |  |  |
+**cid__isw** | Option<**String**> |  |  |
+**cid__nisw** | Option<**String**> |  |  |
+**cid__ie** | Option<**String**> |  |  |
+**cid__nie** | Option<**String**> |  |  |
+**install_date__n** | Option<**String**> |  |  |
+**install_date__lte** | Option<**String**> |  |  |
+**install_date__lt** | Option<**String**> |  |  |
+**install_date__gte** | Option<**String**> |  |  |
+**install_date__gt** | Option<**String**> |  |  |
+**commit_rate__n** | Option<**String**> |  |  |
+**commit_rate__lte** | Option<**String**> |  |  |
+**commit_rate__lt** | Option<**String**> |  |  |
+**commit_rate__gte** | Option<**String**> |  |  |
+**commit_rate__gt** | Option<**String**> |  |  |
+**tenant_group_id__n** | Option<**String**> |  |  |
+**tenant_group__n** | Option<**String**> |  |  |
+**tenant_id__n** | Option<**String**> |  |  |
+**tenant__n** | Option<**String**> |  |  |
+**provider_id__n** | Option<**String**> |  |  |
+**provider__n** | Option<**String**> |  |  |
+**type_id__n** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**status__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -737,7 +816,7 @@ Name | Type | Description  | Required | Notes
 
 ## circuits_providers_list
 
-> crate::models::InlineResponse2003 circuits_providers_list(name, slug, asn, account, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, region_id, region, site_id, site, tag, limit, offset)
+> crate::models::InlineResponse2003 circuits_providers_list(name, slug, asn, account, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, region_id, region, site_id, site, tag, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, asn__n, asn__lte, asn__lt, asn__gte, asn__gt, account__n, account__ic, account__nic, account__iew, account__niew, account__isw, account__nisw, account__ie, account__nie, region_id__n, region__n, site_id__n, site__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -764,6 +843,43 @@ Name | Type | Description  | Required | Notes
 **site_id** | Option<**String**> |  |  |
 **site** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
+**asn__n** | Option<**String**> |  |  |
+**asn__lte** | Option<**String**> |  |  |
+**asn__lt** | Option<**String**> |  |  |
+**asn__gte** | Option<**String**> |  |  |
+**asn__gt** | Option<**String**> |  |  |
+**account__n** | Option<**String**> |  |  |
+**account__ic** | Option<**String**> |  |  |
+**account__nic** | Option<**String**> |  |  |
+**account__iew** | Option<**String**> |  |  |
+**account__niew** | Option<**String**> |  |  |
+**account__isw** | Option<**String**> |  |  |
+**account__nisw** | Option<**String**> |  |  |
+**account__ie** | Option<**String**> |  |  |
+**account__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 

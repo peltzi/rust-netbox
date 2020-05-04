@@ -15,7 +15,7 @@ pub struct RackUnit {
     #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
     #[serde(rename = "face", skip_serializing_if = "Option::is_none")]
-    pub face: Option<crate::models::Status>,
+    pub face: Option<crate::models::Face>,
     #[serde(rename = "device", skip_serializing_if = "Option::is_none")]
     pub device: Option<crate::models::NestedDevice>,
 }

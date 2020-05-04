@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | Option<**i32**> |  | [optional][readonly]
 **device** | [**crate::models::NestedDevice**](NestedDevice.md) |  | 
 **name** | **String** |  | 
-**_type** | [**crate::models::Status**](Status.md) |  | 
+**_type** | [**crate::models::Type1**](Type_1.md) |  | 
 **positions** | Option<**i32**> |  | [optional]
 **description** | Option<**String**> |  | [optional]
 **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]

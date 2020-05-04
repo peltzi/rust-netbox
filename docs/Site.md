@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | Option<**i32**> |  | [optional][readonly]
 **name** | **String** |  | 
 **slug** | **String** |  | 
-**status** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**status** | Option<[**crate::models::Status5**](Status_5.md)> |  | [optional]
 **region** | Option<[**crate::models::NestedRegion**](NestedRegion.md)> |  | [optional]
 **tenant** | Option<[**crate::models::NestedTenant**](NestedTenant.md)> |  | [optional]
 **facility** | Option<**String**> |  | [optional]

@@ -13,7 +13,7 @@ pub struct Aggregate {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "family", skip_serializing_if = "Option::is_none")]
-    pub family: Option<crate::models::Status>,
+    pub family: Option<crate::models::Family>,
     #[serde(rename = "prefix")]
     pub prefix: String,
     #[serde(rename = "rir")]

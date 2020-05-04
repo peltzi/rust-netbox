@@ -15,7 +15,7 @@ pub struct VirtualMachineWithConfigContext {
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<crate::models::Status9>,
     #[serde(rename = "site", skip_serializing_if = "Option::is_none")]
     pub site: Option<crate::models::NestedSite>,
     #[serde(rename = "cluster")]

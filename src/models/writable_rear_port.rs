@@ -52,6 +52,8 @@ pub enum Type {
     _110Punch,
     #[serde(rename = "bnc")]
     Bnc,
+    #[serde(rename = "mrj21")]
+    Mrj21,
     #[serde(rename = "fc")]
     Fc,
     #[serde(rename = "lc")]

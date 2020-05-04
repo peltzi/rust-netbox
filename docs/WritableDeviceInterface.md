@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **untagged_vlan** | Option<**i32**> |  | [optional]
 **tagged_vlans** | Option<**Vec<i32>**> |  | [optional]
 **tags** | Option<**Vec<String>**> |  | [optional]
-**count_ipaddresses** | Option<**String**> |  | [optional][readonly]
+**count_ipaddresses** | Option<**i32**> |  | [optional][readonly]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

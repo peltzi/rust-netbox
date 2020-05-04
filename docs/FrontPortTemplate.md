@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | Option<**i32**> |  | [optional][readonly]
 **device_type** | [**crate::models::NestedDeviceType**](NestedDeviceType.md) |  | 
 **name** | **String** |  | 
-**_type** | [**crate::models::Status**](Status.md) |  | 
+**_type** | [**crate::models::Type1**](Type_1.md) |  | 
 **rear_port** | [**crate::models::NestedRearPortTemplate**](NestedRearPortTemplate.md) |  | 
 **rear_port_position** | Option<**i32**> |  | [optional]
 

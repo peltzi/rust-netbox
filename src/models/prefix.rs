@@ -13,7 +13,7 @@ pub struct Prefix {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "family", skip_serializing_if = "Option::is_none")]
-    pub family: Option<crate::models::Status>,
+    pub family: Option<crate::models::Family>,
     /// IPv4 or IPv6 network with mask
     #[serde(rename = "prefix")]
     pub prefix: String,
@@ -26,7 +26,7 @@ pub struct Prefix {
     #[serde(rename = "vlan", skip_serializing_if = "Option::is_none")]
     pub vlan: Option<crate::models::NestedVlan>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<crate::models::Status7>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
     pub role: Option<crate::models::NestedRole>,
     /// All IP addresses within this prefix are considered usable

@@ -1,6 +1,6 @@
 # \SecretsApi
 
-All URIs are relative to *http://localhost:8000/api*
+All URIs are relative to *http://localhost:32815/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -188,7 +188,7 @@ Name | Type | Description  | Required | Notes
 
 ## secrets_secret_roles_list
 
-> crate::models::InlineResponse20052 secrets_secret_roles_list(id, name, slug, q, limit, offset)
+> crate::models::InlineResponse20052 secrets_secret_roles_list(id, name, slug, q, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, limit, offset)
 
 
 Call to super to allow for caching
@@ -202,6 +202,29 @@ Name | Type | Description  | Required | Notes
 **name** | Option<**String**> |  |  |
 **slug** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -367,7 +390,7 @@ Name | Type | Description  | Required | Notes
 
 ## secrets_secrets_list
 
-> crate::models::InlineResponse20053 secrets_secrets_list(name, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, role_id, role, device_id, device, tag, limit, offset)
+> crate::models::InlineResponse20053 secrets_secrets_list(name, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, role_id, role, device_id, device, tag, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, role_id__n, role__n, device_id__n, device__n, tag__n, limit, offset)
 
 
 ### Parameters
@@ -389,6 +412,20 @@ Name | Type | Description  | Required | Notes
 **device_id** | Option<**String**> |  |  |
 **device** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**role_id__n** | Option<**String**> |  |  |
+**role__n** | Option<**String**> |  |  |
+**device_id__n** | Option<**String**> |  |  |
+**device__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 

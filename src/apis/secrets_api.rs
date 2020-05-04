@@ -43,6 +43,29 @@ pub trait SecretsApi {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20052, Error>;
@@ -78,6 +101,20 @@ pub trait SecretsApi {
         device_id: Option<&str>,
         device: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        device_id__n: Option<&str>,
+        device__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20053, Error>;
@@ -268,6 +305,29 @@ impl SecretsApi for SecretsApiClient {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20052, Error> {
@@ -288,6 +348,75 @@ impl SecretsApi for SecretsApiClient {
         }
         if let Some(ref s) = q {
             req_builder = req_builder.query(&[("q", &s.to_string())]);
+        }
+        if let Some(ref s) = id__n {
+            req_builder = req_builder.query(&[("id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lte {
+            req_builder = req_builder.query(&[("id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lt {
+            req_builder = req_builder.query(&[("id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gte {
+            req_builder = req_builder.query(&[("id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gt {
+            req_builder = req_builder.query(&[("id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__n {
+            req_builder = req_builder.query(&[("slug__n", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ic {
+            req_builder = req_builder.query(&[("slug__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nic {
+            req_builder = req_builder.query(&[("slug__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__iew {
+            req_builder = req_builder.query(&[("slug__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__niew {
+            req_builder = req_builder.query(&[("slug__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__isw {
+            req_builder = req_builder.query(&[("slug__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nisw {
+            req_builder = req_builder.query(&[("slug__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ie {
+            req_builder = req_builder.query(&[("slug__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nie {
+            req_builder = req_builder.query(&[("slug__nie", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -481,6 +610,20 @@ impl SecretsApi for SecretsApiClient {
         device_id: Option<&str>,
         device: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        device_id__n: Option<&str>,
+        device__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20053, Error> {
@@ -531,6 +674,48 @@ impl SecretsApi for SecretsApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = role_id__n {
+            req_builder = req_builder.query(&[("role_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role__n {
+            req_builder = req_builder.query(&[("role__n", &s.to_string())]);
+        }
+        if let Some(ref s) = device_id__n {
+            req_builder = req_builder.query(&[("device_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = device__n {
+            req_builder = req_builder.query(&[("device__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);

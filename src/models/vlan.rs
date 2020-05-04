@@ -23,7 +23,7 @@ pub struct Vlan {
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
     pub tenant: Option<crate::models::NestedTenant>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<crate::models::Status8>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
     pub role: Option<crate::models::NestedRole>,
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]

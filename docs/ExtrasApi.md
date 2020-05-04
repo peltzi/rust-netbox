@@ -1,6 +1,6 @@
 # \ExtrasApi
 
-All URIs are relative to *http://localhost:8000/api*
+All URIs are relative to *http://localhost:32815/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -159,7 +159,7 @@ Name | Type | Description  | Required | Notes
 
 ## extras_config_contexts_list
 
-> crate::models::InlineResponse20037 extras_config_contexts_list(name, is_active, q, region_id, region, site_id, site, role_id, role, platform_id, platform, cluster_group_id, cluster_group, cluster_id, tenant_group_id, tenant_group, tenant_id, tenant, tag, limit, offset)
+> crate::models::InlineResponse20037 extras_config_contexts_list(name, is_active, q, region_id, region, site_id, site, role_id, role, platform_id, platform, cluster_group_id, cluster_group, cluster_id, tenant_group_id, tenant_group, tenant_id, tenant, tag, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, region_id__n, region__n, site_id__n, site__n, role_id__n, role__n, platform_id__n, platform__n, cluster_group_id__n, cluster_group__n, cluster_id__n, tenant_group_id__n, tenant_group__n, tenant_id__n, tenant__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -188,6 +188,31 @@ Name | Type | Description  | Required | Notes
 **tenant_id** | Option<**String**> |  |  |
 **tenant** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**role_id__n** | Option<**String**> |  |  |
+**role__n** | Option<**String**> |  |  |
+**platform_id__n** | Option<**String**> |  |  |
+**platform__n** | Option<**String**> |  |  |
+**cluster_group_id__n** | Option<**String**> |  |  |
+**cluster_group__n** | Option<**String**> |  |  |
+**cluster_id__n** | Option<**String**> |  |  |
+**tenant_group_id__n** | Option<**String**> |  |  |
+**tenant_group__n** | Option<**String**> |  |  |
+**tenant_id__n** | Option<**String**> |  |  |
+**tenant__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -406,7 +431,7 @@ Name | Type | Description  | Required | Notes
 
 ## extras_export_templates_list
 
-> crate::models::InlineResponse20038 extras_export_templates_list(content_type, name, template_language, limit, offset)
+> crate::models::InlineResponse20038 extras_export_templates_list(content_type, name, template_language, content_type__n, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, template_language__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -419,6 +444,17 @@ Name | Type | Description  | Required | Notes
 **content_type** | Option<**String**> |  |  |
 **name** | Option<**String**> |  |  |
 **template_language** | Option<**String**> |  |  |
+**content_type__n** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**template_language__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -584,7 +620,7 @@ Name | Type | Description  | Required | Notes
 
 ## extras_graphs_list
 
-> crate::models::InlineResponse20039 extras_graphs_list(_type, name, template_language, limit, offset)
+> crate::models::InlineResponse20039 extras_graphs_list(_type, name, template_language, type__n, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, template_language__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -597,6 +633,17 @@ Name | Type | Description  | Required | Notes
 **_type** | Option<**String**> |  |  |
 **name** | Option<**String**> |  |  |
 **template_language** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**template_language__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -881,7 +928,7 @@ Name | Type | Description  | Required | Notes
 
 ## extras_object_changes_list
 
-> crate::models::InlineResponse20041 extras_object_changes_list(user, user_name, request_id, action, changed_object_type, changed_object_id, object_repr, q, time, limit, offset)
+> crate::models::InlineResponse20041 extras_object_changes_list(user, user_name, request_id, action, changed_object_type, changed_object_id, object_repr, q, time, user__n, user_name__n, user_name__ic, user_name__nic, user_name__iew, user_name__niew, user_name__isw, user_name__nisw, user_name__ie, user_name__nie, action__n, changed_object_type__n, changed_object_id__n, changed_object_id__lte, changed_object_id__lt, changed_object_id__gte, changed_object_id__gt, object_repr__n, object_repr__ic, object_repr__nic, object_repr__iew, object_repr__niew, object_repr__isw, object_repr__nisw, object_repr__ie, object_repr__nie, limit, offset)
 
 
 Retrieve a list of recent changes.
@@ -896,10 +943,36 @@ Name | Type | Description  | Required | Notes
 **request_id** | Option<**String**> |  |  |
 **action** | Option<**String**> |  |  |
 **changed_object_type** | Option<**String**> |  |  |
-**changed_object_id** | Option<**f32**> |  |  |
+**changed_object_id** | Option<**String**> |  |  |
 **object_repr** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
 **time** | Option<**String**> |  |  |
+**user__n** | Option<**String**> |  |  |
+**user_name__n** | Option<**String**> |  |  |
+**user_name__ic** | Option<**String**> |  |  |
+**user_name__nic** | Option<**String**> |  |  |
+**user_name__iew** | Option<**String**> |  |  |
+**user_name__niew** | Option<**String**> |  |  |
+**user_name__isw** | Option<**String**> |  |  |
+**user_name__nisw** | Option<**String**> |  |  |
+**user_name__ie** | Option<**String**> |  |  |
+**user_name__nie** | Option<**String**> |  |  |
+**action__n** | Option<**String**> |  |  |
+**changed_object_type__n** | Option<**String**> |  |  |
+**changed_object_id__n** | Option<**String**> |  |  |
+**changed_object_id__lte** | Option<**String**> |  |  |
+**changed_object_id__lt** | Option<**String**> |  |  |
+**changed_object_id__gte** | Option<**String**> |  |  |
+**changed_object_id__gt** | Option<**String**> |  |  |
+**object_repr__n** | Option<**String**> |  |  |
+**object_repr__ic** | Option<**String**> |  |  |
+**object_repr__nic** | Option<**String**> |  |  |
+**object_repr__iew** | Option<**String**> |  |  |
+**object_repr__niew** | Option<**String**> |  |  |
+**object_repr__isw** | Option<**String**> |  |  |
+**object_repr__nisw** | Option<**String**> |  |  |
+**object_repr__ie** | Option<**String**> |  |  |
+**object_repr__nie** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -1147,7 +1220,7 @@ Name | Type | Description  | Required | Notes
 
 ## extras_tags_list
 
-> crate::models::InlineResponse20042 extras_tags_list(name, slug, q, limit, offset)
+> crate::models::InlineResponse20042 extras_tags_list(name, slug, q, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, limit, offset)
 
 
 Call to super to allow for caching
@@ -1160,6 +1233,24 @@ Name | Type | Description  | Required | Notes
 **name** | Option<**String**> |  |  |
 **slug** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 

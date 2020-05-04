@@ -27,7 +27,7 @@ pub struct Cable {
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
     pub _type: Option<Type>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<crate::models::Status1>,
     #[serde(rename = "label", skip_serializing_if = "Option::is_none")]
     pub label: Option<String>,
     #[serde(rename = "color", skip_serializing_if = "Option::is_none")]
@@ -35,7 +35,7 @@ pub struct Cable {
     #[serde(rename = "length", skip_serializing_if = "Option::is_none")]
     pub length: Option<i32>,
     #[serde(rename = "length_unit", skip_serializing_if = "Option::is_none")]
-    pub length_unit: Option<crate::models::Status>,
+    pub length_unit: Option<crate::models::LengthUnit>,
 }
 
 impl Cable {
@@ -82,6 +82,8 @@ pub enum Type {
     DacActive,
     #[serde(rename = "dac-passive")]
     DacPassive,
+    #[serde(rename = "mrj21-trunk")]
+    Mrj21Trunk,
     #[serde(rename = "coaxial")]
     Coaxial,
     #[serde(rename = "mmf")]
