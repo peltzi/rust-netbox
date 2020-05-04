@@ -16,9 +16,9 @@ Name | Type | Description | Notes
 **site** | [**crate::models::NestedSite**](NestedSite.md) |  | 
 **rack** | Option<[**crate::models::NestedRack**](NestedRack.md)> |  | [optional]
 **position** | Option<**i32**> | The lowest-numbered unit occupied by the device | [optional]
-**face** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**face** | Option<[**crate::models::Face**](Face.md)> |  | [optional]
 **parent_device** | Option<[**crate::models::NestedDevice**](NestedDevice.md)> |  | [optional]
-**status** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**status** | Option<[**crate::models::Status2**](Status_2.md)> |  | [optional]
 **primary_ip** | Option<[**crate::models::NestedIpAddress**](NestedIPAddress.md)> |  | [optional]
 **primary_ip4** | Option<[**crate::models::NestedIpAddress**](NestedIPAddress.md)> |  | [optional]
 **primary_ip6** | Option<[**crate::models::NestedIpAddress**](NestedIPAddress.md)> |  | [optional]

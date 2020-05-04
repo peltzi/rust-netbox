@@ -45,6 +45,29 @@ pub trait CircuitsApi {
         circuit_id: Option<&str>,
         site_id: Option<&str>,
         site: Option<&str>,
+        term_side__n: Option<&str>,
+        port_speed__n: Option<&str>,
+        port_speed__lte: Option<&str>,
+        port_speed__lt: Option<&str>,
+        port_speed__gte: Option<&str>,
+        port_speed__gt: Option<&str>,
+        upstream_speed__n: Option<&str>,
+        upstream_speed__lte: Option<&str>,
+        upstream_speed__lt: Option<&str>,
+        upstream_speed__gte: Option<&str>,
+        upstream_speed__gt: Option<&str>,
+        xconnect_id__n: Option<&str>,
+        xconnect_id__ic: Option<&str>,
+        xconnect_id__nic: Option<&str>,
+        xconnect_id__iew: Option<&str>,
+        xconnect_id__niew: Option<&str>,
+        xconnect_id__isw: Option<&str>,
+        xconnect_id__nisw: Option<&str>,
+        xconnect_id__ie: Option<&str>,
+        xconnect_id__nie: Option<&str>,
+        circuit_id__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse200, Error>;
@@ -73,6 +96,29 @@ pub trait CircuitsApi {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse2001, Error>;
@@ -119,6 +165,39 @@ pub trait CircuitsApi {
         region_id: Option<&str>,
         region: Option<&str>,
         tag: Option<&str>,
+        cid__n: Option<&str>,
+        cid__ic: Option<&str>,
+        cid__nic: Option<&str>,
+        cid__iew: Option<&str>,
+        cid__niew: Option<&str>,
+        cid__isw: Option<&str>,
+        cid__nisw: Option<&str>,
+        cid__ie: Option<&str>,
+        cid__nie: Option<&str>,
+        install_date__n: Option<&str>,
+        install_date__lte: Option<&str>,
+        install_date__lt: Option<&str>,
+        install_date__gte: Option<&str>,
+        install_date__gt: Option<&str>,
+        commit_rate__n: Option<&str>,
+        commit_rate__lte: Option<&str>,
+        commit_rate__lt: Option<&str>,
+        commit_rate__gte: Option<&str>,
+        commit_rate__gt: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        provider_id__n: Option<&str>,
+        provider__n: Option<&str>,
+        type_id__n: Option<&str>,
+        type__n: Option<&str>,
+        status__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse2002, Error>;
@@ -158,6 +237,43 @@ pub trait CircuitsApi {
         site_id: Option<&str>,
         site: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
+        asn__n: Option<&str>,
+        asn__lte: Option<&str>,
+        asn__lt: Option<&str>,
+        asn__gte: Option<&str>,
+        asn__gt: Option<&str>,
+        account__n: Option<&str>,
+        account__ic: Option<&str>,
+        account__nic: Option<&str>,
+        account__iew: Option<&str>,
+        account__niew: Option<&str>,
+        account__isw: Option<&str>,
+        account__nisw: Option<&str>,
+        account__ie: Option<&str>,
+        account__nie: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse2003, Error>;
@@ -300,6 +416,29 @@ impl CircuitsApi for CircuitsApiClient {
         circuit_id: Option<&str>,
         site_id: Option<&str>,
         site: Option<&str>,
+        term_side__n: Option<&str>,
+        port_speed__n: Option<&str>,
+        port_speed__lte: Option<&str>,
+        port_speed__lt: Option<&str>,
+        port_speed__gte: Option<&str>,
+        port_speed__gt: Option<&str>,
+        upstream_speed__n: Option<&str>,
+        upstream_speed__lte: Option<&str>,
+        upstream_speed__lt: Option<&str>,
+        upstream_speed__gte: Option<&str>,
+        upstream_speed__gt: Option<&str>,
+        xconnect_id__n: Option<&str>,
+        xconnect_id__ic: Option<&str>,
+        xconnect_id__nic: Option<&str>,
+        xconnect_id__iew: Option<&str>,
+        xconnect_id__niew: Option<&str>,
+        xconnect_id__isw: Option<&str>,
+        xconnect_id__nisw: Option<&str>,
+        xconnect_id__ie: Option<&str>,
+        xconnect_id__nie: Option<&str>,
+        circuit_id__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse200, Error> {
@@ -332,6 +471,75 @@ impl CircuitsApi for CircuitsApiClient {
         }
         if let Some(ref s) = site {
             req_builder = req_builder.query(&[("site", &s.to_string())]);
+        }
+        if let Some(ref s) = term_side__n {
+            req_builder = req_builder.query(&[("term_side__n", &s.to_string())]);
+        }
+        if let Some(ref s) = port_speed__n {
+            req_builder = req_builder.query(&[("port_speed__n", &s.to_string())]);
+        }
+        if let Some(ref s) = port_speed__lte {
+            req_builder = req_builder.query(&[("port_speed__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = port_speed__lt {
+            req_builder = req_builder.query(&[("port_speed__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = port_speed__gte {
+            req_builder = req_builder.query(&[("port_speed__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = port_speed__gt {
+            req_builder = req_builder.query(&[("port_speed__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = upstream_speed__n {
+            req_builder = req_builder.query(&[("upstream_speed__n", &s.to_string())]);
+        }
+        if let Some(ref s) = upstream_speed__lte {
+            req_builder = req_builder.query(&[("upstream_speed__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = upstream_speed__lt {
+            req_builder = req_builder.query(&[("upstream_speed__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = upstream_speed__gte {
+            req_builder = req_builder.query(&[("upstream_speed__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = upstream_speed__gt {
+            req_builder = req_builder.query(&[("upstream_speed__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = xconnect_id__n {
+            req_builder = req_builder.query(&[("xconnect_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = xconnect_id__ic {
+            req_builder = req_builder.query(&[("xconnect_id__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = xconnect_id__nic {
+            req_builder = req_builder.query(&[("xconnect_id__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = xconnect_id__iew {
+            req_builder = req_builder.query(&[("xconnect_id__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = xconnect_id__niew {
+            req_builder = req_builder.query(&[("xconnect_id__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = xconnect_id__isw {
+            req_builder = req_builder.query(&[("xconnect_id__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = xconnect_id__nisw {
+            req_builder = req_builder.query(&[("xconnect_id__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = xconnect_id__ie {
+            req_builder = req_builder.query(&[("xconnect_id__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = xconnect_id__nie {
+            req_builder = req_builder.query(&[("xconnect_id__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = circuit_id__n {
+            req_builder = req_builder.query(&[("circuit_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site_id__n {
+            req_builder = req_builder.query(&[("site_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site__n {
+            req_builder = req_builder.query(&[("site__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -522,6 +730,29 @@ impl CircuitsApi for CircuitsApiClient {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse2001, Error> {
@@ -542,6 +773,75 @@ impl CircuitsApi for CircuitsApiClient {
         }
         if let Some(ref s) = q {
             req_builder = req_builder.query(&[("q", &s.to_string())]);
+        }
+        if let Some(ref s) = id__n {
+            req_builder = req_builder.query(&[("id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lte {
+            req_builder = req_builder.query(&[("id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lt {
+            req_builder = req_builder.query(&[("id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gte {
+            req_builder = req_builder.query(&[("id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gt {
+            req_builder = req_builder.query(&[("id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__n {
+            req_builder = req_builder.query(&[("slug__n", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ic {
+            req_builder = req_builder.query(&[("slug__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nic {
+            req_builder = req_builder.query(&[("slug__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__iew {
+            req_builder = req_builder.query(&[("slug__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__niew {
+            req_builder = req_builder.query(&[("slug__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__isw {
+            req_builder = req_builder.query(&[("slug__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nisw {
+            req_builder = req_builder.query(&[("slug__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ie {
+            req_builder = req_builder.query(&[("slug__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nie {
+            req_builder = req_builder.query(&[("slug__nie", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -750,6 +1050,39 @@ impl CircuitsApi for CircuitsApiClient {
         region_id: Option<&str>,
         region: Option<&str>,
         tag: Option<&str>,
+        cid__n: Option<&str>,
+        cid__ic: Option<&str>,
+        cid__nic: Option<&str>,
+        cid__iew: Option<&str>,
+        cid__niew: Option<&str>,
+        cid__isw: Option<&str>,
+        cid__nisw: Option<&str>,
+        cid__ie: Option<&str>,
+        cid__nie: Option<&str>,
+        install_date__n: Option<&str>,
+        install_date__lte: Option<&str>,
+        install_date__lt: Option<&str>,
+        install_date__gte: Option<&str>,
+        install_date__gt: Option<&str>,
+        commit_rate__n: Option<&str>,
+        commit_rate__lte: Option<&str>,
+        commit_rate__lt: Option<&str>,
+        commit_rate__gte: Option<&str>,
+        commit_rate__gt: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        provider_id__n: Option<&str>,
+        provider__n: Option<&str>,
+        type_id__n: Option<&str>,
+        type__n: Option<&str>,
+        status__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse2002, Error> {
@@ -833,6 +1166,105 @@ impl CircuitsApi for CircuitsApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = cid__n {
+            req_builder = req_builder.query(&[("cid__n", &s.to_string())]);
+        }
+        if let Some(ref s) = cid__ic {
+            req_builder = req_builder.query(&[("cid__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = cid__nic {
+            req_builder = req_builder.query(&[("cid__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = cid__iew {
+            req_builder = req_builder.query(&[("cid__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = cid__niew {
+            req_builder = req_builder.query(&[("cid__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = cid__isw {
+            req_builder = req_builder.query(&[("cid__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = cid__nisw {
+            req_builder = req_builder.query(&[("cid__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = cid__ie {
+            req_builder = req_builder.query(&[("cid__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = cid__nie {
+            req_builder = req_builder.query(&[("cid__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = install_date__n {
+            req_builder = req_builder.query(&[("install_date__n", &s.to_string())]);
+        }
+        if let Some(ref s) = install_date__lte {
+            req_builder = req_builder.query(&[("install_date__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = install_date__lt {
+            req_builder = req_builder.query(&[("install_date__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = install_date__gte {
+            req_builder = req_builder.query(&[("install_date__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = install_date__gt {
+            req_builder = req_builder.query(&[("install_date__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = commit_rate__n {
+            req_builder = req_builder.query(&[("commit_rate__n", &s.to_string())]);
+        }
+        if let Some(ref s) = commit_rate__lte {
+            req_builder = req_builder.query(&[("commit_rate__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = commit_rate__lt {
+            req_builder = req_builder.query(&[("commit_rate__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = commit_rate__gte {
+            req_builder = req_builder.query(&[("commit_rate__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = commit_rate__gt {
+            req_builder = req_builder.query(&[("commit_rate__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group_id__n {
+            req_builder = req_builder.query(&[("tenant_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group__n {
+            req_builder = req_builder.query(&[("tenant_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_id__n {
+            req_builder = req_builder.query(&[("tenant_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant__n {
+            req_builder = req_builder.query(&[("tenant__n", &s.to_string())]);
+        }
+        if let Some(ref s) = provider_id__n {
+            req_builder = req_builder.query(&[("provider_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = provider__n {
+            req_builder = req_builder.query(&[("provider__n", &s.to_string())]);
+        }
+        if let Some(ref s) = type_id__n {
+            req_builder = req_builder.query(&[("type_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = type__n {
+            req_builder = req_builder.query(&[("type__n", &s.to_string())]);
+        }
+        if let Some(ref s) = status__n {
+            req_builder = req_builder.query(&[("status__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site_id__n {
+            req_builder = req_builder.query(&[("site_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site__n {
+            req_builder = req_builder.query(&[("site__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region_id__n {
+            req_builder = req_builder.query(&[("region_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region__n {
+            req_builder = req_builder.query(&[("region__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -1062,6 +1494,43 @@ impl CircuitsApi for CircuitsApiClient {
         site_id: Option<&str>,
         site: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
+        asn__n: Option<&str>,
+        asn__lte: Option<&str>,
+        asn__lt: Option<&str>,
+        asn__gte: Option<&str>,
+        asn__gt: Option<&str>,
+        account__n: Option<&str>,
+        account__ic: Option<&str>,
+        account__nic: Option<&str>,
+        account__iew: Option<&str>,
+        account__niew: Option<&str>,
+        account__isw: Option<&str>,
+        account__nisw: Option<&str>,
+        account__ie: Option<&str>,
+        account__nie: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse2003, Error> {
@@ -1121,6 +1590,117 @@ impl CircuitsApi for CircuitsApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__n {
+            req_builder = req_builder.query(&[("slug__n", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ic {
+            req_builder = req_builder.query(&[("slug__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nic {
+            req_builder = req_builder.query(&[("slug__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__iew {
+            req_builder = req_builder.query(&[("slug__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__niew {
+            req_builder = req_builder.query(&[("slug__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__isw {
+            req_builder = req_builder.query(&[("slug__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nisw {
+            req_builder = req_builder.query(&[("slug__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ie {
+            req_builder = req_builder.query(&[("slug__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nie {
+            req_builder = req_builder.query(&[("slug__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = asn__n {
+            req_builder = req_builder.query(&[("asn__n", &s.to_string())]);
+        }
+        if let Some(ref s) = asn__lte {
+            req_builder = req_builder.query(&[("asn__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = asn__lt {
+            req_builder = req_builder.query(&[("asn__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = asn__gte {
+            req_builder = req_builder.query(&[("asn__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = asn__gt {
+            req_builder = req_builder.query(&[("asn__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = account__n {
+            req_builder = req_builder.query(&[("account__n", &s.to_string())]);
+        }
+        if let Some(ref s) = account__ic {
+            req_builder = req_builder.query(&[("account__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = account__nic {
+            req_builder = req_builder.query(&[("account__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = account__iew {
+            req_builder = req_builder.query(&[("account__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = account__niew {
+            req_builder = req_builder.query(&[("account__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = account__isw {
+            req_builder = req_builder.query(&[("account__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = account__nisw {
+            req_builder = req_builder.query(&[("account__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = account__ie {
+            req_builder = req_builder.query(&[("account__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = account__nie {
+            req_builder = req_builder.query(&[("account__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = region_id__n {
+            req_builder = req_builder.query(&[("region_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region__n {
+            req_builder = req_builder.query(&[("region__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site_id__n {
+            req_builder = req_builder.query(&[("site_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site__n {
+            req_builder = req_builder.query(&[("site__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);

@@ -22,9 +22,9 @@ pub struct IpAddress {
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
     pub tenant: Option<crate::models::NestedTenant>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<crate::models::Status6>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
-    pub role: Option<crate::models::Status>,
+    pub role: Option<crate::models::Role1>,
     #[serde(rename = "interface", skip_serializing_if = "Option::is_none")]
     pub interface: Option<crate::models::IpAddressInterface>,
     #[serde(rename = "nat_inside", skip_serializing_if = "Option::is_none")]

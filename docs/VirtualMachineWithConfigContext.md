@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
 **name** | **String** |  | 
-**status** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**status** | Option<[**crate::models::Status9**](Status_9.md)> |  | [optional]
 **site** | Option<[**crate::models::NestedSite**](NestedSite.md)> |  | [optional]
 **cluster** | [**crate::models::NestedCluster**](NestedCluster.md) |  | 
 **role** | Option<[**crate::models::NestedDeviceRole**](NestedDeviceRole.md)> |  | [optional]

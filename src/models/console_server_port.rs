@@ -17,7 +17,7 @@ pub struct ConsoleServerPort {
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Status>,
+    pub _type: Option<crate::models::ModelType>,
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(

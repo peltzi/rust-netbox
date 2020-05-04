@@ -1,6 +1,6 @@
 # \DcimApi
 
-All URIs are relative to *http://localhost:8000/api*
+All URIs are relative to *http://localhost:32815/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -274,7 +274,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_cables_list
 
-> crate::models::InlineResponse2004 dcim_cables_list(id, label, length, length_unit, q, _type, status, color, device_id, device, rack_id, rack, site_id, site, tenant_id, tenant, limit, offset)
+> crate::models::InlineResponse2004 dcim_cables_list(id, label, length, length_unit, q, _type, status, color, device_id, device, rack_id, rack, site_id, site, tenant_id, tenant, id__n, id__lte, id__lt, id__gte, id__gt, label__n, label__ic, label__nic, label__iew, label__niew, label__isw, label__nisw, label__ie, label__nie, length__n, length__lte, length__lt, length__gte, length__gt, length_unit__n, type__n, status__n, color__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -300,6 +300,29 @@ Name | Type | Description  | Required | Notes
 **site** | Option<**String**> |  |  |
 **tenant_id** | Option<**String**> |  |  |
 **tenant** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**label__n** | Option<**String**> |  |  |
+**label__ic** | Option<**String**> |  |  |
+**label__nic** | Option<**String**> |  |  |
+**label__iew** | Option<**String**> |  |  |
+**label__niew** | Option<**String**> |  |  |
+**label__isw** | Option<**String**> |  |  |
+**label__nisw** | Option<**String**> |  |  |
+**label__ie** | Option<**String**> |  |  |
+**label__nie** | Option<**String**> |  |  |
+**length__n** | Option<**String**> |  |  |
+**length__lte** | Option<**String**> |  |  |
+**length__lt** | Option<**String**> |  |  |
+**length__gte** | Option<**String**> |  |  |
+**length__gt** | Option<**String**> |  |  |
+**length_unit__n** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**status__n** | Option<**String**> |  |  |
+**color__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -493,7 +516,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_console_connections_list
 
-> crate::models::InlineResponse2005 dcim_console_connections_list(name, connection_status, site, device_id, device, limit, offset)
+> crate::models::InlineResponse2005 dcim_console_connections_list(name, connection_status, site, device_id, device, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, connection_status__n, limit, offset)
 
 
 ### Parameters
@@ -506,6 +529,16 @@ Name | Type | Description  | Required | Notes
 **site** | Option<**String**> |  |  |
 **device_id** | Option<**String**> |  |  |
 **device** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**connection_status__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -583,7 +616,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_console_port_templates_list
 
-> crate::models::InlineResponse2006 dcim_console_port_templates_list(id, name, _type, q, devicetype_id, limit, offset)
+> crate::models::InlineResponse2006 dcim_console_port_templates_list(id, name, _type, q, devicetype_id, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, type__n, devicetype_id__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -598,6 +631,22 @@ Name | Type | Description  | Required | Notes
 **_type** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
 **devicetype_id** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**devicetype_id__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -763,7 +812,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_console_ports_list
 
-> crate::models::InlineResponse2005 dcim_console_ports_list(id, name, description, connection_status, q, region_id, region, site_id, site, device_id, device, tag, _type, cabled, limit, offset)
+> crate::models::InlineResponse2005 dcim_console_ports_list(id, name, description, connection_status, q, region_id, region, site_id, site, device_id, device, tag, _type, cabled, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, description__n, description__ic, description__nic, description__iew, description__niew, description__isw, description__nisw, description__ie, description__nie, connection_status__n, region_id__n, region__n, site_id__n, site__n, device_id__n, device__n, tag__n, type__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -787,6 +836,38 @@ Name | Type | Description  | Required | Notes
 **tag** | Option<**String**> |  |  |
 **_type** | Option<**String**> |  |  |
 **cabled** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**description__n** | Option<**String**> |  |  |
+**description__ic** | Option<**String**> |  |  |
+**description__nic** | Option<**String**> |  |  |
+**description__iew** | Option<**String**> |  |  |
+**description__niew** | Option<**String**> |  |  |
+**description__isw** | Option<**String**> |  |  |
+**description__nisw** | Option<**String**> |  |  |
+**description__ie** | Option<**String**> |  |  |
+**description__nie** | Option<**String**> |  |  |
+**connection_status__n** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**device_id__n** | Option<**String**> |  |  |
+**device__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -982,7 +1063,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_console_server_port_templates_list
 
-> crate::models::InlineResponse2007 dcim_console_server_port_templates_list(id, name, _type, q, devicetype_id, limit, offset)
+> crate::models::InlineResponse2007 dcim_console_server_port_templates_list(id, name, _type, q, devicetype_id, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, type__n, devicetype_id__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -997,6 +1078,22 @@ Name | Type | Description  | Required | Notes
 **_type** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
 **devicetype_id** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**devicetype_id__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -1162,7 +1259,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_console_server_ports_list
 
-> crate::models::InlineResponse2008 dcim_console_server_ports_list(id, name, description, connection_status, q, region_id, region, site_id, site, device_id, device, tag, _type, cabled, limit, offset)
+> crate::models::InlineResponse2008 dcim_console_server_ports_list(id, name, description, connection_status, q, region_id, region, site_id, site, device_id, device, tag, _type, cabled, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, description__n, description__ic, description__nic, description__iew, description__niew, description__isw, description__nisw, description__ie, description__nie, connection_status__n, region_id__n, region__n, site_id__n, site__n, device_id__n, device__n, tag__n, type__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -1186,6 +1283,38 @@ Name | Type | Description  | Required | Notes
 **tag** | Option<**String**> |  |  |
 **_type** | Option<**String**> |  |  |
 **cabled** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**description__n** | Option<**String**> |  |  |
+**description__ic** | Option<**String**> |  |  |
+**description__nic** | Option<**String**> |  |  |
+**description__iew** | Option<**String**> |  |  |
+**description__niew** | Option<**String**> |  |  |
+**description__isw** | Option<**String**> |  |  |
+**description__nisw** | Option<**String**> |  |  |
+**description__ie** | Option<**String**> |  |  |
+**description__nie** | Option<**String**> |  |  |
+**connection_status__n** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**device_id__n** | Option<**String**> |  |  |
+**device__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -1381,7 +1510,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_device_bay_templates_list
 
-> crate::models::InlineResponse2009 dcim_device_bay_templates_list(id, name, q, devicetype_id, limit, offset)
+> crate::models::InlineResponse2009 dcim_device_bay_templates_list(id, name, q, devicetype_id, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, devicetype_id__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -1395,6 +1524,21 @@ Name | Type | Description  | Required | Notes
 **name** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
 **devicetype_id** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**devicetype_id__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -1560,7 +1704,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_device_bays_list
 
-> crate::models::InlineResponse20010 dcim_device_bays_list(id, name, description, q, region_id, region, site_id, site, device_id, device, tag, limit, offset)
+> crate::models::InlineResponse20010 dcim_device_bays_list(id, name, description, q, region_id, region, site_id, site, device_id, device, tag, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, description__n, description__ic, description__nic, description__iew, description__niew, description__isw, description__nisw, description__ie, description__nie, region_id__n, region__n, site_id__n, site__n, device_id__n, device__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -1581,6 +1725,36 @@ Name | Type | Description  | Required | Notes
 **device_id** | Option<**String**> |  |  |
 **device** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**description__n** | Option<**String**> |  |  |
+**description__ic** | Option<**String**> |  |  |
+**description__nic** | Option<**String**> |  |  |
+**description__iew** | Option<**String**> |  |  |
+**description__niew** | Option<**String**> |  |  |
+**description__isw** | Option<**String**> |  |  |
+**description__nisw** | Option<**String**> |  |  |
+**description__ie** | Option<**String**> |  |  |
+**description__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**device_id__n** | Option<**String**> |  |  |
+**device__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -1746,7 +1920,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_device_roles_list
 
-> crate::models::InlineResponse20011 dcim_device_roles_list(id, name, slug, color, vm_role, q, limit, offset)
+> crate::models::InlineResponse20011 dcim_device_roles_list(id, name, slug, color, vm_role, q, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, color__n, color__ic, color__nic, color__iew, color__niew, color__isw, color__nisw, color__ie, color__nie, limit, offset)
 
 
 Call to super to allow for caching
@@ -1762,6 +1936,38 @@ Name | Type | Description  | Required | Notes
 **color** | Option<**String**> |  |  |
 **vm_role** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
+**color__n** | Option<**String**> |  |  |
+**color__ic** | Option<**String**> |  |  |
+**color__nic** | Option<**String**> |  |  |
+**color__iew** | Option<**String**> |  |  |
+**color__niew** | Option<**String**> |  |  |
+**color__isw** | Option<**String**> |  |  |
+**color__nisw** | Option<**String**> |  |  |
+**color__ie** | Option<**String**> |  |  |
+**color__nie** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -1927,7 +2133,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_device_types_list
 
-> crate::models::InlineResponse20012 dcim_device_types_list(model, slug, part_number, u_height, is_full_depth, subdevice_role, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, manufacturer_id, manufacturer, console_ports, console_server_ports, power_ports, power_outlets, interfaces, pass_through_ports, device_bays, tag, limit, offset)
+> crate::models::InlineResponse20012 dcim_device_types_list(model, slug, part_number, u_height, is_full_depth, subdevice_role, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, manufacturer_id, manufacturer, console_ports, console_server_ports, power_ports, power_outlets, interfaces, pass_through_ports, device_bays, tag, model__n, model__ic, model__nic, model__iew, model__niew, model__isw, model__nisw, model__ie, model__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, part_number__n, part_number__ic, part_number__nic, part_number__iew, part_number__niew, part_number__isw, part_number__nisw, part_number__ie, part_number__nie, u_height__n, u_height__lte, u_height__lt, u_height__gte, u_height__gt, subdevice_role__n, manufacturer_id__n, manufacturer__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -1961,6 +2167,42 @@ Name | Type | Description  | Required | Notes
 **pass_through_ports** | Option<**String**> |  |  |
 **device_bays** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**model__n** | Option<**String**> |  |  |
+**model__ic** | Option<**String**> |  |  |
+**model__nic** | Option<**String**> |  |  |
+**model__iew** | Option<**String**> |  |  |
+**model__niew** | Option<**String**> |  |  |
+**model__isw** | Option<**String**> |  |  |
+**model__nisw** | Option<**String**> |  |  |
+**model__ie** | Option<**String**> |  |  |
+**model__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
+**part_number__n** | Option<**String**> |  |  |
+**part_number__ic** | Option<**String**> |  |  |
+**part_number__nic** | Option<**String**> |  |  |
+**part_number__iew** | Option<**String**> |  |  |
+**part_number__niew** | Option<**String**> |  |  |
+**part_number__isw** | Option<**String**> |  |  |
+**part_number__nisw** | Option<**String**> |  |  |
+**part_number__ie** | Option<**String**> |  |  |
+**part_number__nie** | Option<**String**> |  |  |
+**u_height__n** | Option<**String**> |  |  |
+**u_height__lte** | Option<**String**> |  |  |
+**u_height__lt** | Option<**String**> |  |  |
+**u_height__gte** | Option<**String**> |  |  |
+**u_height__gt** | Option<**String**> |  |  |
+**subdevice_role__n** | Option<**String**> |  |  |
+**manufacturer_id__n** | Option<**String**> |  |  |
+**manufacturer__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -2156,7 +2398,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_devices_list
 
-> crate::models::InlineResponse20013 dcim_devices_list(id, name, asset_tag, face, position, vc_position, vc_priority, local_context_data, tenant_group_id, tenant_group, tenant_id, tenant, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, manufacturer_id, manufacturer, device_type_id, role_id, role, platform_id, platform, region_id, region, site_id, site, rack_group_id, rack_id, cluster_id, model, status, is_full_depth, mac_address, serial, has_primary_ip, virtual_chassis_id, virtual_chassis_member, console_ports, console_server_ports, power_ports, power_outlets, interfaces, pass_through_ports, device_bays, tag, limit, offset)
+> crate::models::InlineResponse20013 dcim_devices_list(id, name, asset_tag, face, position, vc_position, vc_priority, tenant_group_id, tenant_group, tenant_id, tenant, local_context_data, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, manufacturer_id, manufacturer, device_type_id, role_id, role, platform_id, platform, region_id, region, site_id, site, rack_group_id, rack_id, cluster_id, model, status, is_full_depth, mac_address, serial, has_primary_ip, virtual_chassis_id, virtual_chassis_member, console_ports, console_server_ports, power_ports, power_outlets, interfaces, pass_through_ports, device_bays, tag, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, asset_tag__n, asset_tag__ic, asset_tag__nic, asset_tag__iew, asset_tag__niew, asset_tag__isw, asset_tag__nisw, asset_tag__ie, asset_tag__nie, face__n, position__n, position__lte, position__lt, position__gte, position__gt, vc_position__n, vc_position__lte, vc_position__lt, vc_position__gte, vc_position__gt, vc_priority__n, vc_priority__lte, vc_priority__lt, vc_priority__gte, vc_priority__gt, tenant_group_id__n, tenant_group__n, tenant_id__n, tenant__n, manufacturer_id__n, manufacturer__n, device_type_id__n, role_id__n, role__n, platform_id__n, platform__n, region_id__n, region__n, site_id__n, site__n, rack_group_id__n, rack_id__n, cluster_id__n, model__n, status__n, mac_address__n, mac_address__ic, mac_address__nic, mac_address__iew, mac_address__niew, mac_address__isw, mac_address__nisw, mac_address__ie, mac_address__nie, virtual_chassis_id__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -2173,11 +2415,11 @@ Name | Type | Description  | Required | Notes
 **position** | Option<**String**> |  |  |
 **vc_position** | Option<**String**> |  |  |
 **vc_priority** | Option<**String**> |  |  |
-**local_context_data** | Option<**String**> |  |  |
 **tenant_group_id** | Option<**String**> |  |  |
 **tenant_group** | Option<**String**> |  |  |
 **tenant_id** | Option<**String**> |  |  |
 **tenant** | Option<**String**> |  |  |
+**local_context_data** | Option<**String**> |  |  |
 **created** | Option<**String**> |  |  |
 **created__gte** | Option<**String**> |  |  |
 **created__lte** | Option<**String**> |  |  |
@@ -2216,6 +2458,76 @@ Name | Type | Description  | Required | Notes
 **pass_through_ports** | Option<**String**> |  |  |
 **device_bays** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**asset_tag__n** | Option<**String**> |  |  |
+**asset_tag__ic** | Option<**String**> |  |  |
+**asset_tag__nic** | Option<**String**> |  |  |
+**asset_tag__iew** | Option<**String**> |  |  |
+**asset_tag__niew** | Option<**String**> |  |  |
+**asset_tag__isw** | Option<**String**> |  |  |
+**asset_tag__nisw** | Option<**String**> |  |  |
+**asset_tag__ie** | Option<**String**> |  |  |
+**asset_tag__nie** | Option<**String**> |  |  |
+**face__n** | Option<**String**> |  |  |
+**position__n** | Option<**String**> |  |  |
+**position__lte** | Option<**String**> |  |  |
+**position__lt** | Option<**String**> |  |  |
+**position__gte** | Option<**String**> |  |  |
+**position__gt** | Option<**String**> |  |  |
+**vc_position__n** | Option<**String**> |  |  |
+**vc_position__lte** | Option<**String**> |  |  |
+**vc_position__lt** | Option<**String**> |  |  |
+**vc_position__gte** | Option<**String**> |  |  |
+**vc_position__gt** | Option<**String**> |  |  |
+**vc_priority__n** | Option<**String**> |  |  |
+**vc_priority__lte** | Option<**String**> |  |  |
+**vc_priority__lt** | Option<**String**> |  |  |
+**vc_priority__gte** | Option<**String**> |  |  |
+**vc_priority__gt** | Option<**String**> |  |  |
+**tenant_group_id__n** | Option<**String**> |  |  |
+**tenant_group__n** | Option<**String**> |  |  |
+**tenant_id__n** | Option<**String**> |  |  |
+**tenant__n** | Option<**String**> |  |  |
+**manufacturer_id__n** | Option<**String**> |  |  |
+**manufacturer__n** | Option<**String**> |  |  |
+**device_type_id__n** | Option<**String**> |  |  |
+**role_id__n** | Option<**String**> |  |  |
+**role__n** | Option<**String**> |  |  |
+**platform_id__n** | Option<**String**> |  |  |
+**platform__n** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**rack_group_id__n** | Option<**String**> |  |  |
+**rack_id__n** | Option<**String**> |  |  |
+**cluster_id__n** | Option<**String**> |  |  |
+**model__n** | Option<**String**> |  |  |
+**status__n** | Option<**String**> |  |  |
+**mac_address__n** | Option<**String**> |  |  |
+**mac_address__ic** | Option<**String**> |  |  |
+**mac_address__nic** | Option<**String**> |  |  |
+**mac_address__iew** | Option<**String**> |  |  |
+**mac_address__niew** | Option<**String**> |  |  |
+**mac_address__isw** | Option<**String**> |  |  |
+**mac_address__nisw** | Option<**String**> |  |  |
+**mac_address__ie** | Option<**String**> |  |  |
+**mac_address__nie** | Option<**String**> |  |  |
+**virtual_chassis_id__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -2412,7 +2724,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_front_port_templates_list
 
-> crate::models::InlineResponse20014 dcim_front_port_templates_list(id, name, _type, q, devicetype_id, limit, offset)
+> crate::models::InlineResponse20014 dcim_front_port_templates_list(id, name, _type, q, devicetype_id, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, type__n, devicetype_id__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -2427,6 +2739,22 @@ Name | Type | Description  | Required | Notes
 **_type** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
 **devicetype_id** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**devicetype_id__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -2592,7 +2920,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_front_ports_list
 
-> crate::models::InlineResponse20015 dcim_front_ports_list(id, name, _type, description, q, region_id, region, site_id, site, device_id, device, tag, cabled, limit, offset)
+> crate::models::InlineResponse20015 dcim_front_ports_list(id, name, _type, description, q, region_id, region, site_id, site, device_id, device, tag, cabled, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, type__n, description__n, description__ic, description__nic, description__iew, description__niew, description__isw, description__nisw, description__ie, description__nie, region_id__n, region__n, site_id__n, site__n, device_id__n, device__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -2615,6 +2943,37 @@ Name | Type | Description  | Required | Notes
 **device** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
 **cabled** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**description__n** | Option<**String**> |  |  |
+**description__ic** | Option<**String**> |  |  |
+**description__nic** | Option<**String**> |  |  |
+**description__iew** | Option<**String**> |  |  |
+**description__niew** | Option<**String**> |  |  |
+**description__isw** | Option<**String**> |  |  |
+**description__nisw** | Option<**String**> |  |  |
+**description__ie** | Option<**String**> |  |  |
+**description__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**device_id__n** | Option<**String**> |  |  |
+**device__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -2724,7 +3083,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_interface_connections_list
 
-> crate::models::InlineResponse20016 dcim_interface_connections_list(connection_status, site, device_id, device, limit, offset)
+> crate::models::InlineResponse20016 dcim_interface_connections_list(connection_status, site, device_id, device, connection_status__n, limit, offset)
 
 
 ### Parameters
@@ -2736,6 +3095,7 @@ Name | Type | Description  | Required | Notes
 **site** | Option<**String**> |  |  |
 **device_id** | Option<**String**> |  |  |
 **device** | Option<**String**> |  |  |
+**connection_status__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -2813,7 +3173,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_interface_templates_list
 
-> crate::models::InlineResponse20017 dcim_interface_templates_list(id, name, _type, mgmt_only, q, devicetype_id, limit, offset)
+> crate::models::InlineResponse20017 dcim_interface_templates_list(id, name, _type, mgmt_only, q, devicetype_id, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, type__n, devicetype_id__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -2829,6 +3189,22 @@ Name | Type | Description  | Required | Notes
 **mgmt_only** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
 **devicetype_id** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**devicetype_id__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -3024,7 +3400,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_interfaces_list
 
-> crate::models::InlineResponse20018 dcim_interfaces_list(id, name, connection_status, _type, enabled, mtu, mgmt_only, mode, description, q, region_id, region, site_id, site, device_id, device, tag, cabled, kind, lag_id, mac_address, vlan_id, vlan, limit, offset)
+> crate::models::InlineResponse20018 dcim_interfaces_list(id, name, connection_status, _type, enabled, mtu, mgmt_only, mode, description, q, region_id, region, site_id, site, device_id, device, tag, cabled, kind, lag_id, mac_address, vlan_id, vlan, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, connection_status__n, type__n, mtu__n, mtu__lte, mtu__lt, mtu__gte, mtu__gt, mode__n, description__n, description__ic, description__nic, description__iew, description__niew, description__isw, description__nisw, description__ie, description__nie, region_id__n, region__n, site_id__n, site__n, tag__n, lag_id__n, mac_address__n, mac_address__ic, mac_address__nic, mac_address__iew, mac_address__niew, mac_address__isw, mac_address__nisw, mac_address__ie, mac_address__nie, limit, offset)
 
 
 Call to super to allow for caching
@@ -3057,6 +3433,52 @@ Name | Type | Description  | Required | Notes
 **mac_address** | Option<**String**> |  |  |
 **vlan_id** | Option<**String**> |  |  |
 **vlan** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**connection_status__n** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**mtu__n** | Option<**String**> |  |  |
+**mtu__lte** | Option<**String**> |  |  |
+**mtu__lt** | Option<**String**> |  |  |
+**mtu__gte** | Option<**String**> |  |  |
+**mtu__gt** | Option<**String**> |  |  |
+**mode__n** | Option<**String**> |  |  |
+**description__n** | Option<**String**> |  |  |
+**description__ic** | Option<**String**> |  |  |
+**description__nic** | Option<**String**> |  |  |
+**description__iew** | Option<**String**> |  |  |
+**description__niew** | Option<**String**> |  |  |
+**description__isw** | Option<**String**> |  |  |
+**description__nisw** | Option<**String**> |  |  |
+**description__ie** | Option<**String**> |  |  |
+**description__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
+**lag_id__n** | Option<**String**> |  |  |
+**mac_address__n** | Option<**String**> |  |  |
+**mac_address__ic** | Option<**String**> |  |  |
+**mac_address__nic** | Option<**String**> |  |  |
+**mac_address__iew** | Option<**String**> |  |  |
+**mac_address__niew** | Option<**String**> |  |  |
+**mac_address__isw** | Option<**String**> |  |  |
+**mac_address__nisw** | Option<**String**> |  |  |
+**mac_address__ie** | Option<**String**> |  |  |
+**mac_address__nie** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -3252,7 +3674,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_inventory_items_list
 
-> crate::models::InlineResponse20019 dcim_inventory_items_list(id, name, part_id, asset_tag, discovered, q, region_id, region, site_id, site, device_id, device, tag, parent_id, manufacturer_id, manufacturer, serial, limit, offset)
+> crate::models::InlineResponse20019 dcim_inventory_items_list(id, name, part_id, asset_tag, discovered, q, region_id, region, site_id, site, device_id, device, tag, parent_id, manufacturer_id, manufacturer, serial, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, part_id__n, part_id__ic, part_id__nic, part_id__iew, part_id__niew, part_id__isw, part_id__nisw, part_id__ie, part_id__nie, asset_tag__n, asset_tag__ic, asset_tag__nic, asset_tag__iew, asset_tag__niew, asset_tag__isw, asset_tag__nisw, asset_tag__ie, asset_tag__nie, region_id__n, region__n, site_id__n, site__n, device_id__n, device__n, tag__n, parent_id__n, manufacturer_id__n, manufacturer__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -3279,6 +3701,48 @@ Name | Type | Description  | Required | Notes
 **manufacturer_id** | Option<**String**> |  |  |
 **manufacturer** | Option<**String**> |  |  |
 **serial** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**part_id__n** | Option<**String**> |  |  |
+**part_id__ic** | Option<**String**> |  |  |
+**part_id__nic** | Option<**String**> |  |  |
+**part_id__iew** | Option<**String**> |  |  |
+**part_id__niew** | Option<**String**> |  |  |
+**part_id__isw** | Option<**String**> |  |  |
+**part_id__nisw** | Option<**String**> |  |  |
+**part_id__ie** | Option<**String**> |  |  |
+**part_id__nie** | Option<**String**> |  |  |
+**asset_tag__n** | Option<**String**> |  |  |
+**asset_tag__ic** | Option<**String**> |  |  |
+**asset_tag__nic** | Option<**String**> |  |  |
+**asset_tag__iew** | Option<**String**> |  |  |
+**asset_tag__niew** | Option<**String**> |  |  |
+**asset_tag__isw** | Option<**String**> |  |  |
+**asset_tag__nisw** | Option<**String**> |  |  |
+**asset_tag__ie** | Option<**String**> |  |  |
+**asset_tag__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**device_id__n** | Option<**String**> |  |  |
+**device__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
+**parent_id__n** | Option<**String**> |  |  |
+**manufacturer_id__n** | Option<**String**> |  |  |
+**manufacturer__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -3444,7 +3908,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_manufacturers_list
 
-> crate::models::InlineResponse20020 dcim_manufacturers_list(id, name, slug, q, limit, offset)
+> crate::models::InlineResponse20020 dcim_manufacturers_list(id, name, slug, q, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, limit, offset)
 
 
 Call to super to allow for caching
@@ -3458,6 +3922,29 @@ Name | Type | Description  | Required | Notes
 **name** | Option<**String**> |  |  |
 **slug** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -3623,7 +4110,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_platforms_list
 
-> crate::models::InlineResponse20021 dcim_platforms_list(id, name, slug, napalm_driver, q, manufacturer_id, manufacturer, limit, offset)
+> crate::models::InlineResponse20021 dcim_platforms_list(id, name, slug, napalm_driver, q, manufacturer_id, manufacturer, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, napalm_driver__n, napalm_driver__ic, napalm_driver__nic, napalm_driver__iew, napalm_driver__niew, napalm_driver__isw, napalm_driver__nisw, napalm_driver__ie, napalm_driver__nie, manufacturer_id__n, manufacturer__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -3640,6 +4127,40 @@ Name | Type | Description  | Required | Notes
 **q** | Option<**String**> |  |  |
 **manufacturer_id** | Option<**String**> |  |  |
 **manufacturer** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
+**napalm_driver__n** | Option<**String**> |  |  |
+**napalm_driver__ic** | Option<**String**> |  |  |
+**napalm_driver__nic** | Option<**String**> |  |  |
+**napalm_driver__iew** | Option<**String**> |  |  |
+**napalm_driver__niew** | Option<**String**> |  |  |
+**napalm_driver__isw** | Option<**String**> |  |  |
+**napalm_driver__nisw** | Option<**String**> |  |  |
+**napalm_driver__ie** | Option<**String**> |  |  |
+**napalm_driver__nie** | Option<**String**> |  |  |
+**manufacturer_id__n** | Option<**String**> |  |  |
+**manufacturer__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -3749,7 +4270,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_power_connections_list
 
-> crate::models::InlineResponse20022 dcim_power_connections_list(name, connection_status, site, device_id, device, limit, offset)
+> crate::models::InlineResponse20022 dcim_power_connections_list(name, connection_status, site, device_id, device, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, connection_status__n, limit, offset)
 
 
 ### Parameters
@@ -3762,6 +4283,16 @@ Name | Type | Description  | Required | Notes
 **site** | Option<**String**> |  |  |
 **device_id** | Option<**String**> |  |  |
 **device** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**connection_status__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -3839,7 +4370,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_power_feeds_list
 
-> crate::models::InlineResponse20023 dcim_power_feeds_list(name, status, _type, supply, phase, voltage, amperage, max_utilization, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, region_id, region, site_id, site, power_panel_id, rack_id, tag, limit, offset)
+> crate::models::InlineResponse20023 dcim_power_feeds_list(name, status, _type, supply, phase, voltage, amperage, max_utilization, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, region_id, region, site_id, site, power_panel_id, rack_id, tag, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, status__n, type__n, supply__n, phase__n, voltage__n, voltage__lte, voltage__lt, voltage__gte, voltage__gt, amperage__n, amperage__lte, amperage__lt, amperage__gte, amperage__gt, max_utilization__n, max_utilization__lte, max_utilization__lt, max_utilization__gte, max_utilization__gt, region_id__n, region__n, site_id__n, site__n, power_panel_id__n, rack_id__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -3872,6 +4403,41 @@ Name | Type | Description  | Required | Notes
 **power_panel_id** | Option<**String**> |  |  |
 **rack_id** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**status__n** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**supply__n** | Option<**String**> |  |  |
+**phase__n** | Option<**String**> |  |  |
+**voltage__n** | Option<**String**> |  |  |
+**voltage__lte** | Option<**String**> |  |  |
+**voltage__lt** | Option<**String**> |  |  |
+**voltage__gte** | Option<**String**> |  |  |
+**voltage__gt** | Option<**String**> |  |  |
+**amperage__n** | Option<**String**> |  |  |
+**amperage__lte** | Option<**String**> |  |  |
+**amperage__lt** | Option<**String**> |  |  |
+**amperage__gte** | Option<**String**> |  |  |
+**amperage__gt** | Option<**String**> |  |  |
+**max_utilization__n** | Option<**String**> |  |  |
+**max_utilization__lte** | Option<**String**> |  |  |
+**max_utilization__lt** | Option<**String**> |  |  |
+**max_utilization__gte** | Option<**String**> |  |  |
+**max_utilization__gt** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**power_panel_id__n** | Option<**String**> |  |  |
+**rack_id__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -4037,7 +4603,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_power_outlet_templates_list
 
-> crate::models::InlineResponse20024 dcim_power_outlet_templates_list(id, name, _type, feed_leg, q, devicetype_id, limit, offset)
+> crate::models::InlineResponse20024 dcim_power_outlet_templates_list(id, name, _type, feed_leg, q, devicetype_id, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, type__n, feed_leg__n, devicetype_id__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -4053,6 +4619,23 @@ Name | Type | Description  | Required | Notes
 **feed_leg** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
 **devicetype_id** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**feed_leg__n** | Option<**String**> |  |  |
+**devicetype_id__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -4218,7 +4801,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_power_outlets_list
 
-> crate::models::InlineResponse20025 dcim_power_outlets_list(id, name, feed_leg, description, connection_status, q, region_id, region, site_id, site, device_id, device, tag, _type, cabled, limit, offset)
+> crate::models::InlineResponse20025 dcim_power_outlets_list(id, name, feed_leg, description, connection_status, q, region_id, region, site_id, site, device_id, device, tag, _type, cabled, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, feed_leg__n, description__n, description__ic, description__nic, description__iew, description__niew, description__isw, description__nisw, description__ie, description__nie, connection_status__n, region_id__n, region__n, site_id__n, site__n, device_id__n, device__n, tag__n, type__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -4243,6 +4826,39 @@ Name | Type | Description  | Required | Notes
 **tag** | Option<**String**> |  |  |
 **_type** | Option<**String**> |  |  |
 **cabled** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**feed_leg__n** | Option<**String**> |  |  |
+**description__n** | Option<**String**> |  |  |
+**description__ic** | Option<**String**> |  |  |
+**description__nic** | Option<**String**> |  |  |
+**description__iew** | Option<**String**> |  |  |
+**description__niew** | Option<**String**> |  |  |
+**description__isw** | Option<**String**> |  |  |
+**description__nisw** | Option<**String**> |  |  |
+**description__ie** | Option<**String**> |  |  |
+**description__nie** | Option<**String**> |  |  |
+**connection_status__n** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**device_id__n** | Option<**String**> |  |  |
+**device__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -4438,7 +5054,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_power_panels_list
 
-> crate::models::InlineResponse20026 dcim_power_panels_list(name, id__in, q, region_id, region, site_id, site, rack_group_id, limit, offset)
+> crate::models::InlineResponse20026 dcim_power_panels_list(name, id__in, q, region_id, region, site_id, site, rack_group_id, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, region_id__n, region__n, site_id__n, site__n, rack_group_id__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -4456,6 +5072,20 @@ Name | Type | Description  | Required | Notes
 **site_id** | Option<**String**> |  |  |
 **site** | Option<**String**> |  |  |
 **rack_group_id** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**rack_group_id__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -4621,7 +5251,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_power_port_templates_list
 
-> crate::models::InlineResponse20027 dcim_power_port_templates_list(id, name, _type, maximum_draw, allocated_draw, q, devicetype_id, limit, offset)
+> crate::models::InlineResponse20027 dcim_power_port_templates_list(id, name, _type, maximum_draw, allocated_draw, q, devicetype_id, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, type__n, maximum_draw__n, maximum_draw__lte, maximum_draw__lt, maximum_draw__gte, maximum_draw__gt, allocated_draw__n, allocated_draw__lte, allocated_draw__lt, allocated_draw__gte, allocated_draw__gt, devicetype_id__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -4638,6 +5268,32 @@ Name | Type | Description  | Required | Notes
 **allocated_draw** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
 **devicetype_id** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**maximum_draw__n** | Option<**String**> |  |  |
+**maximum_draw__lte** | Option<**String**> |  |  |
+**maximum_draw__lt** | Option<**String**> |  |  |
+**maximum_draw__gte** | Option<**String**> |  |  |
+**maximum_draw__gt** | Option<**String**> |  |  |
+**allocated_draw__n** | Option<**String**> |  |  |
+**allocated_draw__lte** | Option<**String**> |  |  |
+**allocated_draw__lt** | Option<**String**> |  |  |
+**allocated_draw__gte** | Option<**String**> |  |  |
+**allocated_draw__gt** | Option<**String**> |  |  |
+**devicetype_id__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -4803,7 +5459,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_power_ports_list
 
-> crate::models::InlineResponse20022 dcim_power_ports_list(id, name, maximum_draw, allocated_draw, description, connection_status, q, region_id, region, site_id, site, device_id, device, tag, _type, cabled, limit, offset)
+> crate::models::InlineResponse20022 dcim_power_ports_list(id, name, maximum_draw, allocated_draw, description, connection_status, q, region_id, region, site_id, site, device_id, device, tag, _type, cabled, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, maximum_draw__n, maximum_draw__lte, maximum_draw__lt, maximum_draw__gte, maximum_draw__gt, allocated_draw__n, allocated_draw__lte, allocated_draw__lt, allocated_draw__gte, allocated_draw__gt, description__n, description__ic, description__nic, description__iew, description__niew, description__isw, description__nisw, description__ie, description__nie, connection_status__n, region_id__n, region__n, site_id__n, site__n, device_id__n, device__n, tag__n, type__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -4829,6 +5485,48 @@ Name | Type | Description  | Required | Notes
 **tag** | Option<**String**> |  |  |
 **_type** | Option<**String**> |  |  |
 **cabled** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**maximum_draw__n** | Option<**String**> |  |  |
+**maximum_draw__lte** | Option<**String**> |  |  |
+**maximum_draw__lt** | Option<**String**> |  |  |
+**maximum_draw__gte** | Option<**String**> |  |  |
+**maximum_draw__gt** | Option<**String**> |  |  |
+**allocated_draw__n** | Option<**String**> |  |  |
+**allocated_draw__lte** | Option<**String**> |  |  |
+**allocated_draw__lt** | Option<**String**> |  |  |
+**allocated_draw__gte** | Option<**String**> |  |  |
+**allocated_draw__gt** | Option<**String**> |  |  |
+**description__n** | Option<**String**> |  |  |
+**description__ic** | Option<**String**> |  |  |
+**description__nic** | Option<**String**> |  |  |
+**description__iew** | Option<**String**> |  |  |
+**description__niew** | Option<**String**> |  |  |
+**description__isw** | Option<**String**> |  |  |
+**description__nisw** | Option<**String**> |  |  |
+**description__ie** | Option<**String**> |  |  |
+**description__nie** | Option<**String**> |  |  |
+**connection_status__n** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**device_id__n** | Option<**String**> |  |  |
+**device__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -5024,7 +5722,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_rack_groups_list
 
-> crate::models::InlineResponse20028 dcim_rack_groups_list(id, name, slug, q, region_id, region, site_id, site, limit, offset)
+> crate::models::InlineResponse20028 dcim_rack_groups_list(id, name, slug, q, region_id, region, site_id, site, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, region_id__n, region__n, site_id__n, site__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -5042,6 +5740,33 @@ Name | Type | Description  | Required | Notes
 **region** | Option<**String**> |  |  |
 **site_id** | Option<**String**> |  |  |
 **site** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -5207,7 +5932,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_rack_reservations_list
 
-> crate::models::InlineResponse20029 dcim_rack_reservations_list(created, tenant_group_id, tenant_group, tenant_id, tenant, id__in, q, rack_id, site_id, site, group_id, group, user_id, user, limit, offset)
+> crate::models::InlineResponse20029 dcim_rack_reservations_list(created, tenant_group_id, tenant_group, tenant_id, tenant, id__in, q, rack_id, site_id, site, group_id, group, user_id, user, created__n, created__lte, created__lt, created__gte, created__gt, tenant_group_id__n, tenant_group__n, tenant_id__n, tenant__n, rack_id__n, site_id__n, site__n, group_id__n, group__n, user_id__n, user__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -5231,6 +5956,22 @@ Name | Type | Description  | Required | Notes
 **group** | Option<**String**> |  |  |
 **user_id** | Option<**String**> |  |  |
 **user** | Option<**String**> |  |  |
+**created__n** | Option<**String**> |  |  |
+**created__lte** | Option<**String**> |  |  |
+**created__lt** | Option<**String**> |  |  |
+**created__gte** | Option<**String**> |  |  |
+**created__gt** | Option<**String**> |  |  |
+**tenant_group_id__n** | Option<**String**> |  |  |
+**tenant_group__n** | Option<**String**> |  |  |
+**tenant_id__n** | Option<**String**> |  |  |
+**tenant__n** | Option<**String**> |  |  |
+**rack_id__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**group_id__n** | Option<**String**> |  |  |
+**group__n** | Option<**String**> |  |  |
+**user_id__n** | Option<**String**> |  |  |
+**user__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -5396,7 +6137,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_rack_roles_list
 
-> crate::models::InlineResponse20030 dcim_rack_roles_list(id, name, slug, color, q, limit, offset)
+> crate::models::InlineResponse20030 dcim_rack_roles_list(id, name, slug, color, q, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, color__n, color__ic, color__nic, color__iew, color__niew, color__isw, color__nisw, color__ie, color__nie, limit, offset)
 
 
 Call to super to allow for caching
@@ -5411,6 +6152,38 @@ Name | Type | Description  | Required | Notes
 **slug** | Option<**String**> |  |  |
 **color** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
+**color__n** | Option<**String**> |  |  |
+**color__ic** | Option<**String**> |  |  |
+**color__nic** | Option<**String**> |  |  |
+**color__iew** | Option<**String**> |  |  |
+**color__niew** | Option<**String**> |  |  |
+**color__isw** | Option<**String**> |  |  |
+**color__nisw** | Option<**String**> |  |  |
+**color__ie** | Option<**String**> |  |  |
+**color__nie** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -5615,7 +6388,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_racks_list
 
-> crate::models::InlineResponse20031 dcim_racks_list(id, name, facility_id, asset_tag, _type, width, u_height, desc_units, outer_width, outer_depth, outer_unit, tenant_group_id, tenant_group, tenant_id, tenant, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, region_id, region, site_id, site, group_id, group, status, role_id, role, serial, tag, limit, offset)
+> crate::models::InlineResponse20031 dcim_racks_list(id, name, facility_id, asset_tag, _type, width, u_height, desc_units, outer_width, outer_depth, outer_unit, tenant_group_id, tenant_group, tenant_id, tenant, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, region_id, region, site_id, site, group_id, group, status, role_id, role, serial, tag, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, facility_id__n, facility_id__ic, facility_id__nic, facility_id__iew, facility_id__niew, facility_id__isw, facility_id__nisw, facility_id__ie, facility_id__nie, asset_tag__n, asset_tag__ic, asset_tag__nic, asset_tag__iew, asset_tag__niew, asset_tag__isw, asset_tag__nisw, asset_tag__ie, asset_tag__nie, type__n, width__n, u_height__n, u_height__lte, u_height__lt, u_height__gte, u_height__gt, outer_width__n, outer_width__lte, outer_width__lt, outer_width__gte, outer_width__gt, outer_depth__n, outer_depth__lte, outer_depth__lt, outer_depth__gte, outer_depth__gt, outer_unit__n, tenant_group_id__n, tenant_group__n, tenant_id__n, tenant__n, region_id__n, region__n, site_id__n, site__n, group_id__n, group__n, status__n, role_id__n, role__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -5659,6 +6432,70 @@ Name | Type | Description  | Required | Notes
 **role** | Option<**String**> |  |  |
 **serial** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**facility_id__n** | Option<**String**> |  |  |
+**facility_id__ic** | Option<**String**> |  |  |
+**facility_id__nic** | Option<**String**> |  |  |
+**facility_id__iew** | Option<**String**> |  |  |
+**facility_id__niew** | Option<**String**> |  |  |
+**facility_id__isw** | Option<**String**> |  |  |
+**facility_id__nisw** | Option<**String**> |  |  |
+**facility_id__ie** | Option<**String**> |  |  |
+**facility_id__nie** | Option<**String**> |  |  |
+**asset_tag__n** | Option<**String**> |  |  |
+**asset_tag__ic** | Option<**String**> |  |  |
+**asset_tag__nic** | Option<**String**> |  |  |
+**asset_tag__iew** | Option<**String**> |  |  |
+**asset_tag__niew** | Option<**String**> |  |  |
+**asset_tag__isw** | Option<**String**> |  |  |
+**asset_tag__nisw** | Option<**String**> |  |  |
+**asset_tag__ie** | Option<**String**> |  |  |
+**asset_tag__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**width__n** | Option<**String**> |  |  |
+**u_height__n** | Option<**String**> |  |  |
+**u_height__lte** | Option<**String**> |  |  |
+**u_height__lt** | Option<**String**> |  |  |
+**u_height__gte** | Option<**String**> |  |  |
+**u_height__gt** | Option<**String**> |  |  |
+**outer_width__n** | Option<**String**> |  |  |
+**outer_width__lte** | Option<**String**> |  |  |
+**outer_width__lt** | Option<**String**> |  |  |
+**outer_width__gte** | Option<**String**> |  |  |
+**outer_width__gt** | Option<**String**> |  |  |
+**outer_depth__n** | Option<**String**> |  |  |
+**outer_depth__lte** | Option<**String**> |  |  |
+**outer_depth__lt** | Option<**String**> |  |  |
+**outer_depth__gte** | Option<**String**> |  |  |
+**outer_depth__gt** | Option<**String**> |  |  |
+**outer_unit__n** | Option<**String**> |  |  |
+**tenant_group_id__n** | Option<**String**> |  |  |
+**tenant_group__n** | Option<**String**> |  |  |
+**tenant_id__n** | Option<**String**> |  |  |
+**tenant__n** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**group_id__n** | Option<**String**> |  |  |
+**group__n** | Option<**String**> |  |  |
+**status__n** | Option<**String**> |  |  |
+**role_id__n** | Option<**String**> |  |  |
+**role__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -5854,7 +6691,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_rear_port_templates_list
 
-> crate::models::InlineResponse20032 dcim_rear_port_templates_list(id, name, _type, positions, q, devicetype_id, limit, offset)
+> crate::models::InlineResponse20032 dcim_rear_port_templates_list(id, name, _type, positions, q, devicetype_id, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, type__n, positions__n, positions__lte, positions__lt, positions__gte, positions__gt, devicetype_id__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -5870,6 +6707,27 @@ Name | Type | Description  | Required | Notes
 **positions** | Option<**String**> |  |  |
 **q** | Option<**String**> |  |  |
 **devicetype_id** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**positions__n** | Option<**String**> |  |  |
+**positions__lte** | Option<**String**> |  |  |
+**positions__lt** | Option<**String**> |  |  |
+**positions__gte** | Option<**String**> |  |  |
+**positions__gt** | Option<**String**> |  |  |
+**devicetype_id__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -6035,7 +6893,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_rear_ports_list
 
-> crate::models::InlineResponse20033 dcim_rear_ports_list(id, name, _type, positions, description, q, region_id, region, site_id, site, device_id, device, tag, cabled, limit, offset)
+> crate::models::InlineResponse20033 dcim_rear_ports_list(id, name, _type, positions, description, q, region_id, region, site_id, site, device_id, device, tag, cabled, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, type__n, positions__n, positions__lte, positions__lt, positions__gte, positions__gt, description__n, description__ic, description__nic, description__iew, description__niew, description__isw, description__nisw, description__ie, description__nie, region_id__n, region__n, site_id__n, site__n, device_id__n, device__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -6059,6 +6917,42 @@ Name | Type | Description  | Required | Notes
 **device** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
 **cabled** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**type__n** | Option<**String**> |  |  |
+**positions__n** | Option<**String**> |  |  |
+**positions__lte** | Option<**String**> |  |  |
+**positions__lt** | Option<**String**> |  |  |
+**positions__gte** | Option<**String**> |  |  |
+**positions__gt** | Option<**String**> |  |  |
+**description__n** | Option<**String**> |  |  |
+**description__ic** | Option<**String**> |  |  |
+**description__nic** | Option<**String**> |  |  |
+**description__iew** | Option<**String**> |  |  |
+**description__niew** | Option<**String**> |  |  |
+**description__isw** | Option<**String**> |  |  |
+**description__nisw** | Option<**String**> |  |  |
+**description__ie** | Option<**String**> |  |  |
+**description__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**device_id__n** | Option<**String**> |  |  |
+**device__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -6224,7 +7118,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_regions_list
 
-> crate::models::InlineResponse20034 dcim_regions_list(id, name, slug, q, parent_id, parent, limit, offset)
+> crate::models::InlineResponse20034 dcim_regions_list(id, name, slug, q, parent_id, parent, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, parent_id__n, parent__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -6240,6 +7134,31 @@ Name | Type | Description  | Required | Notes
 **q** | Option<**String**> |  |  |
 **parent_id** | Option<**String**> |  |  |
 **parent** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
+**parent_id__n** | Option<**String**> |  |  |
+**parent__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -6435,7 +7354,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_sites_list
 
-> crate::models::InlineResponse20035 dcim_sites_list(id, name, slug, facility, asn, latitude, longitude, contact_name, contact_phone, contact_email, tenant_group_id, tenant_group, tenant_id, tenant, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, status, region_id, region, tag, limit, offset)
+> crate::models::InlineResponse20035 dcim_sites_list(id, name, slug, facility, asn, latitude, longitude, contact_name, contact_phone, contact_email, tenant_group_id, tenant_group, tenant_id, tenant, created, created__gte, created__lte, last_updated, last_updated__gte, last_updated__lte, id__in, q, status, region_id, region, tag, id__n, id__lte, id__lt, id__gte, id__gt, name__n, name__ic, name__nic, name__iew, name__niew, name__isw, name__nisw, name__ie, name__nie, slug__n, slug__ic, slug__nic, slug__iew, slug__niew, slug__isw, slug__nisw, slug__ie, slug__nie, facility__n, facility__ic, facility__nic, facility__iew, facility__niew, facility__isw, facility__nisw, facility__ie, facility__nie, asn__n, asn__lte, asn__lt, asn__gte, asn__gt, latitude__n, latitude__lte, latitude__lt, latitude__gte, latitude__gt, longitude__n, longitude__lte, longitude__lt, longitude__gte, longitude__gt, contact_name__n, contact_name__ic, contact_name__nic, contact_name__iew, contact_name__niew, contact_name__isw, contact_name__nisw, contact_name__ie, contact_name__nie, contact_phone__n, contact_phone__ic, contact_phone__nic, contact_phone__iew, contact_phone__niew, contact_phone__isw, contact_phone__nisw, contact_phone__ie, contact_phone__nie, contact_email__n, contact_email__ic, contact_email__nic, contact_email__iew, contact_email__niew, contact_email__isw, contact_email__nisw, contact_email__ie, contact_email__nie, tenant_group_id__n, tenant_group__n, tenant_id__n, tenant__n, status__n, region_id__n, region__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -6471,6 +7390,88 @@ Name | Type | Description  | Required | Notes
 **region_id** | Option<**String**> |  |  |
 **region** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**name__n** | Option<**String**> |  |  |
+**name__ic** | Option<**String**> |  |  |
+**name__nic** | Option<**String**> |  |  |
+**name__iew** | Option<**String**> |  |  |
+**name__niew** | Option<**String**> |  |  |
+**name__isw** | Option<**String**> |  |  |
+**name__nisw** | Option<**String**> |  |  |
+**name__ie** | Option<**String**> |  |  |
+**name__nie** | Option<**String**> |  |  |
+**slug__n** | Option<**String**> |  |  |
+**slug__ic** | Option<**String**> |  |  |
+**slug__nic** | Option<**String**> |  |  |
+**slug__iew** | Option<**String**> |  |  |
+**slug__niew** | Option<**String**> |  |  |
+**slug__isw** | Option<**String**> |  |  |
+**slug__nisw** | Option<**String**> |  |  |
+**slug__ie** | Option<**String**> |  |  |
+**slug__nie** | Option<**String**> |  |  |
+**facility__n** | Option<**String**> |  |  |
+**facility__ic** | Option<**String**> |  |  |
+**facility__nic** | Option<**String**> |  |  |
+**facility__iew** | Option<**String**> |  |  |
+**facility__niew** | Option<**String**> |  |  |
+**facility__isw** | Option<**String**> |  |  |
+**facility__nisw** | Option<**String**> |  |  |
+**facility__ie** | Option<**String**> |  |  |
+**facility__nie** | Option<**String**> |  |  |
+**asn__n** | Option<**String**> |  |  |
+**asn__lte** | Option<**String**> |  |  |
+**asn__lt** | Option<**String**> |  |  |
+**asn__gte** | Option<**String**> |  |  |
+**asn__gt** | Option<**String**> |  |  |
+**latitude__n** | Option<**String**> |  |  |
+**latitude__lte** | Option<**String**> |  |  |
+**latitude__lt** | Option<**String**> |  |  |
+**latitude__gte** | Option<**String**> |  |  |
+**latitude__gt** | Option<**String**> |  |  |
+**longitude__n** | Option<**String**> |  |  |
+**longitude__lte** | Option<**String**> |  |  |
+**longitude__lt** | Option<**String**> |  |  |
+**longitude__gte** | Option<**String**> |  |  |
+**longitude__gt** | Option<**String**> |  |  |
+**contact_name__n** | Option<**String**> |  |  |
+**contact_name__ic** | Option<**String**> |  |  |
+**contact_name__nic** | Option<**String**> |  |  |
+**contact_name__iew** | Option<**String**> |  |  |
+**contact_name__niew** | Option<**String**> |  |  |
+**contact_name__isw** | Option<**String**> |  |  |
+**contact_name__nisw** | Option<**String**> |  |  |
+**contact_name__ie** | Option<**String**> |  |  |
+**contact_name__nie** | Option<**String**> |  |  |
+**contact_phone__n** | Option<**String**> |  |  |
+**contact_phone__ic** | Option<**String**> |  |  |
+**contact_phone__nic** | Option<**String**> |  |  |
+**contact_phone__iew** | Option<**String**> |  |  |
+**contact_phone__niew** | Option<**String**> |  |  |
+**contact_phone__isw** | Option<**String**> |  |  |
+**contact_phone__nisw** | Option<**String**> |  |  |
+**contact_phone__ie** | Option<**String**> |  |  |
+**contact_phone__nie** | Option<**String**> |  |  |
+**contact_email__n** | Option<**String**> |  |  |
+**contact_email__ic** | Option<**String**> |  |  |
+**contact_email__nic** | Option<**String**> |  |  |
+**contact_email__iew** | Option<**String**> |  |  |
+**contact_email__niew** | Option<**String**> |  |  |
+**contact_email__isw** | Option<**String**> |  |  |
+**contact_email__nisw** | Option<**String**> |  |  |
+**contact_email__ie** | Option<**String**> |  |  |
+**contact_email__nie** | Option<**String**> |  |  |
+**tenant_group_id__n** | Option<**String**> |  |  |
+**tenant_group__n** | Option<**String**> |  |  |
+**tenant_id__n** | Option<**String**> |  |  |
+**tenant__n** | Option<**String**> |  |  |
+**status__n** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 
@@ -6636,7 +7637,7 @@ Name | Type | Description  | Required | Notes
 
 ## dcim_virtual_chassis_list
 
-> crate::models::InlineResponse20036 dcim_virtual_chassis_list(id, domain, q, region_id, region, site_id, site, tenant_id, tenant, tag, limit, offset)
+> crate::models::InlineResponse20036 dcim_virtual_chassis_list(id, domain, q, region_id, region, site_id, site, tenant_id, tenant, tag, id__n, id__lte, id__lt, id__gte, id__gt, domain__n, domain__ic, domain__nic, domain__iew, domain__niew, domain__isw, domain__nisw, domain__ie, domain__nie, region_id__n, region__n, site_id__n, site__n, tenant_id__n, tenant__n, tag__n, limit, offset)
 
 
 Call to super to allow for caching
@@ -6656,6 +7657,27 @@ Name | Type | Description  | Required | Notes
 **tenant_id** | Option<**String**> |  |  |
 **tenant** | Option<**String**> |  |  |
 **tag** | Option<**String**> |  |  |
+**id__n** | Option<**String**> |  |  |
+**id__lte** | Option<**String**> |  |  |
+**id__lt** | Option<**String**> |  |  |
+**id__gte** | Option<**String**> |  |  |
+**id__gt** | Option<**String**> |  |  |
+**domain__n** | Option<**String**> |  |  |
+**domain__ic** | Option<**String**> |  |  |
+**domain__nic** | Option<**String**> |  |  |
+**domain__iew** | Option<**String**> |  |  |
+**domain__niew** | Option<**String**> |  |  |
+**domain__isw** | Option<**String**> |  |  |
+**domain__nisw** | Option<**String**> |  |  |
+**domain__ie** | Option<**String**> |  |  |
+**domain__nie** | Option<**String**> |  |  |
+**region_id__n** | Option<**String**> |  |  |
+**region__n** | Option<**String**> |  |  |
+**site_id__n** | Option<**String**> |  |  |
+**site__n** | Option<**String**> |  |  |
+**tenant_id__n** | Option<**String**> |  |  |
+**tenant__n** | Option<**String**> |  |  |
+**tag__n** | Option<**String**> |  |  |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
 

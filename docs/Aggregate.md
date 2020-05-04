@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
-**family** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**family** | Option<[**crate::models::Family**](Family.md)> |  | [optional]
 **prefix** | **String** |  | 
 **rir** | [**crate::models::NestedRir**](NestedRIR.md) |  | 
 **date_added** | Option<[**String**](string.md)> |  | [optional]

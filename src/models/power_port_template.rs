@@ -17,7 +17,7 @@ pub struct PowerPortTemplate {
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Status>,
+    pub _type: Option<crate::models::Type3>,
     /// Maximum power draw (watts)
     #[serde(rename = "maximum_draw", skip_serializing_if = "Option::is_none")]
     pub maximum_draw: Option<i32>,

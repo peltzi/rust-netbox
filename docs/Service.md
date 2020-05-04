@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **virtual_machine** | Option<[**crate::models::NestedVirtualMachine**](NestedVirtualMachine.md)> |  | [optional]
 **name** | **String** |  | 
 **port** | **i32** |  | 
-**protocol** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**protocol** | Option<[**crate::models::Protocol**](Protocol.md)> |  | [optional]
 **ipaddresses** | Option<[**Vec<crate::models::NestedIpAddress>**](NestedIPAddress.md)> |  | [optional]
 **description** | Option<**String**> |  | [optional]
 **tags** | Option<**Vec<String>**> |  | [optional]

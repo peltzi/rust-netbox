@@ -56,6 +56,31 @@ pub trait ExtrasApi {
         tenant_id: Option<&str>,
         tenant: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        platform_id__n: Option<&str>,
+        platform__n: Option<&str>,
+        cluster_group_id__n: Option<&str>,
+        cluster_group__n: Option<&str>,
+        cluster_id__n: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20037, Error>;
@@ -82,6 +107,17 @@ pub trait ExtrasApi {
         content_type: Option<&str>,
         name: Option<&str>,
         template_language: Option<&str>,
+        content_type__n: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        template_language__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20038, Error>;
@@ -107,6 +143,17 @@ pub trait ExtrasApi {
         _type: Option<&str>,
         name: Option<&str>,
         template_language: Option<&str>,
+        type__n: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        template_language__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20039, Error>;
@@ -152,10 +199,36 @@ pub trait ExtrasApi {
         request_id: Option<&str>,
         action: Option<&str>,
         changed_object_type: Option<&str>,
-        changed_object_id: Option<f32>,
+        changed_object_id: Option<&str>,
         object_repr: Option<&str>,
         q: Option<&str>,
         time: Option<&str>,
+        user__n: Option<&str>,
+        user_name__n: Option<&str>,
+        user_name__ic: Option<&str>,
+        user_name__nic: Option<&str>,
+        user_name__iew: Option<&str>,
+        user_name__niew: Option<&str>,
+        user_name__isw: Option<&str>,
+        user_name__nisw: Option<&str>,
+        user_name__ie: Option<&str>,
+        user_name__nie: Option<&str>,
+        action__n: Option<&str>,
+        changed_object_type__n: Option<&str>,
+        changed_object_id__n: Option<&str>,
+        changed_object_id__lte: Option<&str>,
+        changed_object_id__lt: Option<&str>,
+        changed_object_id__gte: Option<&str>,
+        changed_object_id__gt: Option<&str>,
+        object_repr__n: Option<&str>,
+        object_repr__ic: Option<&str>,
+        object_repr__nic: Option<&str>,
+        object_repr__iew: Option<&str>,
+        object_repr__niew: Option<&str>,
+        object_repr__isw: Option<&str>,
+        object_repr__nisw: Option<&str>,
+        object_repr__ie: Option<&str>,
+        object_repr__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20041, Error>;
@@ -172,6 +245,24 @@ pub trait ExtrasApi {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20042, Error>;
@@ -325,6 +416,31 @@ impl ExtrasApi for ExtrasApiClient {
         tenant_id: Option<&str>,
         tenant: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        platform_id__n: Option<&str>,
+        platform__n: Option<&str>,
+        cluster_group_id__n: Option<&str>,
+        cluster_group__n: Option<&str>,
+        cluster_id__n: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20037, Error> {
@@ -390,6 +506,81 @@ impl ExtrasApi for ExtrasApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = region_id__n {
+            req_builder = req_builder.query(&[("region_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region__n {
+            req_builder = req_builder.query(&[("region__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site_id__n {
+            req_builder = req_builder.query(&[("site_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site__n {
+            req_builder = req_builder.query(&[("site__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role_id__n {
+            req_builder = req_builder.query(&[("role_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role__n {
+            req_builder = req_builder.query(&[("role__n", &s.to_string())]);
+        }
+        if let Some(ref s) = platform_id__n {
+            req_builder = req_builder.query(&[("platform_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = platform__n {
+            req_builder = req_builder.query(&[("platform__n", &s.to_string())]);
+        }
+        if let Some(ref s) = cluster_group_id__n {
+            req_builder = req_builder.query(&[("cluster_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = cluster_group__n {
+            req_builder = req_builder.query(&[("cluster_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = cluster_id__n {
+            req_builder = req_builder.query(&[("cluster_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group_id__n {
+            req_builder = req_builder.query(&[("tenant_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group__n {
+            req_builder = req_builder.query(&[("tenant_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_id__n {
+            req_builder = req_builder.query(&[("tenant_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant__n {
+            req_builder = req_builder.query(&[("tenant__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -632,6 +823,17 @@ impl ExtrasApi for ExtrasApiClient {
         content_type: Option<&str>,
         name: Option<&str>,
         template_language: Option<&str>,
+        content_type__n: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        template_language__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20038, Error> {
@@ -649,6 +851,39 @@ impl ExtrasApi for ExtrasApiClient {
         }
         if let Some(ref s) = template_language {
             req_builder = req_builder.query(&[("template_language", &s.to_string())]);
+        }
+        if let Some(ref s) = content_type__n {
+            req_builder = req_builder.query(&[("content_type__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = template_language__n {
+            req_builder = req_builder.query(&[("template_language__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -834,6 +1069,17 @@ impl ExtrasApi for ExtrasApiClient {
         _type: Option<&str>,
         name: Option<&str>,
         template_language: Option<&str>,
+        type__n: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        template_language__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20039, Error> {
@@ -851,6 +1097,39 @@ impl ExtrasApi for ExtrasApiClient {
         }
         if let Some(ref s) = template_language {
             req_builder = req_builder.query(&[("template_language", &s.to_string())]);
+        }
+        if let Some(ref s) = type__n {
+            req_builder = req_builder.query(&[("type__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = template_language__n {
+            req_builder = req_builder.query(&[("template_language__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -1162,10 +1441,36 @@ impl ExtrasApi for ExtrasApiClient {
         request_id: Option<&str>,
         action: Option<&str>,
         changed_object_type: Option<&str>,
-        changed_object_id: Option<f32>,
+        changed_object_id: Option<&str>,
         object_repr: Option<&str>,
         q: Option<&str>,
         time: Option<&str>,
+        user__n: Option<&str>,
+        user_name__n: Option<&str>,
+        user_name__ic: Option<&str>,
+        user_name__nic: Option<&str>,
+        user_name__iew: Option<&str>,
+        user_name__niew: Option<&str>,
+        user_name__isw: Option<&str>,
+        user_name__nisw: Option<&str>,
+        user_name__ie: Option<&str>,
+        user_name__nie: Option<&str>,
+        action__n: Option<&str>,
+        changed_object_type__n: Option<&str>,
+        changed_object_id__n: Option<&str>,
+        changed_object_id__lte: Option<&str>,
+        changed_object_id__lt: Option<&str>,
+        changed_object_id__gte: Option<&str>,
+        changed_object_id__gt: Option<&str>,
+        object_repr__n: Option<&str>,
+        object_repr__ic: Option<&str>,
+        object_repr__nic: Option<&str>,
+        object_repr__iew: Option<&str>,
+        object_repr__niew: Option<&str>,
+        object_repr__isw: Option<&str>,
+        object_repr__nisw: Option<&str>,
+        object_repr__ie: Option<&str>,
+        object_repr__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20041, Error> {
@@ -1201,6 +1506,84 @@ impl ExtrasApi for ExtrasApiClient {
         }
         if let Some(ref s) = time {
             req_builder = req_builder.query(&[("time", &s.to_string())]);
+        }
+        if let Some(ref s) = user__n {
+            req_builder = req_builder.query(&[("user__n", &s.to_string())]);
+        }
+        if let Some(ref s) = user_name__n {
+            req_builder = req_builder.query(&[("user_name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = user_name__ic {
+            req_builder = req_builder.query(&[("user_name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = user_name__nic {
+            req_builder = req_builder.query(&[("user_name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = user_name__iew {
+            req_builder = req_builder.query(&[("user_name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = user_name__niew {
+            req_builder = req_builder.query(&[("user_name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = user_name__isw {
+            req_builder = req_builder.query(&[("user_name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = user_name__nisw {
+            req_builder = req_builder.query(&[("user_name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = user_name__ie {
+            req_builder = req_builder.query(&[("user_name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = user_name__nie {
+            req_builder = req_builder.query(&[("user_name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = action__n {
+            req_builder = req_builder.query(&[("action__n", &s.to_string())]);
+        }
+        if let Some(ref s) = changed_object_type__n {
+            req_builder = req_builder.query(&[("changed_object_type__n", &s.to_string())]);
+        }
+        if let Some(ref s) = changed_object_id__n {
+            req_builder = req_builder.query(&[("changed_object_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = changed_object_id__lte {
+            req_builder = req_builder.query(&[("changed_object_id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = changed_object_id__lt {
+            req_builder = req_builder.query(&[("changed_object_id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = changed_object_id__gte {
+            req_builder = req_builder.query(&[("changed_object_id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = changed_object_id__gt {
+            req_builder = req_builder.query(&[("changed_object_id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = object_repr__n {
+            req_builder = req_builder.query(&[("object_repr__n", &s.to_string())]);
+        }
+        if let Some(ref s) = object_repr__ic {
+            req_builder = req_builder.query(&[("object_repr__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = object_repr__nic {
+            req_builder = req_builder.query(&[("object_repr__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = object_repr__iew {
+            req_builder = req_builder.query(&[("object_repr__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = object_repr__niew {
+            req_builder = req_builder.query(&[("object_repr__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = object_repr__isw {
+            req_builder = req_builder.query(&[("object_repr__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = object_repr__nisw {
+            req_builder = req_builder.query(&[("object_repr__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = object_repr__ie {
+            req_builder = req_builder.query(&[("object_repr__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = object_repr__nie {
+            req_builder = req_builder.query(&[("object_repr__nie", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -1454,6 +1837,24 @@ impl ExtrasApi for ExtrasApiClient {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20042, Error> {
@@ -1471,6 +1872,60 @@ impl ExtrasApi for ExtrasApiClient {
         }
         if let Some(ref s) = q {
             req_builder = req_builder.query(&[("q", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__n {
+            req_builder = req_builder.query(&[("slug__n", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ic {
+            req_builder = req_builder.query(&[("slug__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nic {
+            req_builder = req_builder.query(&[("slug__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__iew {
+            req_builder = req_builder.query(&[("slug__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__niew {
+            req_builder = req_builder.query(&[("slug__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__isw {
+            req_builder = req_builder.query(&[("slug__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nisw {
+            req_builder = req_builder.query(&[("slug__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ie {
+            req_builder = req_builder.query(&[("slug__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nie {
+            req_builder = req_builder.query(&[("slug__nie", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);

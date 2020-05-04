@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **vid** | **i32** |  | 
 **name** | **String** |  | 
 **tenant** | Option<[**crate::models::NestedTenant**](NestedTenant.md)> |  | [optional]
-**status** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**status** | Option<[**crate::models::Status8**](Status_8.md)> |  | [optional]
 **role** | Option<[**crate::models::NestedRole**](NestedRole.md)> |  | [optional]
 **description** | Option<**String**> |  | [optional]
 **tags** | Option<**Vec<String>**> |  | [optional]

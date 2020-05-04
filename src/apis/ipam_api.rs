@@ -49,6 +49,15 @@ pub trait IpamApi {
         rir_id: Option<&str>,
         rir: Option<&str>,
         tag: Option<&str>,
+        family__n: Option<&str>,
+        date_added__n: Option<&str>,
+        date_added__lte: Option<&str>,
+        date_added__lt: Option<&str>,
+        date_added__gte: Option<&str>,
+        date_added__gt: Option<&str>,
+        rir_id__n: Option<&str>,
+        rir__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20043, Error>;
@@ -101,6 +110,29 @@ pub trait IpamApi {
         status: Option<&str>,
         role: Option<&str>,
         tag: Option<&str>,
+        family__n: Option<&str>,
+        dns_name__n: Option<&str>,
+        dns_name__ic: Option<&str>,
+        dns_name__nic: Option<&str>,
+        dns_name__iew: Option<&str>,
+        dns_name__niew: Option<&str>,
+        dns_name__isw: Option<&str>,
+        dns_name__nisw: Option<&str>,
+        dns_name__ie: Option<&str>,
+        dns_name__nie: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        vrf_id__n: Option<&str>,
+        vrf__n: Option<&str>,
+        virtual_machine_id__n: Option<&str>,
+        virtual_machine__n: Option<&str>,
+        interface__n: Option<&str>,
+        interface_id__n: Option<&str>,
+        status__n: Option<&str>,
+        role__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20044, Error>;
@@ -168,6 +200,22 @@ pub trait IpamApi {
         role: Option<&str>,
         status: Option<&str>,
         tag: Option<&str>,
+        family__n: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        vrf_id__n: Option<&str>,
+        vrf__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        vlan_id__n: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        status__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20045, Error>;
@@ -191,6 +239,24 @@ pub trait IpamApi {
         is_private: Option<&str>,
         q: Option<&str>,
         id__in: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20046, Error>;
@@ -213,6 +279,29 @@ pub trait IpamApi {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20047, Error>;
@@ -250,6 +339,31 @@ pub trait IpamApi {
         virtual_machine_id: Option<&str>,
         virtual_machine: Option<&str>,
         tag: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        protocol__n: Option<&str>,
+        port__n: Option<&str>,
+        port__lte: Option<&str>,
+        port__lt: Option<&str>,
+        port__gte: Option<&str>,
+        port__gt: Option<&str>,
+        device_id__n: Option<&str>,
+        device__n: Option<&str>,
+        virtual_machine_id__n: Option<&str>,
+        virtual_machine__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20048, Error>;
@@ -279,6 +393,33 @@ pub trait IpamApi {
         region: Option<&str>,
         site_id: Option<&str>,
         site: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20049, Error>;
@@ -324,6 +465,34 @@ pub trait IpamApi {
         role: Option<&str>,
         status: Option<&str>,
         tag: Option<&str>,
+        vid__n: Option<&str>,
+        vid__lte: Option<&str>,
+        vid__lt: Option<&str>,
+        vid__gte: Option<&str>,
+        vid__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        group_id__n: Option<&str>,
+        group__n: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        status__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20050, Error>;
@@ -361,6 +530,29 @@ pub trait IpamApi {
         id__in: Option<&str>,
         q: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        rd__n: Option<&str>,
+        rd__ic: Option<&str>,
+        rd__nic: Option<&str>,
+        rd__iew: Option<&str>,
+        rd__niew: Option<&str>,
+        rd__isw: Option<&str>,
+        rd__nisw: Option<&str>,
+        rd__ie: Option<&str>,
+        rd__nie: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20051, Error>;
@@ -449,6 +641,15 @@ impl IpamApi for IpamApiClient {
         rir_id: Option<&str>,
         rir: Option<&str>,
         tag: Option<&str>,
+        family__n: Option<&str>,
+        date_added__n: Option<&str>,
+        date_added__lte: Option<&str>,
+        date_added__lt: Option<&str>,
+        date_added__gte: Option<&str>,
+        date_added__gt: Option<&str>,
+        rir_id__n: Option<&str>,
+        rir__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20043, Error> {
@@ -499,6 +700,33 @@ impl IpamApi for IpamApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = family__n {
+            req_builder = req_builder.query(&[("family__n", &s.to_string())]);
+        }
+        if let Some(ref s) = date_added__n {
+            req_builder = req_builder.query(&[("date_added__n", &s.to_string())]);
+        }
+        if let Some(ref s) = date_added__lte {
+            req_builder = req_builder.query(&[("date_added__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = date_added__lt {
+            req_builder = req_builder.query(&[("date_added__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = date_added__gte {
+            req_builder = req_builder.query(&[("date_added__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = date_added__gt {
+            req_builder = req_builder.query(&[("date_added__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = rir_id__n {
+            req_builder = req_builder.query(&[("rir_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = rir__n {
+            req_builder = req_builder.query(&[("rir__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -755,6 +983,29 @@ impl IpamApi for IpamApiClient {
         status: Option<&str>,
         role: Option<&str>,
         tag: Option<&str>,
+        family__n: Option<&str>,
+        dns_name__n: Option<&str>,
+        dns_name__ic: Option<&str>,
+        dns_name__nic: Option<&str>,
+        dns_name__iew: Option<&str>,
+        dns_name__niew: Option<&str>,
+        dns_name__isw: Option<&str>,
+        dns_name__nisw: Option<&str>,
+        dns_name__ie: Option<&str>,
+        dns_name__nie: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        vrf_id__n: Option<&str>,
+        vrf__n: Option<&str>,
+        virtual_machine_id__n: Option<&str>,
+        virtual_machine__n: Option<&str>,
+        interface__n: Option<&str>,
+        interface_id__n: Option<&str>,
+        status__n: Option<&str>,
+        role__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20044, Error> {
@@ -850,6 +1101,75 @@ impl IpamApi for IpamApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = family__n {
+            req_builder = req_builder.query(&[("family__n", &s.to_string())]);
+        }
+        if let Some(ref s) = dns_name__n {
+            req_builder = req_builder.query(&[("dns_name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = dns_name__ic {
+            req_builder = req_builder.query(&[("dns_name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = dns_name__nic {
+            req_builder = req_builder.query(&[("dns_name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = dns_name__iew {
+            req_builder = req_builder.query(&[("dns_name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = dns_name__niew {
+            req_builder = req_builder.query(&[("dns_name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = dns_name__isw {
+            req_builder = req_builder.query(&[("dns_name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = dns_name__nisw {
+            req_builder = req_builder.query(&[("dns_name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = dns_name__ie {
+            req_builder = req_builder.query(&[("dns_name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = dns_name__nie {
+            req_builder = req_builder.query(&[("dns_name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group_id__n {
+            req_builder = req_builder.query(&[("tenant_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group__n {
+            req_builder = req_builder.query(&[("tenant_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_id__n {
+            req_builder = req_builder.query(&[("tenant_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant__n {
+            req_builder = req_builder.query(&[("tenant__n", &s.to_string())]);
+        }
+        if let Some(ref s) = vrf_id__n {
+            req_builder = req_builder.query(&[("vrf_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = vrf__n {
+            req_builder = req_builder.query(&[("vrf__n", &s.to_string())]);
+        }
+        if let Some(ref s) = virtual_machine_id__n {
+            req_builder = req_builder.query(&[("virtual_machine_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = virtual_machine__n {
+            req_builder = req_builder.query(&[("virtual_machine__n", &s.to_string())]);
+        }
+        if let Some(ref s) = interface__n {
+            req_builder = req_builder.query(&[("interface__n", &s.to_string())]);
+        }
+        if let Some(ref s) = interface_id__n {
+            req_builder = req_builder.query(&[("interface_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = status__n {
+            req_builder = req_builder.query(&[("status__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role__n {
+            req_builder = req_builder.query(&[("role__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -1189,6 +1509,22 @@ impl IpamApi for IpamApiClient {
         role: Option<&str>,
         status: Option<&str>,
         tag: Option<&str>,
+        family__n: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        vrf_id__n: Option<&str>,
+        vrf__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        vlan_id__n: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        status__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20045, Error> {
@@ -1290,6 +1626,54 @@ impl IpamApi for IpamApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = family__n {
+            req_builder = req_builder.query(&[("family__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group_id__n {
+            req_builder = req_builder.query(&[("tenant_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group__n {
+            req_builder = req_builder.query(&[("tenant_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_id__n {
+            req_builder = req_builder.query(&[("tenant_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant__n {
+            req_builder = req_builder.query(&[("tenant__n", &s.to_string())]);
+        }
+        if let Some(ref s) = vrf_id__n {
+            req_builder = req_builder.query(&[("vrf_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = vrf__n {
+            req_builder = req_builder.query(&[("vrf__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region_id__n {
+            req_builder = req_builder.query(&[("region_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region__n {
+            req_builder = req_builder.query(&[("region__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site_id__n {
+            req_builder = req_builder.query(&[("site_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site__n {
+            req_builder = req_builder.query(&[("site__n", &s.to_string())]);
+        }
+        if let Some(ref s) = vlan_id__n {
+            req_builder = req_builder.query(&[("vlan_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role_id__n {
+            req_builder = req_builder.query(&[("role_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role__n {
+            req_builder = req_builder.query(&[("role__n", &s.to_string())]);
+        }
+        if let Some(ref s) = status__n {
+            req_builder = req_builder.query(&[("status__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -1459,6 +1843,24 @@ impl IpamApi for IpamApiClient {
         is_private: Option<&str>,
         q: Option<&str>,
         id__in: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20046, Error> {
@@ -1482,6 +1884,60 @@ impl IpamApi for IpamApiClient {
         }
         if let Some(ref s) = id__in {
             req_builder = req_builder.query(&[("id__in", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__n {
+            req_builder = req_builder.query(&[("slug__n", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ic {
+            req_builder = req_builder.query(&[("slug__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nic {
+            req_builder = req_builder.query(&[("slug__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__iew {
+            req_builder = req_builder.query(&[("slug__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__niew {
+            req_builder = req_builder.query(&[("slug__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__isw {
+            req_builder = req_builder.query(&[("slug__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nisw {
+            req_builder = req_builder.query(&[("slug__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ie {
+            req_builder = req_builder.query(&[("slug__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nie {
+            req_builder = req_builder.query(&[("slug__nie", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -1650,6 +2106,29 @@ impl IpamApi for IpamApiClient {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20047, Error> {
@@ -1670,6 +2149,75 @@ impl IpamApi for IpamApiClient {
         }
         if let Some(ref s) = q {
             req_builder = req_builder.query(&[("q", &s.to_string())]);
+        }
+        if let Some(ref s) = id__n {
+            req_builder = req_builder.query(&[("id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lte {
+            req_builder = req_builder.query(&[("id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lt {
+            req_builder = req_builder.query(&[("id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gte {
+            req_builder = req_builder.query(&[("id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gt {
+            req_builder = req_builder.query(&[("id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__n {
+            req_builder = req_builder.query(&[("slug__n", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ic {
+            req_builder = req_builder.query(&[("slug__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nic {
+            req_builder = req_builder.query(&[("slug__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__iew {
+            req_builder = req_builder.query(&[("slug__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__niew {
+            req_builder = req_builder.query(&[("slug__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__isw {
+            req_builder = req_builder.query(&[("slug__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nisw {
+            req_builder = req_builder.query(&[("slug__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ie {
+            req_builder = req_builder.query(&[("slug__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nie {
+            req_builder = req_builder.query(&[("slug__nie", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -1853,6 +2401,31 @@ impl IpamApi for IpamApiClient {
         virtual_machine_id: Option<&str>,
         virtual_machine: Option<&str>,
         tag: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        protocol__n: Option<&str>,
+        port__n: Option<&str>,
+        port__lte: Option<&str>,
+        port__lt: Option<&str>,
+        port__gte: Option<&str>,
+        port__gt: Option<&str>,
+        device_id__n: Option<&str>,
+        device__n: Option<&str>,
+        virtual_machine_id__n: Option<&str>,
+        virtual_machine__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20048, Error> {
@@ -1909,6 +2482,81 @@ impl IpamApi for IpamApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = id__n {
+            req_builder = req_builder.query(&[("id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lte {
+            req_builder = req_builder.query(&[("id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lt {
+            req_builder = req_builder.query(&[("id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gte {
+            req_builder = req_builder.query(&[("id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gt {
+            req_builder = req_builder.query(&[("id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = protocol__n {
+            req_builder = req_builder.query(&[("protocol__n", &s.to_string())]);
+        }
+        if let Some(ref s) = port__n {
+            req_builder = req_builder.query(&[("port__n", &s.to_string())]);
+        }
+        if let Some(ref s) = port__lte {
+            req_builder = req_builder.query(&[("port__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = port__lt {
+            req_builder = req_builder.query(&[("port__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = port__gte {
+            req_builder = req_builder.query(&[("port__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = port__gt {
+            req_builder = req_builder.query(&[("port__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = device_id__n {
+            req_builder = req_builder.query(&[("device_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = device__n {
+            req_builder = req_builder.query(&[("device__n", &s.to_string())]);
+        }
+        if let Some(ref s) = virtual_machine_id__n {
+            req_builder = req_builder.query(&[("virtual_machine_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = virtual_machine__n {
+            req_builder = req_builder.query(&[("virtual_machine__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -2088,6 +2736,33 @@ impl IpamApi for IpamApiClient {
         region: Option<&str>,
         site_id: Option<&str>,
         site: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20049, Error> {
@@ -2120,6 +2795,87 @@ impl IpamApi for IpamApiClient {
         }
         if let Some(ref s) = site {
             req_builder = req_builder.query(&[("site", &s.to_string())]);
+        }
+        if let Some(ref s) = id__n {
+            req_builder = req_builder.query(&[("id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lte {
+            req_builder = req_builder.query(&[("id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lt {
+            req_builder = req_builder.query(&[("id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gte {
+            req_builder = req_builder.query(&[("id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gt {
+            req_builder = req_builder.query(&[("id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__n {
+            req_builder = req_builder.query(&[("slug__n", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ic {
+            req_builder = req_builder.query(&[("slug__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nic {
+            req_builder = req_builder.query(&[("slug__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__iew {
+            req_builder = req_builder.query(&[("slug__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__niew {
+            req_builder = req_builder.query(&[("slug__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__isw {
+            req_builder = req_builder.query(&[("slug__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nisw {
+            req_builder = req_builder.query(&[("slug__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ie {
+            req_builder = req_builder.query(&[("slug__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nie {
+            req_builder = req_builder.query(&[("slug__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = region_id__n {
+            req_builder = req_builder.query(&[("region_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region__n {
+            req_builder = req_builder.query(&[("region__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site_id__n {
+            req_builder = req_builder.query(&[("site_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site__n {
+            req_builder = req_builder.query(&[("site__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -2323,6 +3079,34 @@ impl IpamApi for IpamApiClient {
         role: Option<&str>,
         status: Option<&str>,
         tag: Option<&str>,
+        vid__n: Option<&str>,
+        vid__lte: Option<&str>,
+        vid__lt: Option<&str>,
+        vid__gte: Option<&str>,
+        vid__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        group_id__n: Option<&str>,
+        group__n: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        status__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20050, Error> {
@@ -2403,6 +3187,90 @@ impl IpamApi for IpamApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = vid__n {
+            req_builder = req_builder.query(&[("vid__n", &s.to_string())]);
+        }
+        if let Some(ref s) = vid__lte {
+            req_builder = req_builder.query(&[("vid__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = vid__lt {
+            req_builder = req_builder.query(&[("vid__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = vid__gte {
+            req_builder = req_builder.query(&[("vid__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = vid__gt {
+            req_builder = req_builder.query(&[("vid__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group_id__n {
+            req_builder = req_builder.query(&[("tenant_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group__n {
+            req_builder = req_builder.query(&[("tenant_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_id__n {
+            req_builder = req_builder.query(&[("tenant_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant__n {
+            req_builder = req_builder.query(&[("tenant__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region_id__n {
+            req_builder = req_builder.query(&[("region_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region__n {
+            req_builder = req_builder.query(&[("region__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site_id__n {
+            req_builder = req_builder.query(&[("site_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site__n {
+            req_builder = req_builder.query(&[("site__n", &s.to_string())]);
+        }
+        if let Some(ref s) = group_id__n {
+            req_builder = req_builder.query(&[("group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = group__n {
+            req_builder = req_builder.query(&[("group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role_id__n {
+            req_builder = req_builder.query(&[("role_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role__n {
+            req_builder = req_builder.query(&[("role__n", &s.to_string())]);
+        }
+        if let Some(ref s) = status__n {
+            req_builder = req_builder.query(&[("status__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -2586,6 +3454,29 @@ impl IpamApi for IpamApiClient {
         id__in: Option<&str>,
         q: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        rd__n: Option<&str>,
+        rd__ic: Option<&str>,
+        rd__nic: Option<&str>,
+        rd__iew: Option<&str>,
+        rd__niew: Option<&str>,
+        rd__isw: Option<&str>,
+        rd__nisw: Option<&str>,
+        rd__ie: Option<&str>,
+        rd__nie: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20051, Error> {
@@ -2642,6 +3533,75 @@ impl IpamApi for IpamApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = rd__n {
+            req_builder = req_builder.query(&[("rd__n", &s.to_string())]);
+        }
+        if let Some(ref s) = rd__ic {
+            req_builder = req_builder.query(&[("rd__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = rd__nic {
+            req_builder = req_builder.query(&[("rd__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = rd__iew {
+            req_builder = req_builder.query(&[("rd__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = rd__niew {
+            req_builder = req_builder.query(&[("rd__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = rd__isw {
+            req_builder = req_builder.query(&[("rd__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = rd__nisw {
+            req_builder = req_builder.query(&[("rd__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = rd__ie {
+            req_builder = req_builder.query(&[("rd__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = rd__nie {
+            req_builder = req_builder.query(&[("rd__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group_id__n {
+            req_builder = req_builder.query(&[("tenant_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group__n {
+            req_builder = req_builder.query(&[("tenant_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_id__n {
+            req_builder = req_builder.query(&[("tenant_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant__n {
+            req_builder = req_builder.query(&[("tenant__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);

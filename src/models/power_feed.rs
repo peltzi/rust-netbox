@@ -19,13 +19,13 @@ pub struct PowerFeed {
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<crate::models::Status3>,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Status>,
+    pub _type: Option<crate::models::Type4>,
     #[serde(rename = "supply", skip_serializing_if = "Option::is_none")]
-    pub supply: Option<crate::models::Status>,
+    pub supply: Option<crate::models::Supply>,
     #[serde(rename = "phase", skip_serializing_if = "Option::is_none")]
-    pub phase: Option<crate::models::Status>,
+    pub phase: Option<crate::models::Phase>,
     #[serde(rename = "voltage", skip_serializing_if = "Option::is_none")]
     pub voltage: Option<i32>,
     #[serde(rename = "amperage", skip_serializing_if = "Option::is_none")]

@@ -25,7 +25,7 @@ pub struct Rack {
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
     pub tenant: Option<crate::models::NestedTenant>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<crate::models::Status4>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
     pub role: Option<crate::models::NestedRackRole>,
     #[serde(rename = "serial", skip_serializing_if = "Option::is_none")]
@@ -34,9 +34,9 @@ pub struct Rack {
     #[serde(rename = "asset_tag", skip_serializing_if = "Option::is_none")]
     pub asset_tag: Option<String>,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Status>,
+    pub _type: Option<crate::models::Type6>,
     #[serde(rename = "width", skip_serializing_if = "Option::is_none")]
-    pub width: Option<crate::models::Status>,
+    pub width: Option<crate::models::Width>,
     #[serde(rename = "u_height", skip_serializing_if = "Option::is_none")]
     pub u_height: Option<i32>,
     /// Units are numbered top-to-bottom
@@ -47,7 +47,7 @@ pub struct Rack {
     #[serde(rename = "outer_depth", skip_serializing_if = "Option::is_none")]
     pub outer_depth: Option<i32>,
     #[serde(rename = "outer_unit", skip_serializing_if = "Option::is_none")]
-    pub outer_unit: Option<crate::models::Status>,
+    pub outer_unit: Option<crate::models::OuterUnit>,
     #[serde(rename = "comments", skip_serializing_if = "Option::is_none")]
     pub comments: Option<String>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]

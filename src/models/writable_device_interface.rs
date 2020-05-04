@@ -52,7 +52,7 @@ pub struct WritableDeviceInterface {
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
     pub tags: Option<Vec<String>>,
     #[serde(rename = "count_ipaddresses", skip_serializing_if = "Option::is_none")]
-    pub count_ipaddresses: Option<String>,
+    pub count_ipaddresses: Option<i32>,
 }
 
 impl WritableDeviceInterface {

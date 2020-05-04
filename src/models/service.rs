@@ -21,7 +21,7 @@ pub struct Service {
     #[serde(rename = "port")]
     pub port: i32,
     #[serde(rename = "protocol", skip_serializing_if = "Option::is_none")]
-    pub protocol: Option<crate::models::Status>,
+    pub protocol: Option<crate::models::Protocol>,
     #[serde(rename = "ipaddresses", skip_serializing_if = "Option::is_none")]
     pub ipaddresses: Option<Vec<crate::models::NestedIpAddress>>,
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]

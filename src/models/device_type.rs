@@ -29,7 +29,7 @@ pub struct DeviceType {
     #[serde(rename = "is_full_depth", skip_serializing_if = "Option::is_none")]
     pub is_full_depth: Option<bool>,
     #[serde(rename = "subdevice_role", skip_serializing_if = "Option::is_none")]
-    pub subdevice_role: Option<crate::models::Status>,
+    pub subdevice_role: Option<crate::models::SubdeviceRole>,
     #[serde(rename = "front_image", skip_serializing_if = "Option::is_none")]
     pub front_image: Option<String>,
     #[serde(rename = "rear_image", skip_serializing_if = "Option::is_none")]

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **user** | Option<[**crate::models::NestedUser**](NestedUser.md)> |  | [optional]
 **user_name** | Option<**String**> |  | [optional][readonly]
 **request_id** | Option<**String**> |  | [optional][readonly]
-**action** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**action** | Option<[**crate::models::Action**](Action.md)> |  | [optional]
 **changed_object_type** | Option<**String**> |  | [optional][readonly]
 **changed_object_id** | **i32** |  | 
 **changed_object** | Option<**::std::collections::HashMap<String, String>**> |          Serialize a nested representation of the changed object.          | [optional][readonly]
