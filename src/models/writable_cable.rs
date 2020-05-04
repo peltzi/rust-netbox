@@ -82,6 +82,8 @@ pub enum Type {
     DacActive,
     #[serde(rename = "dac-passive")]
     DacPassive,
+    #[serde(rename = "mrj21-trunk")]
+    Mrj21Trunk,
     #[serde(rename = "coaxial")]
     Coaxial,
     #[serde(rename = "mmf")]

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **part_number** | Option<**String**> | Discrete part number (optional) | [optional]
 **u_height** | Option<**i32**> |  | [optional]
 **is_full_depth** | Option<**bool**> | Device consumes both front and rear rack faces | [optional]
-**subdevice_role** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**subdevice_role** | Option<[**crate::models::SubdeviceRole**](Subdevice_role.md)> |  | [optional]
 **front_image** | Option<**String**> |  | [optional][readonly]
 **rear_image** | Option<**String**> |  | [optional][readonly]
 **comments** | Option<**String**> |  | [optional]

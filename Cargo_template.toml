@@ -1,0 +1,8 @@
+[package]
+edition = "2018"
+authors = [
+  "Toni Peltonen <peltzi@peltzi.fi>"
+]
+repository = "https://github.com/peltzi/rust-netbox"
+license = "Apache-2.0"
+readme = "README.md"

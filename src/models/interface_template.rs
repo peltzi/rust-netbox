@@ -16,19 +16,23 @@ pub struct InterfaceTemplate {
     pub device_type: crate::models::NestedDeviceType,
     #[serde(rename = "name")]
     pub name: String,
-    #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Status>,
+    #[serde(rename = "type")]
+    pub _type: crate::models::Type2,
     #[serde(rename = "mgmt_only", skip_serializing_if = "Option::is_none")]
     pub mgmt_only: Option<bool>,
 }
 
 impl InterfaceTemplate {
-    pub fn new(device_type: crate::models::NestedDeviceType, name: String) -> InterfaceTemplate {
+    pub fn new(
+        device_type: crate::models::NestedDeviceType,
+        name: String,
+        _type: crate::models::Type2,
+    ) -> InterfaceTemplate {
         InterfaceTemplate {
             id: None,
             device_type,
             name,
-            _type: None,
+            _type,
             mgmt_only: None,
         }
     }

@@ -17,7 +17,7 @@ pub struct FrontPort {
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type")]
-    pub _type: crate::models::Status,
+    pub _type: crate::models::Type1,
     #[serde(rename = "rear_port")]
     pub rear_port: crate::models::FrontPortRearPort,
     #[serde(rename = "rear_port_position", skip_serializing_if = "Option::is_none")]
@@ -34,7 +34,7 @@ impl FrontPort {
     pub fn new(
         device: crate::models::NestedDevice,
         name: String,
-        _type: crate::models::Status,
+        _type: crate::models::Type1,
         rear_port: crate::models::FrontPortRearPort,
     ) -> FrontPort {
         FrontPort {

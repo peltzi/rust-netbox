@@ -17,7 +17,7 @@ pub struct Site {
     #[serde(rename = "slug")]
     pub slug: String,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<crate::models::Status5>,
     #[serde(rename = "region", skip_serializing_if = "Option::is_none")]
     pub region: Option<crate::models::NestedRegion>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]

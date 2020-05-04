@@ -41,6 +41,29 @@ pub trait VirtualizationApi {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20056, Error>;
@@ -69,6 +92,29 @@ pub trait VirtualizationApi {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20057, Error>;
@@ -94,6 +140,10 @@ pub trait VirtualizationApi {
     fn virtualization_clusters_list(
         &self,
         name: Option<&str>,
+        tenant_group_id: Option<&str>,
+        tenant_group: Option<&str>,
+        tenant_id: Option<&str>,
+        tenant: Option<&str>,
         created: Option<&str>,
         created__gte: Option<&str>,
         created__lte: Option<&str>,
@@ -110,8 +160,29 @@ pub trait VirtualizationApi {
         group: Option<&str>,
         type_id: Option<&str>,
         _type: Option<&str>,
-        tenant: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        group_id__n: Option<&str>,
+        group__n: Option<&str>,
+        type_id__n: Option<&str>,
+        type__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20058, Error>;
@@ -141,6 +212,36 @@ pub trait VirtualizationApi {
         virtual_machine_id: Option<&str>,
         virtual_machine: Option<&str>,
         mac_address: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        mtu__n: Option<&str>,
+        mtu__lte: Option<&str>,
+        mtu__lt: Option<&str>,
+        mtu__gte: Option<&str>,
+        mtu__gt: Option<&str>,
+        virtual_machine_id__n: Option<&str>,
+        virtual_machine__n: Option<&str>,
+        mac_address__n: Option<&str>,
+        mac_address__ic: Option<&str>,
+        mac_address__nic: Option<&str>,
+        mac_address__iew: Option<&str>,
+        mac_address__niew: Option<&str>,
+        mac_address__isw: Option<&str>,
+        mac_address__nisw: Option<&str>,
+        mac_address__ie: Option<&str>,
+        mac_address__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20059, Error>;
@@ -200,6 +301,64 @@ pub trait VirtualizationApi {
         platform: Option<&str>,
         mac_address: Option<&str>,
         tag: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        cluster__n: Option<&str>,
+        vcpus__n: Option<&str>,
+        vcpus__lte: Option<&str>,
+        vcpus__lt: Option<&str>,
+        vcpus__gte: Option<&str>,
+        vcpus__gt: Option<&str>,
+        memory__n: Option<&str>,
+        memory__lte: Option<&str>,
+        memory__lt: Option<&str>,
+        memory__gte: Option<&str>,
+        memory__gt: Option<&str>,
+        disk__n: Option<&str>,
+        disk__lte: Option<&str>,
+        disk__lt: Option<&str>,
+        disk__gte: Option<&str>,
+        disk__gt: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        status__n: Option<&str>,
+        cluster_group_id__n: Option<&str>,
+        cluster_group__n: Option<&str>,
+        cluster_type_id__n: Option<&str>,
+        cluster_type__n: Option<&str>,
+        cluster_id__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        platform_id__n: Option<&str>,
+        platform__n: Option<&str>,
+        mac_address__n: Option<&str>,
+        mac_address__ic: Option<&str>,
+        mac_address__nic: Option<&str>,
+        mac_address__iew: Option<&str>,
+        mac_address__niew: Option<&str>,
+        mac_address__isw: Option<&str>,
+        mac_address__nisw: Option<&str>,
+        mac_address__ie: Option<&str>,
+        mac_address__nie: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20060, Error>;
@@ -341,6 +500,29 @@ impl VirtualizationApi for VirtualizationApiClient {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20056, Error> {
@@ -361,6 +543,75 @@ impl VirtualizationApi for VirtualizationApiClient {
         }
         if let Some(ref s) = q {
             req_builder = req_builder.query(&[("q", &s.to_string())]);
+        }
+        if let Some(ref s) = id__n {
+            req_builder = req_builder.query(&[("id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lte {
+            req_builder = req_builder.query(&[("id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lt {
+            req_builder = req_builder.query(&[("id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gte {
+            req_builder = req_builder.query(&[("id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gt {
+            req_builder = req_builder.query(&[("id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__n {
+            req_builder = req_builder.query(&[("slug__n", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ic {
+            req_builder = req_builder.query(&[("slug__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nic {
+            req_builder = req_builder.query(&[("slug__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__iew {
+            req_builder = req_builder.query(&[("slug__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__niew {
+            req_builder = req_builder.query(&[("slug__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__isw {
+            req_builder = req_builder.query(&[("slug__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nisw {
+            req_builder = req_builder.query(&[("slug__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ie {
+            req_builder = req_builder.query(&[("slug__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nie {
+            req_builder = req_builder.query(&[("slug__nie", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -551,6 +802,29 @@ impl VirtualizationApi for VirtualizationApiClient {
         name: Option<&str>,
         slug: Option<&str>,
         q: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        slug__n: Option<&str>,
+        slug__ic: Option<&str>,
+        slug__nic: Option<&str>,
+        slug__iew: Option<&str>,
+        slug__niew: Option<&str>,
+        slug__isw: Option<&str>,
+        slug__nisw: Option<&str>,
+        slug__ie: Option<&str>,
+        slug__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20057, Error> {
@@ -571,6 +845,75 @@ impl VirtualizationApi for VirtualizationApiClient {
         }
         if let Some(ref s) = q {
             req_builder = req_builder.query(&[("q", &s.to_string())]);
+        }
+        if let Some(ref s) = id__n {
+            req_builder = req_builder.query(&[("id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lte {
+            req_builder = req_builder.query(&[("id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lt {
+            req_builder = req_builder.query(&[("id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gte {
+            req_builder = req_builder.query(&[("id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gt {
+            req_builder = req_builder.query(&[("id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__n {
+            req_builder = req_builder.query(&[("slug__n", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ic {
+            req_builder = req_builder.query(&[("slug__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nic {
+            req_builder = req_builder.query(&[("slug__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__iew {
+            req_builder = req_builder.query(&[("slug__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__niew {
+            req_builder = req_builder.query(&[("slug__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__isw {
+            req_builder = req_builder.query(&[("slug__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nisw {
+            req_builder = req_builder.query(&[("slug__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__ie {
+            req_builder = req_builder.query(&[("slug__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = slug__nie {
+            req_builder = req_builder.query(&[("slug__nie", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -758,6 +1101,10 @@ impl VirtualizationApi for VirtualizationApiClient {
     fn virtualization_clusters_list(
         &self,
         name: Option<&str>,
+        tenant_group_id: Option<&str>,
+        tenant_group: Option<&str>,
+        tenant_id: Option<&str>,
+        tenant: Option<&str>,
         created: Option<&str>,
         created__gte: Option<&str>,
         created__lte: Option<&str>,
@@ -774,8 +1121,29 @@ impl VirtualizationApi for VirtualizationApiClient {
         group: Option<&str>,
         type_id: Option<&str>,
         _type: Option<&str>,
-        tenant: Option<&str>,
         tag: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        group_id__n: Option<&str>,
+        group__n: Option<&str>,
+        type_id__n: Option<&str>,
+        type__n: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20058, Error> {
@@ -787,6 +1155,18 @@ impl VirtualizationApi for VirtualizationApiClient {
 
         if let Some(ref s) = name {
             req_builder = req_builder.query(&[("name", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group_id {
+            req_builder = req_builder.query(&[("tenant_group_id", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group {
+            req_builder = req_builder.query(&[("tenant_group", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_id {
+            req_builder = req_builder.query(&[("tenant_id", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant {
+            req_builder = req_builder.query(&[("tenant", &s.to_string())]);
         }
         if let Some(ref s) = created {
             req_builder = req_builder.query(&[("created", &s.to_string())]);
@@ -836,11 +1216,74 @@ impl VirtualizationApi for VirtualizationApiClient {
         if let Some(ref s) = _type {
             req_builder = req_builder.query(&[("type", &s.to_string())]);
         }
-        if let Some(ref s) = tenant {
-            req_builder = req_builder.query(&[("tenant", &s.to_string())]);
-        }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group_id__n {
+            req_builder = req_builder.query(&[("tenant_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group__n {
+            req_builder = req_builder.query(&[("tenant_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_id__n {
+            req_builder = req_builder.query(&[("tenant_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant__n {
+            req_builder = req_builder.query(&[("tenant__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region_id__n {
+            req_builder = req_builder.query(&[("region_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region__n {
+            req_builder = req_builder.query(&[("region__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site_id__n {
+            req_builder = req_builder.query(&[("site_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site__n {
+            req_builder = req_builder.query(&[("site__n", &s.to_string())]);
+        }
+        if let Some(ref s) = group_id__n {
+            req_builder = req_builder.query(&[("group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = group__n {
+            req_builder = req_builder.query(&[("group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = type_id__n {
+            req_builder = req_builder.query(&[("type_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = type__n {
+            req_builder = req_builder.query(&[("type__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -1032,6 +1475,36 @@ impl VirtualizationApi for VirtualizationApiClient {
         virtual_machine_id: Option<&str>,
         virtual_machine: Option<&str>,
         mac_address: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        mtu__n: Option<&str>,
+        mtu__lte: Option<&str>,
+        mtu__lt: Option<&str>,
+        mtu__gte: Option<&str>,
+        mtu__gt: Option<&str>,
+        virtual_machine_id__n: Option<&str>,
+        virtual_machine__n: Option<&str>,
+        mac_address__n: Option<&str>,
+        mac_address__ic: Option<&str>,
+        mac_address__nic: Option<&str>,
+        mac_address__iew: Option<&str>,
+        mac_address__niew: Option<&str>,
+        mac_address__isw: Option<&str>,
+        mac_address__nisw: Option<&str>,
+        mac_address__ie: Option<&str>,
+        mac_address__nie: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20059, Error> {
@@ -1064,6 +1537,96 @@ impl VirtualizationApi for VirtualizationApiClient {
         }
         if let Some(ref s) = mac_address {
             req_builder = req_builder.query(&[("mac_address", &s.to_string())]);
+        }
+        if let Some(ref s) = id__n {
+            req_builder = req_builder.query(&[("id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lte {
+            req_builder = req_builder.query(&[("id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lt {
+            req_builder = req_builder.query(&[("id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gte {
+            req_builder = req_builder.query(&[("id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gt {
+            req_builder = req_builder.query(&[("id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = mtu__n {
+            req_builder = req_builder.query(&[("mtu__n", &s.to_string())]);
+        }
+        if let Some(ref s) = mtu__lte {
+            req_builder = req_builder.query(&[("mtu__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = mtu__lt {
+            req_builder = req_builder.query(&[("mtu__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = mtu__gte {
+            req_builder = req_builder.query(&[("mtu__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = mtu__gt {
+            req_builder = req_builder.query(&[("mtu__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = virtual_machine_id__n {
+            req_builder = req_builder.query(&[("virtual_machine_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = virtual_machine__n {
+            req_builder = req_builder.query(&[("virtual_machine__n", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__n {
+            req_builder = req_builder.query(&[("mac_address__n", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__ic {
+            req_builder = req_builder.query(&[("mac_address__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__nic {
+            req_builder = req_builder.query(&[("mac_address__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__iew {
+            req_builder = req_builder.query(&[("mac_address__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__niew {
+            req_builder = req_builder.query(&[("mac_address__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__isw {
+            req_builder = req_builder.query(&[("mac_address__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__nisw {
+            req_builder = req_builder.query(&[("mac_address__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__ie {
+            req_builder = req_builder.query(&[("mac_address__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__nie {
+            req_builder = req_builder.query(&[("mac_address__nie", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);
@@ -1288,6 +1851,64 @@ impl VirtualizationApi for VirtualizationApiClient {
         platform: Option<&str>,
         mac_address: Option<&str>,
         tag: Option<&str>,
+        id__n: Option<&str>,
+        id__lte: Option<&str>,
+        id__lt: Option<&str>,
+        id__gte: Option<&str>,
+        id__gt: Option<&str>,
+        name__n: Option<&str>,
+        name__ic: Option<&str>,
+        name__nic: Option<&str>,
+        name__iew: Option<&str>,
+        name__niew: Option<&str>,
+        name__isw: Option<&str>,
+        name__nisw: Option<&str>,
+        name__ie: Option<&str>,
+        name__nie: Option<&str>,
+        cluster__n: Option<&str>,
+        vcpus__n: Option<&str>,
+        vcpus__lte: Option<&str>,
+        vcpus__lt: Option<&str>,
+        vcpus__gte: Option<&str>,
+        vcpus__gt: Option<&str>,
+        memory__n: Option<&str>,
+        memory__lte: Option<&str>,
+        memory__lt: Option<&str>,
+        memory__gte: Option<&str>,
+        memory__gt: Option<&str>,
+        disk__n: Option<&str>,
+        disk__lte: Option<&str>,
+        disk__lt: Option<&str>,
+        disk__gte: Option<&str>,
+        disk__gt: Option<&str>,
+        tenant_group_id__n: Option<&str>,
+        tenant_group__n: Option<&str>,
+        tenant_id__n: Option<&str>,
+        tenant__n: Option<&str>,
+        status__n: Option<&str>,
+        cluster_group_id__n: Option<&str>,
+        cluster_group__n: Option<&str>,
+        cluster_type_id__n: Option<&str>,
+        cluster_type__n: Option<&str>,
+        cluster_id__n: Option<&str>,
+        region_id__n: Option<&str>,
+        region__n: Option<&str>,
+        site_id__n: Option<&str>,
+        site__n: Option<&str>,
+        role_id__n: Option<&str>,
+        role__n: Option<&str>,
+        platform_id__n: Option<&str>,
+        platform__n: Option<&str>,
+        mac_address__n: Option<&str>,
+        mac_address__ic: Option<&str>,
+        mac_address__nic: Option<&str>,
+        mac_address__iew: Option<&str>,
+        mac_address__niew: Option<&str>,
+        mac_address__isw: Option<&str>,
+        mac_address__nisw: Option<&str>,
+        mac_address__ie: Option<&str>,
+        mac_address__nie: Option<&str>,
+        tag__n: Option<&str>,
         limit: Option<i32>,
         offset: Option<i32>,
     ) -> Result<crate::models::InlineResponse20060, Error> {
@@ -1404,6 +2025,180 @@ impl VirtualizationApi for VirtualizationApiClient {
         }
         if let Some(ref s) = tag {
             req_builder = req_builder.query(&[("tag", &s.to_string())]);
+        }
+        if let Some(ref s) = id__n {
+            req_builder = req_builder.query(&[("id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lte {
+            req_builder = req_builder.query(&[("id__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__lt {
+            req_builder = req_builder.query(&[("id__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gte {
+            req_builder = req_builder.query(&[("id__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = id__gt {
+            req_builder = req_builder.query(&[("id__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = name__n {
+            req_builder = req_builder.query(&[("name__n", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ic {
+            req_builder = req_builder.query(&[("name__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nic {
+            req_builder = req_builder.query(&[("name__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = name__iew {
+            req_builder = req_builder.query(&[("name__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__niew {
+            req_builder = req_builder.query(&[("name__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = name__isw {
+            req_builder = req_builder.query(&[("name__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nisw {
+            req_builder = req_builder.query(&[("name__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = name__ie {
+            req_builder = req_builder.query(&[("name__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = name__nie {
+            req_builder = req_builder.query(&[("name__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = cluster__n {
+            req_builder = req_builder.query(&[("cluster__n", &s.to_string())]);
+        }
+        if let Some(ref s) = vcpus__n {
+            req_builder = req_builder.query(&[("vcpus__n", &s.to_string())]);
+        }
+        if let Some(ref s) = vcpus__lte {
+            req_builder = req_builder.query(&[("vcpus__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = vcpus__lt {
+            req_builder = req_builder.query(&[("vcpus__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = vcpus__gte {
+            req_builder = req_builder.query(&[("vcpus__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = vcpus__gt {
+            req_builder = req_builder.query(&[("vcpus__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = memory__n {
+            req_builder = req_builder.query(&[("memory__n", &s.to_string())]);
+        }
+        if let Some(ref s) = memory__lte {
+            req_builder = req_builder.query(&[("memory__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = memory__lt {
+            req_builder = req_builder.query(&[("memory__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = memory__gte {
+            req_builder = req_builder.query(&[("memory__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = memory__gt {
+            req_builder = req_builder.query(&[("memory__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = disk__n {
+            req_builder = req_builder.query(&[("disk__n", &s.to_string())]);
+        }
+        if let Some(ref s) = disk__lte {
+            req_builder = req_builder.query(&[("disk__lte", &s.to_string())]);
+        }
+        if let Some(ref s) = disk__lt {
+            req_builder = req_builder.query(&[("disk__lt", &s.to_string())]);
+        }
+        if let Some(ref s) = disk__gte {
+            req_builder = req_builder.query(&[("disk__gte", &s.to_string())]);
+        }
+        if let Some(ref s) = disk__gt {
+            req_builder = req_builder.query(&[("disk__gt", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group_id__n {
+            req_builder = req_builder.query(&[("tenant_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_group__n {
+            req_builder = req_builder.query(&[("tenant_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant_id__n {
+            req_builder = req_builder.query(&[("tenant_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = tenant__n {
+            req_builder = req_builder.query(&[("tenant__n", &s.to_string())]);
+        }
+        if let Some(ref s) = status__n {
+            req_builder = req_builder.query(&[("status__n", &s.to_string())]);
+        }
+        if let Some(ref s) = cluster_group_id__n {
+            req_builder = req_builder.query(&[("cluster_group_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = cluster_group__n {
+            req_builder = req_builder.query(&[("cluster_group__n", &s.to_string())]);
+        }
+        if let Some(ref s) = cluster_type_id__n {
+            req_builder = req_builder.query(&[("cluster_type_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = cluster_type__n {
+            req_builder = req_builder.query(&[("cluster_type__n", &s.to_string())]);
+        }
+        if let Some(ref s) = cluster_id__n {
+            req_builder = req_builder.query(&[("cluster_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region_id__n {
+            req_builder = req_builder.query(&[("region_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = region__n {
+            req_builder = req_builder.query(&[("region__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site_id__n {
+            req_builder = req_builder.query(&[("site_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = site__n {
+            req_builder = req_builder.query(&[("site__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role_id__n {
+            req_builder = req_builder.query(&[("role_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = role__n {
+            req_builder = req_builder.query(&[("role__n", &s.to_string())]);
+        }
+        if let Some(ref s) = platform_id__n {
+            req_builder = req_builder.query(&[("platform_id__n", &s.to_string())]);
+        }
+        if let Some(ref s) = platform__n {
+            req_builder = req_builder.query(&[("platform__n", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__n {
+            req_builder = req_builder.query(&[("mac_address__n", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__ic {
+            req_builder = req_builder.query(&[("mac_address__ic", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__nic {
+            req_builder = req_builder.query(&[("mac_address__nic", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__iew {
+            req_builder = req_builder.query(&[("mac_address__iew", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__niew {
+            req_builder = req_builder.query(&[("mac_address__niew", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__isw {
+            req_builder = req_builder.query(&[("mac_address__isw", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__nisw {
+            req_builder = req_builder.query(&[("mac_address__nisw", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__ie {
+            req_builder = req_builder.query(&[("mac_address__ie", &s.to_string())]);
+        }
+        if let Some(ref s) = mac_address__nie {
+            req_builder = req_builder.query(&[("mac_address__nie", &s.to_string())]);
+        }
+        if let Some(ref s) = tag__n {
+            req_builder = req_builder.query(&[("tag__n", &s.to_string())]);
         }
         if let Some(ref s) = limit {
             req_builder = req_builder.query(&[("limit", &s.to_string())]);

@@ -17,11 +17,11 @@ pub struct PowerOutlet {
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Status>,
+    pub _type: Option<crate::models::Type5>,
     #[serde(rename = "power_port", skip_serializing_if = "Option::is_none")]
     pub power_port: Option<crate::models::NestedPowerPort>,
     #[serde(rename = "feed_leg", skip_serializing_if = "Option::is_none")]
-    pub feed_leg: Option<crate::models::Status>,
+    pub feed_leg: Option<crate::models::FeedLeg>,
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(

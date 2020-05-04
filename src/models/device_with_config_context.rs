@@ -37,11 +37,11 @@ pub struct DeviceWithConfigContext {
     #[serde(rename = "position", skip_serializing_if = "Option::is_none")]
     pub position: Option<i32>,
     #[serde(rename = "face", skip_serializing_if = "Option::is_none")]
-    pub face: Option<crate::models::Status>,
+    pub face: Option<crate::models::Face>,
     #[serde(rename = "parent_device", skip_serializing_if = "Option::is_none")]
     pub parent_device: Option<crate::models::NestedDevice>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<crate::models::Status2>,
     #[serde(rename = "primary_ip", skip_serializing_if = "Option::is_none")]
     pub primary_ip: Option<crate::models::NestedIpAddress>,
     #[serde(rename = "primary_ip4", skip_serializing_if = "Option::is_none")]

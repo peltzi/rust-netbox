@@ -17,7 +17,7 @@ pub struct VirtualMachineInterface {
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Status>,
+    pub _type: Option<crate::models::Type7>,
     #[serde(rename = "enabled", skip_serializing_if = "Option::is_none")]
     pub enabled: Option<bool>,
     #[serde(rename = "mtu", skip_serializing_if = "Option::is_none")]
@@ -27,7 +27,7 @@ pub struct VirtualMachineInterface {
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(rename = "mode", skip_serializing_if = "Option::is_none")]
-    pub mode: Option<crate::models::Status>,
+    pub mode: Option<crate::models::Mode>,
     #[serde(rename = "untagged_vlan", skip_serializing_if = "Option::is_none")]
     pub untagged_vlan: Option<crate::models::NestedVlan>,
     #[serde(rename = "tagged_vlans", skip_serializing_if = "Option::is_none")]

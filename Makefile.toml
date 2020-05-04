@@ -1,0 +1,248 @@
+[env]
+NETBOX_VERSION = "2.7"
+NETBOX_API_VERSION = "2.7"
+NETBOX_DOCKER_VERSION = "0.23.0"
+NETBOX_DOCKER_REPO_URL = "https://github.com/netbox-community/netbox-docker.git"
+OPENAPI_GENERATOR_DOCKER_IMAGE = "openapitools/openapi-generator-cli:v4.3.0"
+
+# Tasks
+
+# Generate the client code, see ${PWD}/build for results
+[tasks.generate-client]
+run_task = [
+  { name = ["generate_spec_with_netbox_docker", "generate_code", "check_generated_code"], fork = true }
+]
+
+# Clean the build depris from client code generation
+[tasks.clean-generated]
+run_task = [
+  { name = ["clean_build_generated_client", "clean_build_netbox_docker"] }
+]
+
+# Full upgrade metatask
+[tasks.full-upgrade]
+condition = { fail_message = "Don't try to upgrade in master / dirty repo!" }
+condition_script = [
+  "git status --porcelain | wc -l | grep '^0$'",
+  "git rev-parse --abbrev-ref HEAD | grep -vE '^master$'"
+]
+run_task = { name = ["clean-generated", "generate-client", "full-sync"], fork = true }
+
+# Full copy
+[tasks.full-sync]
+condition = { fail_message = "Don't try to full-sync in master / dirty repo!" }
+condition_script = [
+  "git status --porcelain | wc -l | grep '^0$'",
+  "git rev-parse --abbrev-ref HEAD | grep -vE '^master$'"
+]
+run_task = { name = ["copy-generated-code", "copy-generated-spec", "sync-cargo-toml"], fork = true }
+
+# Copy the genereted code over repo
+[tasks.copy-generated-code]
+dependencies = ["check_generated_code"]
+condition = { fail_message = "Generated code doesn't exist / dirty repo!" }
+condition_script = [
+    "test ${PWD}/build/src/lib.rs",
+    "git status --porcelain | wc -l | grep '^0$'"
+]
+script = [
+  "git status --porcelain | wc -l | grep '^0$'",
+  "rm -rf ${PWD}/src",
+  "mkdir ${PWD}/src",
+  "cp -TRv ${PWD}/build/client/src ${PWD}/src/",
+  "rm -rf ${PWD}/docs",
+  "mkdir ${PWD}/docs",
+  "cp -TRv ${PWD}/build/client/docs ${PWD}/docs/",
+  "cp ${PWD}/build/client/.openapi-generator/VERSION ${PWD}/.openapi-generator/VERSION",
+  "git --no-pager diff --stat"
+]
+
+# Copy the genereted code over repo
+[tasks.copy-generated-spec]
+condition = { fail_message = "Generated swagger.json doesn't exist!" }
+condition_script = [
+    "test ${PWD}/build/swagger.json"
+]
+script = [
+  "cp ${PWD}/build/swagger_pretty.json ${PWD}/swagger.json",
+  "git --no-pager diff --stat"
+]
+
+# Sync Cargo.toml from generated client. This was we can keep up generated code
+# without having to manually transfer dependencies around if they change.
+# See Cargo_template.toml for our "static" values.
+# Cargo_template.toml will be merged on top of genereted Cargo.toml.
+[tasks.sync-cargo-toml]
+run_task = [
+  { name = "merge_cargo_tomls" }
+]
+
+
+## Private tasks
+
+# Clean the build dir for generated code
+[tasks.clean_build_generated_client]
+private = true
+condition = { fail_message = "Nothing to clean, client builddir doesn't exist." }
+condition_script = [
+    "test -d ${PWD}/build/client"
+]
+script = ["rm -rf ${PWD}/build/client"]
+
+# Cleanup Netbox docker-compose
+[tasks.clean_build_netbox_docker_compose]
+private = true
+condition = { fail_message = "Nothing to clean, netbox-docker builddir doesn't exist." }
+condition_script = [
+    "test -d ${PWD}/build/netbox-docker"
+]
+script = [
+  "cd ${PWD}/build/netbox-docker",
+  "docker-compose stop",
+  "docker-compose rm -f"
+]
+
+# Clean Netbox docker build directory
+[tasks.clean_build_netbox_docker]
+private = true
+dependencies = ["clean_build_netbox_docker_compose"]
+script = [
+  "rm -rf ${PWD}/build/netbox-docker",
+  "rm -f ${PWD}/build/swagger.json"
+]
+
+# Setup Netbox docker and fetch swagger.json
+[tasks.generate_spec_with_netbox_docker]
+private = true
+dependencies = ["clean_build_netbox_docker"]
+script = [
+  "mkdir -p ${PWD}/build/netbox-docker",
+  "git clone --branch ${NETBOX_DOCKER_VERSION} ${NETBOX_DOCKER_REPO_URL} ${PWD}/build/netbox-docker",
+  "cd ${PWD}/build/netbox-docker",
+  "VERSION=v${NETBOX_VERSION} docker-compose pull",
+  "VERSION=v${NETBOX_VERSION} docker-compose up --detach",
+  "curl --connect-timeout 30 --retry 6 --retry-delay 10 --retry-connrefused http://localhost:$(docker-compose port nginx 8080 | cut -d':' -f 2)/api/swagger.json -o ../swagger.json",
+  "docker-compose stop",
+  "grep -E \"version.*${NETBOX_API_VERSION}\" ../swagger.json"
+]
+
+# Generate new client code from spec
+[tasks.generate_code]
+private = true
+dependencies = ["clean_build_generated_client", "prettify_swagger_json"]
+script = [
+  "export RUNUSER_UID=$(id -u); export RUNUSER_GID=$(id -g)",
+  "mkdir -p ${PWD}/build/client",
+  "${GEN_DOCKER_CMDLINE} --user ${RUNUSER_UID}:${RUNUSER_GID} ${GEN_DOCKER_VOLUMES} ${OPENAPI_GENERATOR_DOCKER_IMAGE} ${GEN_CMDLINE}"
+]
+
+  [tasks.generate_code.env]
+  "GEN_DOCKER_VOLUMES" = "-v ${PWD}/build/client:/build -v ${PWD}/build/swagger_pretty.json:/swagger.json"
+  "GEN_DOCKER_CMDLINE" = "docker run --rm"
+  "GEN_CMDLINE" = "generate -i /swagger.json -g rust --library reqwest --package-name ${CARGO_MAKE_PROJECT_NAME} --additional-properties=packageVersion=${CARGO_MAKE_PROJECT_VERSION} -o /build"
+
+# Prettify generated swagger.json
+# (TODO): Convert to Rust script to drop jq dependency
+[tasks.prettify_swagger_json]
+private = true
+script = [
+  "test ${PWD}/build/swagger.json",
+  "jq '.' ${SWAGGER_SOURCE} > ${SWAGGER_TARGET}"
+]
+  [tasks.prettify_swagger_json.env]
+  SWAGGER_SOURCE = "${PWD}/build/swagger.json"
+  SWAGGER_TARGET = "${PWD}/build/swagger_pretty.json"
+
+# Rustfmt the generate code
+[tasks.format_generated_code]
+private = true
+command = "rustfmt"
+args = ["-v", "build/client/src/lib.rs"]
+
+# Check the generated client code
+[tasks.check_generated_code]
+private = true
+dependencies = ["format_generated_code"]
+script = [
+  "cd ${PWD}/build/client",
+  "cargo check",
+  "echo '[OK] Cargo check on generated code completed!'"
+]
+
+# Merge Cargo.tomls, use Rust script since we already required Rust as a build
+# dependency so using it makes sense. And merging TOML files isn't too hard.
+# (TODO): Not the prettiest script, works though... -peltzi
+[tasks.merge_cargo_tomls]
+private = true
+script_runner = "@rust"
+script = [
+'''
+//! ```cargo
+//! [dependencies]
+//! toml = { version = "0.5", features = ["preserve_order"] }
+//! serde = { version = "1.0", features = ["derive"] }
+//! ```
+extern crate serde;
+extern crate toml;
+
+use serde::ser::Serialize;
+use std::env;
+use std::fs::File;
+use std::io::prelude::*;
+use toml::Value;
+
+fn merge(a: &mut Value, b: &Value) {
+    match (a, b) {
+        (&mut Value::Table(ref mut a), &Value::Table(ref b)) => {
+            for (k, v) in b {
+                merge(a.entry(k.clone()).or_insert(Value::Boolean(false)), v);
+            }
+        }
+        (a, b) => {
+            *a = b.clone();
+        }
+    }
+}
+
+fn main() {
+    let file1 = match env::var("GENERATED_CARGO_TOML") {
+        Ok(val) => val,
+        Err(e) => panic!("Problem with GENERATED_CARGO_TOML env: {:?}", e),
+    };
+    let file2 = match env::var("CARGO_TOML_TEMPLATE") {
+        Ok(val) => val,
+        Err(e) => panic!("Problem with CARGO_TOML_TEMPLATE env: {:?}", e),
+    };
+    let mut file1 = File::open(file1).expect("Unable to open the generated file.");
+    let mut contents1 = String::new();
+    file1
+        .read_to_string(&mut contents1)
+        .expect("Unable to read the generated Cargo.toml!");
+
+    let mut file2 = File::open(file2).expect("Unable to open the template file.");
+    let mut contents2 = String::new();
+    file2
+        .read_to_string(&mut contents2)
+        .expect("Unable to read the Cargo.toml template!");
+
+    let mut cargo_generated: Value = toml::from_str(&contents1).unwrap();
+    let cargo_template: Value = toml::from_str(&contents2).unwrap();
+
+    merge(&mut cargo_generated, &cargo_template);
+
+    let mut result = String::new();
+
+    cargo_generated
+        .serialize(&mut toml::Serializer::new(&mut result))
+        .unwrap();
+
+    let mut newfile = File::create("Cargo.toml").unwrap();
+    newfile.write_all(&result.as_bytes()).unwrap();
+
+    println!("Wrote new Cargo.toml!");
+}
+'''
+]
+  [tasks.merge_cargo_tomls.env]
+  GENERATED_CARGO_TOML = "${PWD}/build/client/Cargo.toml"
+  CARGO_TOML_TEMPLATE = "${PWD}/Cargo_template.toml"

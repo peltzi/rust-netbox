@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **address** | **String** | IPv4 or IPv6 address (with mask) | 
 **vrf** | Option<[**crate::models::NestedVrf**](NestedVRF.md)> |  | [optional]
 **tenant** | Option<[**crate::models::NestedTenant**](NestedTenant.md)> |  | [optional]
-**status** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
-**role** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**status** | Option<[**crate::models::Status6**](Status_6.md)> |  | [optional]
+**role** | Option<[**crate::models::Role1**](Role_1.md)> |  | [optional]
 **interface** | Option<[**crate::models::IpAddressInterface**](IPAddressInterface.md)> |  | [optional]
 **nat_inside** | Option<[**crate::models::NestedIpAddress**](NestedIPAddress.md)> |  | [optional]
 **nat_outside** | Option<[**crate::models::NestedIpAddress**](NestedIPAddress.md)> |  | [optional]

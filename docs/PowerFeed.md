@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **power_panel** | [**crate::models::NestedPowerPanel**](NestedPowerPanel.md) |  | 
 **rack** | Option<[**crate::models::NestedRack**](NestedRack.md)> |  | [optional]
 **name** | **String** |  | 
-**status** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
-**_type** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
-**supply** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
-**phase** | Option<[**crate::models::Status**](Status.md)> |  | [optional]
+**status** | Option<[**crate::models::Status3**](Status_3.md)> |  | [optional]
+**_type** | Option<[**crate::models::Type4**](Type_4.md)> |  | [optional]
+**supply** | Option<[**crate::models::Supply**](Supply.md)> |  | [optional]
+**phase** | Option<[**crate::models::Phase**](Phase.md)> |  | [optional]
 **voltage** | Option<**i32**> |  | [optional]
 **amperage** | Option<**i32**> |  | [optional]
 **max_utilization** | Option<**i32**> | Maximum permissible draw (percentage) | [optional]
