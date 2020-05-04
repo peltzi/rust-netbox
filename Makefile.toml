@@ -46,6 +46,8 @@ condition_script = [
 ]
 script = [
   "cp -TRv ${PWD}/build/client/src ${PWD}/src/",
+  "cp -TRv ${PWD}/build/client/docs ${PWD}/docs/",
+  "cp ${PWD}/build/client/.openapi-generator/VERSION ${PWD}/.openapi-generator/VERSION",
   "git diff --stat"
 ]
 
