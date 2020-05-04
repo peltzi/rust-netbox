@@ -48,7 +48,7 @@ script = [
   "cp -TRv ${PWD}/build/client/src ${PWD}/src/",
   "cp -TRv ${PWD}/build/client/docs ${PWD}/docs/",
   "cp ${PWD}/build/client/.openapi-generator/VERSION ${PWD}/.openapi-generator/VERSION",
-  "git diff --stat"
+  "git --no-pager diff --stat"
 ]
 
 # Copy the genereted code over repo
@@ -59,7 +59,7 @@ condition_script = [
 ]
 script = [
   "cp ${PWD}/build/swagger_pretty.json ${PWD}/swagger.json",
-  "git diff --stat"
+  "git --no-pager diff --stat"
 ]
 
 # Sync Cargo.toml from generated client. This was we can keep up generated code
