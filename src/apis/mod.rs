@@ -1,26 +1,34 @@
 use reqwest;
 use serde_json;
 
+#[derive(Debug, Clone)]
+pub struct ResponseContent<T> {
+    pub status: reqwest::StatusCode,
+    pub content: String,
+    pub entity: Option<T>,
+}
+
 #[derive(Debug)]
-pub enum Error {
+pub enum Error<T> {
     Reqwest(reqwest::Error),
     Serde(serde_json::Error),
     Io(std::io::Error),
+    ResponseError(ResponseContent<T>),
 }
 
-impl From<reqwest::Error> for Error {
+impl<T> From<reqwest::Error> for Error<T> {
     fn from(e: reqwest::Error) -> Self {
         Error::Reqwest(e)
     }
 }
 
-impl From<serde_json::Error> for Error {
+impl<T> From<serde_json::Error> for Error<T> {
     fn from(e: serde_json::Error) -> Self {
         Error::Serde(e)
     }
 }
 
-impl From<std::io::Error> for Error {
+impl<T> From<std::io::Error> for Error<T> {
     fn from(e: std::io::Error) -> Self {
         Error::Io(e)
     }
@@ -30,20 +38,12 @@ pub fn urlencode<T: AsRef<str>>(s: T) -> String {
     ::url::form_urlencoded::byte_serialize(s.as_ref().as_bytes()).collect()
 }
 
-mod circuits_api;
-pub use self::circuits_api::{CircuitsApi, CircuitsApiClient};
-mod dcim_api;
-pub use self::dcim_api::{DcimApi, DcimApiClient};
-mod extras_api;
-pub use self::extras_api::{ExtrasApi, ExtrasApiClient};
-mod ipam_api;
-pub use self::ipam_api::{IpamApi, IpamApiClient};
-mod secrets_api;
-pub use self::secrets_api::{SecretsApi, SecretsApiClient};
-mod tenancy_api;
-pub use self::tenancy_api::{TenancyApi, TenancyApiClient};
-mod virtualization_api;
-pub use self::virtualization_api::{VirtualizationApi, VirtualizationApiClient};
+pub mod circuits_api;
+pub mod dcim_api;
+pub mod extras_api;
+pub mod ipam_api;
+pub mod secrets_api;
+pub mod tenancy_api;
+pub mod virtualization_api;
 
-pub mod client;
 pub mod configuration;

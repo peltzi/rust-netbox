@@ -15,7 +15,7 @@ pub struct InterfaceConnection {
     #[serde(rename = "interface_b")]
     pub interface_b: crate::models::NestedInterface,
     #[serde(rename = "connection_status", skip_serializing_if = "Option::is_none")]
-    pub connection_status: Option<crate::models::ConnectionStatus>,
+    pub connection_status: Option<crate::models::ConnectionStatus1>,
 }
 
 impl InterfaceConnection {
