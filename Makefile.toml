@@ -139,7 +139,7 @@ script = [
   [tasks.generate_code.env]
   "GEN_DOCKER_VOLUMES" = "-v ${PWD}/build/client:/build -v ${PWD}/build/swagger_pretty.json:/swagger.json"
   "GEN_DOCKER_CMDLINE" = "docker run --rm"
-  "GEN_CMDLINE" = "generate -i /swagger.json -g rust --library reqwest --package-name ${CARGO_MAKE_PROJECT_NAME} --additional-properties=packageVersion=${CARGO_MAKE_PROJECT_VERSION} -o /build"
+  "GEN_CMDLINE" = "generate -i /swagger.json -g rust --library reqwest --package-name ${CARGO_MAKE_PROJECT_NAME} --additional-properties=packageVersion=${CARGO_MAKE_PROJECT_VERSION},supportAsync=true -o /build"
 
 # Prettify generated swagger.json
 # (TODO): Convert to Rust script to drop jq dependency
