@@ -19,24 +19,24 @@ pub struct Rack {
     #[serde(rename = "display_name", skip_serializing_if = "Option::is_none")]
     pub display_name: Option<String>,
     #[serde(rename = "site")]
-    pub site: crate::models::NestedSite,
+    pub site: Box<crate::models::NestedSite>,
     #[serde(rename = "group", skip_serializing_if = "Option::is_none")]
-    pub group: Option<crate::models::NestedRackGroup>,
+    pub group: Option<Box<crate::models::NestedRackGroup>>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status4>,
+    pub status: Option<Box<crate::models::Status4>>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
-    pub role: Option<crate::models::NestedRackRole>,
+    pub role: Option<Box<crate::models::NestedRackRole>>,
     #[serde(rename = "serial", skip_serializing_if = "Option::is_none")]
     pub serial: Option<String>,
     /// A unique tag used to identify this rack
     #[serde(rename = "asset_tag", skip_serializing_if = "Option::is_none")]
     pub asset_tag: Option<String>,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Type6>,
+    pub _type: Option<Box<crate::models::Type6>>,
     #[serde(rename = "width", skip_serializing_if = "Option::is_none")]
-    pub width: Option<crate::models::Width>,
+    pub width: Option<Box<crate::models::Width>>,
     #[serde(rename = "u_height", skip_serializing_if = "Option::is_none")]
     pub u_height: Option<i32>,
     /// Units are numbered top-to-bottom
@@ -47,7 +47,7 @@ pub struct Rack {
     #[serde(rename = "outer_depth", skip_serializing_if = "Option::is_none")]
     pub outer_depth: Option<i32>,
     #[serde(rename = "outer_unit", skip_serializing_if = "Option::is_none")]
-    pub outer_unit: Option<crate::models::OuterUnit>,
+    pub outer_unit: Option<Box<crate::models::OuterUnit>>,
     #[serde(rename = "comments", skip_serializing_if = "Option::is_none")]
     pub comments: Option<String>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
@@ -71,7 +71,7 @@ impl Rack {
             name,
             facility_id: None,
             display_name: None,
-            site,
+            site: Box::new(site),
             group: None,
             tenant: None,
             status: None,

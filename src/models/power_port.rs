@@ -13,11 +13,11 @@ pub struct PowerPort {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device")]
-    pub device: crate::models::NestedDevice,
+    pub device: Box<crate::models::NestedDevice>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Type3>,
+    pub _type: Option<Box<crate::models::Type3>>,
     /// Maximum power draw (watts)
     #[serde(rename = "maximum_draw", skip_serializing_if = "Option::is_none")]
     pub maximum_draw: Option<i32>,
@@ -35,9 +35,9 @@ pub struct PowerPort {
     #[serde(rename = "connected_endpoint", skip_serializing_if = "Option::is_none")]
     pub connected_endpoint: Option<::std::collections::HashMap<String, String>>,
     #[serde(rename = "connection_status", skip_serializing_if = "Option::is_none")]
-    pub connection_status: Option<crate::models::ConnectionStatus>,
+    pub connection_status: Option<Box<crate::models::ConnectionStatus>>,
     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
-    pub cable: Option<crate::models::NestedCable>,
+    pub cable: Option<Box<crate::models::NestedCable>>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
     pub tags: Option<Vec<String>>,
 }
@@ -46,7 +46,7 @@ impl PowerPort {
     pub fn new(device: crate::models::NestedDevice, name: String) -> PowerPort {
         PowerPort {
             id: None,
-            device,
+            device: Box::new(device),
             name,
             _type: None,
             maximum_draw: None,

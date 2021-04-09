@@ -17,11 +17,11 @@ pub struct Site {
     #[serde(rename = "slug")]
     pub slug: String,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status5>,
+    pub status: Option<Box<crate::models::Status5>>,
     #[serde(rename = "region", skip_serializing_if = "Option::is_none")]
-    pub region: Option<crate::models::NestedRegion>,
+    pub region: Option<Box<crate::models::NestedRegion>>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "facility", skip_serializing_if = "Option::is_none")]
     pub facility: Option<String>,
     #[serde(rename = "asn", skip_serializing_if = "Option::is_none")]

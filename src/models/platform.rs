@@ -17,7 +17,7 @@ pub struct Platform {
     #[serde(rename = "slug")]
     pub slug: String,
     #[serde(rename = "manufacturer", skip_serializing_if = "Option::is_none")]
-    pub manufacturer: Option<crate::models::NestedManufacturer>,
+    pub manufacturer: Option<Box<crate::models::NestedManufacturer>>,
     /// The name of the NAPALM driver to use when interacting with devices
     #[serde(rename = "napalm_driver", skip_serializing_if = "Option::is_none")]
     pub napalm_driver: Option<String>,

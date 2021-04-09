@@ -13,22 +13,22 @@ pub struct Prefix {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "family", skip_serializing_if = "Option::is_none")]
-    pub family: Option<crate::models::Family>,
+    pub family: Option<Box<crate::models::Family>>,
     /// IPv4 or IPv6 network with mask
     #[serde(rename = "prefix")]
     pub prefix: String,
     #[serde(rename = "site", skip_serializing_if = "Option::is_none")]
-    pub site: Option<crate::models::NestedSite>,
+    pub site: Option<Box<crate::models::NestedSite>>,
     #[serde(rename = "vrf", skip_serializing_if = "Option::is_none")]
-    pub vrf: Option<crate::models::NestedVrf>,
+    pub vrf: Option<Box<crate::models::NestedVrf>>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "vlan", skip_serializing_if = "Option::is_none")]
-    pub vlan: Option<crate::models::NestedVlan>,
+    pub vlan: Option<Box<crate::models::NestedVlan>>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status7>,
+    pub status: Option<Box<crate::models::Status7>>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
-    pub role: Option<crate::models::NestedRole>,
+    pub role: Option<Box<crate::models::NestedRole>>,
     /// All IP addresses within this prefix are considered usable
     #[serde(rename = "is_pool", skip_serializing_if = "Option::is_none")]
     pub is_pool: Option<bool>,

@@ -13,15 +13,15 @@ pub struct DeviceInterface {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device")]
-    pub device: crate::models::NestedDevice,
+    pub device: Box<crate::models::NestedDevice>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type")]
-    pub _type: crate::models::Type2,
+    pub _type: Box<crate::models::Type2>,
     #[serde(rename = "enabled", skip_serializing_if = "Option::is_none")]
     pub enabled: Option<bool>,
     #[serde(rename = "lag", skip_serializing_if = "Option::is_none")]
-    pub lag: Option<crate::models::NestedInterface>,
+    pub lag: Option<Box<crate::models::NestedInterface>>,
     #[serde(rename = "mtu", skip_serializing_if = "Option::is_none")]
     pub mtu: Option<i32>,
     #[serde(rename = "mac_address", skip_serializing_if = "Option::is_none")]
@@ -40,13 +40,13 @@ pub struct DeviceInterface {
     #[serde(rename = "connected_endpoint", skip_serializing_if = "Option::is_none")]
     pub connected_endpoint: Option<::std::collections::HashMap<String, String>>,
     #[serde(rename = "connection_status", skip_serializing_if = "Option::is_none")]
-    pub connection_status: Option<crate::models::ConnectionStatus>,
+    pub connection_status: Option<Box<crate::models::ConnectionStatus>>,
     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
-    pub cable: Option<crate::models::NestedCable>,
+    pub cable: Option<Box<crate::models::NestedCable>>,
     #[serde(rename = "mode", skip_serializing_if = "Option::is_none")]
-    pub mode: Option<crate::models::Mode>,
+    pub mode: Option<Box<crate::models::Mode>>,
     #[serde(rename = "untagged_vlan", skip_serializing_if = "Option::is_none")]
-    pub untagged_vlan: Option<crate::models::NestedVlan>,
+    pub untagged_vlan: Option<Box<crate::models::NestedVlan>>,
     #[serde(rename = "tagged_vlans", skip_serializing_if = "Option::is_none")]
     pub tagged_vlans: Option<Vec<crate::models::NestedVlan>>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
@@ -63,9 +63,9 @@ impl DeviceInterface {
     ) -> DeviceInterface {
         DeviceInterface {
             id: None,
-            device,
+            device: Box::new(device),
             name,
-            _type,
+            _type: Box::new(_type),
             enabled: None,
             lag: None,
             mtu: None,

@@ -13,11 +13,11 @@ pub struct ConsoleServerPort {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device")]
-    pub device: crate::models::NestedDevice,
+    pub device: Box<crate::models::NestedDevice>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::ModelType>,
+    pub _type: Option<Box<crate::models::ModelType>>,
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(
@@ -29,9 +29,9 @@ pub struct ConsoleServerPort {
     #[serde(rename = "connected_endpoint", skip_serializing_if = "Option::is_none")]
     pub connected_endpoint: Option<::std::collections::HashMap<String, String>>,
     #[serde(rename = "connection_status", skip_serializing_if = "Option::is_none")]
-    pub connection_status: Option<crate::models::ConnectionStatus>,
+    pub connection_status: Option<Box<crate::models::ConnectionStatus>>,
     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
-    pub cable: Option<crate::models::NestedCable>,
+    pub cable: Option<Box<crate::models::NestedCable>>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
     pub tags: Option<Vec<String>>,
 }
@@ -40,7 +40,7 @@ impl ConsoleServerPort {
     pub fn new(device: crate::models::NestedDevice, name: String) -> ConsoleServerPort {
         ConsoleServerPort {
             id: None,
-            device,
+            device: Box::new(device),
             name,
             _type: None,
             description: None,

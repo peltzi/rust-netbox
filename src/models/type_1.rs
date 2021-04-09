@@ -28,7 +28,7 @@ pub enum Label {
     #[serde(rename = "8P8C")]
     _8P8C,
     #[serde(rename = "110 Punch")]
-    _110_Punch,
+    _110Punch,
     #[serde(rename = "BNC")]
     BNC,
     #[serde(rename = "MRJ21")]

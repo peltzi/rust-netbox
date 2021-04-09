@@ -26,7 +26,7 @@ impl Phase {
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum Label {
     #[serde(rename = "Single phase")]
-    Single_phase,
+    SinglePhase,
     #[serde(rename = "Three-phase")]
     ThreePhase,
 }

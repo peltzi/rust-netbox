@@ -13,11 +13,11 @@ pub struct CircuitTermination {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "circuit")]
-    pub circuit: crate::models::NestedCircuit,
+    pub circuit: Box<crate::models::NestedCircuit>,
     #[serde(rename = "term_side")]
     pub term_side: TermSide,
     #[serde(rename = "site")]
-    pub site: crate::models::NestedSite,
+    pub site: Box<crate::models::NestedSite>,
     #[serde(rename = "port_speed")]
     pub port_speed: i32,
     /// Upstream speed, if different from port speed
@@ -38,9 +38,9 @@ pub struct CircuitTermination {
     #[serde(rename = "connected_endpoint", skip_serializing_if = "Option::is_none")]
     pub connected_endpoint: Option<::std::collections::HashMap<String, String>>,
     #[serde(rename = "connection_status", skip_serializing_if = "Option::is_none")]
-    pub connection_status: Option<crate::models::ConnectionStatus>,
+    pub connection_status: Option<Box<crate::models::ConnectionStatus>>,
     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
-    pub cable: Option<crate::models::NestedCable>,
+    pub cable: Option<Box<crate::models::NestedCable>>,
 }
 
 impl CircuitTermination {
@@ -52,9 +52,9 @@ impl CircuitTermination {
     ) -> CircuitTermination {
         CircuitTermination {
             id: None,
-            circuit,
+            circuit: Box::new(circuit),
             term_side,
-            site,
+            site: Box::new(site),
             port_speed,
             upstream_speed: None,
             xconnect_id: None,

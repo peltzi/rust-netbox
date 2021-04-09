@@ -17,7 +17,7 @@ pub struct VlanGroup {
     #[serde(rename = "slug")]
     pub slug: String,
     #[serde(rename = "site", skip_serializing_if = "Option::is_none")]
-    pub site: Option<crate::models::NestedSite>,
+    pub site: Option<Box<crate::models::NestedSite>>,
     #[serde(rename = "vlan_count", skip_serializing_if = "Option::is_none")]
     pub vlan_count: Option<i32>,
 }

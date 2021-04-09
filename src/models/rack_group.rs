@@ -17,7 +17,7 @@ pub struct RackGroup {
     #[serde(rename = "slug")]
     pub slug: String,
     #[serde(rename = "site")]
-    pub site: crate::models::NestedSite,
+    pub site: Box<crate::models::NestedSite>,
     #[serde(rename = "rack_count", skip_serializing_if = "Option::is_none")]
     pub rack_count: Option<i32>,
 }
@@ -28,7 +28,7 @@ impl RackGroup {
             id: None,
             name,
             slug,
-            site,
+            site: Box::new(site),
             rack_count: None,
         }
     }

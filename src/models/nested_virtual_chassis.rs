@@ -15,7 +15,7 @@ pub struct NestedVirtualChassis {
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
     #[serde(rename = "master")]
-    pub master: crate::models::NestedDevice,
+    pub master: Box<crate::models::NestedDevice>,
     #[serde(rename = "member_count", skip_serializing_if = "Option::is_none")]
     pub member_count: Option<i32>,
 }
@@ -25,7 +25,7 @@ impl NestedVirtualChassis {
         NestedVirtualChassis {
             id: None,
             url: None,
-            master,
+            master: Box::new(master),
             member_count: None,
         }
     }

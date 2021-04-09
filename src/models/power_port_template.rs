@@ -13,11 +13,11 @@ pub struct PowerPortTemplate {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device_type")]
-    pub device_type: crate::models::NestedDeviceType,
+    pub device_type: Box<crate::models::NestedDeviceType>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Type3>,
+    pub _type: Option<Box<crate::models::Type3>>,
     /// Maximum power draw (watts)
     #[serde(rename = "maximum_draw", skip_serializing_if = "Option::is_none")]
     pub maximum_draw: Option<i32>,
@@ -30,7 +30,7 @@ impl PowerPortTemplate {
     pub fn new(device_type: crate::models::NestedDeviceType, name: String) -> PowerPortTemplate {
         PowerPortTemplate {
             id: None,
-            device_type,
+            device_type: Box::new(device_type),
             name,
             _type: None,
             maximum_draw: None,

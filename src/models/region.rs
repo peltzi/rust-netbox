@@ -17,7 +17,7 @@ pub struct Region {
     #[serde(rename = "slug")]
     pub slug: String,
     #[serde(rename = "parent", skip_serializing_if = "Option::is_none")]
-    pub parent: Option<crate::models::NestedRegion>,
+    pub parent: Option<Box<crate::models::NestedRegion>>,
     #[serde(rename = "site_count", skip_serializing_if = "Option::is_none")]
     pub site_count: Option<i32>,
 }

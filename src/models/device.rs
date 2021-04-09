@@ -17,41 +17,41 @@ pub struct Device {
     #[serde(rename = "display_name", skip_serializing_if = "Option::is_none")]
     pub display_name: Option<String>,
     #[serde(rename = "device_type")]
-    pub device_type: crate::models::NestedDeviceType,
+    pub device_type: Box<crate::models::NestedDeviceType>,
     #[serde(rename = "device_role")]
-    pub device_role: crate::models::NestedDeviceRole,
+    pub device_role: Box<crate::models::NestedDeviceRole>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "platform", skip_serializing_if = "Option::is_none")]
-    pub platform: Option<crate::models::NestedPlatform>,
+    pub platform: Option<Box<crate::models::NestedPlatform>>,
     #[serde(rename = "serial", skip_serializing_if = "Option::is_none")]
     pub serial: Option<String>,
     /// A unique tag used to identify this device
     #[serde(rename = "asset_tag", skip_serializing_if = "Option::is_none")]
     pub asset_tag: Option<String>,
     #[serde(rename = "site")]
-    pub site: crate::models::NestedSite,
+    pub site: Box<crate::models::NestedSite>,
     #[serde(rename = "rack", skip_serializing_if = "Option::is_none")]
-    pub rack: Option<crate::models::NestedRack>,
+    pub rack: Option<Box<crate::models::NestedRack>>,
     /// The lowest-numbered unit occupied by the device
     #[serde(rename = "position", skip_serializing_if = "Option::is_none")]
     pub position: Option<i32>,
     #[serde(rename = "face", skip_serializing_if = "Option::is_none")]
-    pub face: Option<crate::models::Face>,
+    pub face: Option<Box<crate::models::Face>>,
     #[serde(rename = "parent_device", skip_serializing_if = "Option::is_none")]
-    pub parent_device: Option<crate::models::NestedDevice>,
+    pub parent_device: Option<Box<crate::models::NestedDevice>>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status2>,
+    pub status: Option<Box<crate::models::Status2>>,
     #[serde(rename = "primary_ip", skip_serializing_if = "Option::is_none")]
-    pub primary_ip: Option<crate::models::NestedIpAddress>,
+    pub primary_ip: Option<Box<crate::models::NestedIpAddress>>,
     #[serde(rename = "primary_ip4", skip_serializing_if = "Option::is_none")]
-    pub primary_ip4: Option<crate::models::NestedIpAddress>,
+    pub primary_ip4: Option<Box<crate::models::NestedIpAddress>>,
     #[serde(rename = "primary_ip6", skip_serializing_if = "Option::is_none")]
-    pub primary_ip6: Option<crate::models::NestedIpAddress>,
+    pub primary_ip6: Option<Box<crate::models::NestedIpAddress>>,
     #[serde(rename = "cluster", skip_serializing_if = "Option::is_none")]
-    pub cluster: Option<crate::models::NestedCluster>,
+    pub cluster: Option<Box<crate::models::NestedCluster>>,
     #[serde(rename = "virtual_chassis", skip_serializing_if = "Option::is_none")]
-    pub virtual_chassis: Option<crate::models::NestedVirtualChassis>,
+    pub virtual_chassis: Option<Box<crate::models::NestedVirtualChassis>>,
     #[serde(rename = "vc_position", skip_serializing_if = "Option::is_none")]
     pub vc_position: Option<i32>,
     #[serde(rename = "vc_priority", skip_serializing_if = "Option::is_none")]
@@ -80,13 +80,13 @@ impl Device {
             id: None,
             name: None,
             display_name: None,
-            device_type,
-            device_role,
+            device_type: Box::new(device_type),
+            device_role: Box::new(device_role),
             tenant: None,
             platform: None,
             serial: None,
             asset_tag: None,
-            site,
+            site: Box::new(site),
             rack: None,
             position: None,
             face: None,

@@ -15,7 +15,7 @@ pub struct NestedDeviceType {
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
     #[serde(rename = "manufacturer", skip_serializing_if = "Option::is_none")]
-    pub manufacturer: Option<crate::models::NestedManufacturer>,
+    pub manufacturer: Option<Box<crate::models::NestedManufacturer>>,
     #[serde(rename = "model")]
     pub model: String,
     #[serde(rename = "slug")]

@@ -30,7 +30,7 @@ pub enum Label {
     #[serde(rename = "Tagged")]
     Tagged,
     #[serde(rename = "Tagged (All)")]
-    Tagged__All,
+    TaggedAll,
 }
 ///
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]

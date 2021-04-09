@@ -26,7 +26,7 @@ impl ConnectionStatus {
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum Label {
     #[serde(rename = "Not Connected")]
-    Not_Connected,
+    NotConnected,
     #[serde(rename = "Connected")]
     Connected,
 }

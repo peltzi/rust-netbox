@@ -13,19 +13,19 @@ pub struct Vlan {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "site", skip_serializing_if = "Option::is_none")]
-    pub site: Option<crate::models::NestedSite>,
+    pub site: Option<Box<crate::models::NestedSite>>,
     #[serde(rename = "group", skip_serializing_if = "Option::is_none")]
-    pub group: Option<crate::models::NestedVlanGroup>,
+    pub group: Option<Box<crate::models::NestedVlanGroup>>,
     #[serde(rename = "vid")]
     pub vid: i32,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status8>,
+    pub status: Option<Box<crate::models::Status8>>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
-    pub role: Option<crate::models::NestedRole>,
+    pub role: Option<Box<crate::models::NestedRole>>,
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]

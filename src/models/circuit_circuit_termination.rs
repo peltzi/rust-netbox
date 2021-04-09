@@ -15,9 +15,9 @@ pub struct CircuitCircuitTermination {
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
     #[serde(rename = "site")]
-    pub site: crate::models::NestedSite,
+    pub site: Box<crate::models::NestedSite>,
     #[serde(rename = "connected_endpoint")]
-    pub connected_endpoint: crate::models::NestedInterface,
+    pub connected_endpoint: Box<crate::models::NestedInterface>,
     #[serde(rename = "port_speed")]
     pub port_speed: i32,
     /// Upstream speed, if different from port speed
@@ -36,8 +36,8 @@ impl CircuitCircuitTermination {
         CircuitCircuitTermination {
             id: None,
             url: None,
-            site,
-            connected_endpoint,
+            site: Box::new(site),
+            connected_endpoint: Box::new(connected_endpoint),
             port_speed,
             upstream_speed: None,
             xconnect_id: None,

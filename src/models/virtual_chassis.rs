@@ -13,7 +13,7 @@ pub struct VirtualChassis {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "master")]
-    pub master: crate::models::NestedDevice,
+    pub master: Box<crate::models::NestedDevice>,
     #[serde(rename = "domain", skip_serializing_if = "Option::is_none")]
     pub domain: Option<String>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
@@ -26,7 +26,7 @@ impl VirtualChassis {
     pub fn new(master: crate::models::NestedDevice) -> VirtualChassis {
         VirtualChassis {
             id: None,
-            master,
+            master: Box::new(master),
             domain: None,
             tags: None,
             member_count: None,

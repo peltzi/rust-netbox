@@ -36,59 +36,59 @@ pub enum Label {
     #[serde(rename = "C19")]
     C19,
     #[serde(rename = "P+N+E 4H")]
-    PNE_4H,
+    PNE4H,
     #[serde(rename = "P+N+E 6H")]
-    PNE_6H,
+    PNE6H,
     #[serde(rename = "P+N+E 9H")]
-    PNE_9H,
+    PNE9H,
     #[serde(rename = "2P+E 4H")]
-    _2PE_4H,
+    _2PE4H,
     #[serde(rename = "2P+E 6H")]
-    _2PE_6H,
+    _2PE6H,
     #[serde(rename = "2P+E 9H")]
-    _2PE_9H,
+    _2PE9H,
     #[serde(rename = "3P+E 4H")]
-    _3PE_4H,
+    _3PE4H,
     #[serde(rename = "3P+E 6H")]
-    _3PE_6H,
+    _3PE6H,
     #[serde(rename = "3P+E 9H")]
-    _3PE_9H,
+    _3PE9H,
     #[serde(rename = "3P+N+E 4H")]
-    _3PNE_4H,
+    _3PNE4H,
     #[serde(rename = "3P+N+E 6H")]
-    _3PNE_6H,
+    _3PNE6H,
     #[serde(rename = "3P+N+E 9H")]
-    _3PNE_9H,
+    _3PNE9H,
     #[serde(rename = "NEMA 5-15R")]
-    NEMA_515R,
+    NEMA515R,
     #[serde(rename = "NEMA 5-20R")]
-    NEMA_520R,
+    NEMA520R,
     #[serde(rename = "NEMA 5-30R")]
-    NEMA_530R,
+    NEMA530R,
     #[serde(rename = "NEMA 5-50R")]
-    NEMA_550R,
+    NEMA550R,
     #[serde(rename = "NEMA 6-15R")]
-    NEMA_615R,
+    NEMA615R,
     #[serde(rename = "NEMA 6-20R")]
-    NEMA_620R,
+    NEMA620R,
     #[serde(rename = "NEMA 6-30R")]
-    NEMA_630R,
+    NEMA630R,
     #[serde(rename = "NEMA 6-50R")]
-    NEMA_650R,
+    NEMA650R,
     #[serde(rename = "NEMA L5-15R")]
-    NEMA_L515R,
+    NEMAL515R,
     #[serde(rename = "NEMA L5-20R")]
-    NEMA_L520R,
+    NEMAL520R,
     #[serde(rename = "NEMA L5-30R")]
-    NEMA_L530R,
+    NEMAL530R,
     #[serde(rename = "NEMA L6-15R")]
-    NEMA_L615R,
+    NEMAL615R,
     #[serde(rename = "NEMA L6-20R")]
-    NEMA_L620R,
+    NEMAL620R,
     #[serde(rename = "NEMA L6-30R")]
-    NEMA_L630R,
+    NEMAL630R,
     #[serde(rename = "NEMA L6-50R")]
-    NEMA_L650R,
+    NEMAL650R,
     #[serde(rename = "CS6360C")]
     CS6360C,
     #[serde(rename = "CS6364C")]
@@ -102,27 +102,27 @@ pub enum Label {
     #[serde(rename = "CS8464C")]
     CS8464C,
     #[serde(rename = "ITA Type E (CEE7/5)")]
-    ITA_Type_E__CEE75,
+    ITATypeECEE75,
     #[serde(rename = "ITA Type F (CEE7/3)")]
-    ITA_Type_F__CEE73,
+    ITATypeFCEE73,
     #[serde(rename = "ITA Type G (BS 1363)")]
-    ITA_Type_G__BS_1363,
+    ITATypeGBS1363,
     #[serde(rename = "ITA Type H")]
-    ITA_Type_H,
+    ITATypeH,
     #[serde(rename = "ITA Type I")]
-    ITA_Type_I,
+    ITATypeI,
     #[serde(rename = "ITA Type J")]
-    ITA_Type_J,
+    ITATypeJ,
     #[serde(rename = "ITA Type K")]
-    ITA_Type_K,
+    ITATypeK,
     #[serde(rename = "ITA Type L (CEI 23-50)")]
-    ITA_Type_L__CEI_2350,
+    ITATypeLCEI2350,
     #[serde(rename = "ITA Type M (BS 546)")]
-    ITA_Type_M__BS_546,
+    ITATypeMBS546,
     #[serde(rename = "ITA Type N")]
-    ITA_Type_N,
+    ITATypeN,
     #[serde(rename = "ITA Type O")]
-    ITA_Type_O,
+    ITATypeO,
 }
 ///
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]

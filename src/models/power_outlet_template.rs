@@ -13,22 +13,22 @@ pub struct PowerOutletTemplate {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device_type")]
-    pub device_type: crate::models::NestedDeviceType,
+    pub device_type: Box<crate::models::NestedDeviceType>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Type5>,
+    pub _type: Option<Box<crate::models::Type5>>,
     #[serde(rename = "power_port", skip_serializing_if = "Option::is_none")]
-    pub power_port: Option<crate::models::NestedPowerPortTemplate>,
+    pub power_port: Option<Box<crate::models::NestedPowerPortTemplate>>,
     #[serde(rename = "feed_leg", skip_serializing_if = "Option::is_none")]
-    pub feed_leg: Option<crate::models::FeedLeg>,
+    pub feed_leg: Option<Box<crate::models::FeedLeg>>,
 }
 
 impl PowerOutletTemplate {
     pub fn new(device_type: crate::models::NestedDeviceType, name: String) -> PowerOutletTemplate {
         PowerOutletTemplate {
             id: None,
-            device_type,
+            device_type: Box::new(device_type),
             name,
             _type: None,
             power_port: None,

@@ -13,13 +13,13 @@ pub struct DeviceBay {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device")]
-    pub device: crate::models::NestedDevice,
+    pub device: Box<crate::models::NestedDevice>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(rename = "installed_device", skip_serializing_if = "Option::is_none")]
-    pub installed_device: Option<crate::models::NestedDevice>,
+    pub installed_device: Option<Box<crate::models::NestedDevice>>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
     pub tags: Option<Vec<String>>,
 }
@@ -28,7 +28,7 @@ impl DeviceBay {
     pub fn new(device: crate::models::NestedDevice, name: String) -> DeviceBay {
         DeviceBay {
             id: None,
-            device,
+            device: Box::new(device),
             name,
             description: None,
             installed_device: None,

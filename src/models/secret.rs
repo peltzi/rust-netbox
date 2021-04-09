@@ -13,9 +13,9 @@ pub struct Secret {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device")]
-    pub device: crate::models::NestedDevice,
+    pub device: Box<crate::models::NestedDevice>,
     #[serde(rename = "role")]
-    pub role: crate::models::NestedSecretRole,
+    pub role: Box<crate::models::NestedSecretRole>,
     #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
     #[serde(rename = "plaintext")]
@@ -40,8 +40,8 @@ impl Secret {
     ) -> Secret {
         Secret {
             id: None,
-            device,
-            role,
+            device: Box::new(device),
+            role: Box::new(role),
             name: None,
             plaintext,
             hash: None,

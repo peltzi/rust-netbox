@@ -19,7 +19,7 @@ pub struct ExportTemplate {
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(rename = "template_language", skip_serializing_if = "Option::is_none")]
-    pub template_language: Option<crate::models::TemplateLanguage>,
+    pub template_language: Option<Box<crate::models::TemplateLanguage>>,
     /// The list of objects being exported is passed as a context variable named <code>queryset</code>.
     #[serde(rename = "template_code")]
     pub template_code: String,

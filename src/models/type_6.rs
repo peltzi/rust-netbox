@@ -26,15 +26,15 @@ impl Type6 {
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum Label {
     #[serde(rename = "2-post frame")]
-    _2Post_frame,
+    _2PostFrame,
     #[serde(rename = "4-post frame")]
-    _4Post_frame,
+    _4PostFrame,
     #[serde(rename = "4-post cabinet")]
-    _4Post_cabinet,
+    _4PostCabinet,
     #[serde(rename = "Wall-mounted frame")]
-    WallMounted_frame,
+    WallMountedFrame,
     #[serde(rename = "Wall-mounted cabinet")]
-    WallMounted_cabinet,
+    WallMountedCabinet,
 }
 ///
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]

@@ -13,24 +13,24 @@ pub struct IpAddress {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "family", skip_serializing_if = "Option::is_none")]
-    pub family: Option<crate::models::Family>,
+    pub family: Option<Box<crate::models::Family>>,
     /// IPv4 or IPv6 address (with mask)
     #[serde(rename = "address")]
     pub address: String,
     #[serde(rename = "vrf", skip_serializing_if = "Option::is_none")]
-    pub vrf: Option<crate::models::NestedVrf>,
+    pub vrf: Option<Box<crate::models::NestedVrf>>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status6>,
+    pub status: Option<Box<crate::models::Status6>>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
-    pub role: Option<crate::models::Role1>,
+    pub role: Option<Box<crate::models::Role1>>,
     #[serde(rename = "interface", skip_serializing_if = "Option::is_none")]
-    pub interface: Option<crate::models::IpAddressInterface>,
+    pub interface: Option<Box<crate::models::IpAddressInterface>>,
     #[serde(rename = "nat_inside", skip_serializing_if = "Option::is_none")]
-    pub nat_inside: Option<crate::models::NestedIpAddress>,
+    pub nat_inside: Option<Box<crate::models::NestedIpAddress>>,
     #[serde(rename = "nat_outside", skip_serializing_if = "Option::is_none")]
-    pub nat_outside: Option<crate::models::NestedIpAddress>,
+    pub nat_outside: Option<Box<crate::models::NestedIpAddress>>,
     /// Hostname or FQDN (not case-sensitive)
     #[serde(rename = "dns_name", skip_serializing_if = "Option::is_none")]
     pub dns_name: Option<String>,

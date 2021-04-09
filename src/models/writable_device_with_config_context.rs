@@ -39,7 +39,7 @@ pub struct WritableDeviceWithConfigContext {
     #[serde(rename = "face", skip_serializing_if = "Option::is_none")]
     pub face: Option<Face>,
     #[serde(rename = "parent_device", skip_serializing_if = "Option::is_none")]
-    pub parent_device: Option<crate::models::NestedDevice>,
+    pub parent_device: Option<Box<crate::models::NestedDevice>>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
     pub status: Option<Status>,
     #[serde(rename = "primary_ip", skip_serializing_if = "Option::is_none")]

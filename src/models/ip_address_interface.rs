@@ -15,9 +15,9 @@ pub struct IpAddressInterface {
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
     #[serde(rename = "device", skip_serializing_if = "Option::is_none")]
-    pub device: Option<crate::models::NestedDevice>,
+    pub device: Option<Box<crate::models::NestedDevice>>,
     #[serde(rename = "virtual_machine", skip_serializing_if = "Option::is_none")]
-    pub virtual_machine: Option<crate::models::NestedVirtualMachine>,
+    pub virtual_machine: Option<Box<crate::models::NestedVirtualMachine>>,
     #[serde(rename = "name")]
     pub name: String,
 }

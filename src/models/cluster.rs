@@ -15,13 +15,13 @@ pub struct Cluster {
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type")]
-    pub _type: crate::models::NestedClusterType,
+    pub _type: Box<crate::models::NestedClusterType>,
     #[serde(rename = "group", skip_serializing_if = "Option::is_none")]
-    pub group: Option<crate::models::NestedClusterGroup>,
+    pub group: Option<Box<crate::models::NestedClusterGroup>>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "site", skip_serializing_if = "Option::is_none")]
-    pub site: Option<crate::models::NestedSite>,
+    pub site: Option<Box<crate::models::NestedSite>>,
     #[serde(rename = "comments", skip_serializing_if = "Option::is_none")]
     pub comments: Option<String>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
@@ -46,7 +46,7 @@ impl Cluster {
         Cluster {
             id: None,
             name,
-            _type,
+            _type: Box::new(_type),
             group: None,
             tenant: None,
             site: None,

@@ -13,19 +13,19 @@ pub struct PowerFeed {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "power_panel")]
-    pub power_panel: crate::models::NestedPowerPanel,
+    pub power_panel: Box<crate::models::NestedPowerPanel>,
     #[serde(rename = "rack", skip_serializing_if = "Option::is_none")]
-    pub rack: Option<crate::models::NestedRack>,
+    pub rack: Option<Box<crate::models::NestedRack>>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status3>,
+    pub status: Option<Box<crate::models::Status3>>,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Type4>,
+    pub _type: Option<Box<crate::models::Type4>>,
     #[serde(rename = "supply", skip_serializing_if = "Option::is_none")]
-    pub supply: Option<crate::models::Supply>,
+    pub supply: Option<Box<crate::models::Supply>>,
     #[serde(rename = "phase", skip_serializing_if = "Option::is_none")]
-    pub phase: Option<crate::models::Phase>,
+    pub phase: Option<Box<crate::models::Phase>>,
     #[serde(rename = "voltage", skip_serializing_if = "Option::is_none")]
     pub voltage: Option<i32>,
     #[serde(rename = "amperage", skip_serializing_if = "Option::is_none")]
@@ -49,7 +49,7 @@ impl PowerFeed {
     pub fn new(power_panel: crate::models::NestedPowerPanel, name: String) -> PowerFeed {
         PowerFeed {
             id: None,
-            power_panel,
+            power_panel: Box::new(power_panel),
             rack: None,
             name,
             status: None,

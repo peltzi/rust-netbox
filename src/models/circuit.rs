@@ -15,13 +15,13 @@ pub struct Circuit {
     #[serde(rename = "cid")]
     pub cid: String,
     #[serde(rename = "provider")]
-    pub provider: crate::models::NestedProvider,
+    pub provider: Box<crate::models::NestedProvider>,
     #[serde(rename = "type")]
-    pub _type: crate::models::NestedCircuitType,
+    pub _type: Box<crate::models::NestedCircuitType>,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status>,
+    pub status: Option<Box<crate::models::Status>>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "install_date", skip_serializing_if = "Option::is_none")]
     pub install_date: Option<String>,
     #[serde(rename = "commit_rate", skip_serializing_if = "Option::is_none")]
@@ -29,9 +29,9 @@ pub struct Circuit {
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(rename = "termination_a", skip_serializing_if = "Option::is_none")]
-    pub termination_a: Option<crate::models::CircuitCircuitTermination>,
+    pub termination_a: Option<Box<crate::models::CircuitCircuitTermination>>,
     #[serde(rename = "termination_z", skip_serializing_if = "Option::is_none")]
-    pub termination_z: Option<crate::models::CircuitCircuitTermination>,
+    pub termination_z: Option<Box<crate::models::CircuitCircuitTermination>>,
     #[serde(rename = "comments", skip_serializing_if = "Option::is_none")]
     pub comments: Option<String>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
@@ -53,8 +53,8 @@ impl Circuit {
         Circuit {
             id: None,
             cid,
-            provider,
-            _type,
+            provider: Box::new(provider),
+            _type: Box::new(_type),
             status: None,
             tenant: None,
             install_date: None,

@@ -23,7 +23,7 @@ pub struct WritableRearPort {
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
-    pub cable: Option<crate::models::NestedCable>,
+    pub cable: Option<Box<crate::models::NestedCable>>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
     pub tags: Option<Vec<String>>,
 }

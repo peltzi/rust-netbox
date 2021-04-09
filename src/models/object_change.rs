@@ -15,13 +15,13 @@ pub struct ObjectChange {
     #[serde(rename = "time", skip_serializing_if = "Option::is_none")]
     pub time: Option<String>,
     #[serde(rename = "user", skip_serializing_if = "Option::is_none")]
-    pub user: Option<crate::models::NestedUser>,
+    pub user: Option<Box<crate::models::NestedUser>>,
     #[serde(rename = "user_name", skip_serializing_if = "Option::is_none")]
     pub user_name: Option<String>,
     #[serde(rename = "request_id", skip_serializing_if = "Option::is_none")]
     pub request_id: Option<String>,
     #[serde(rename = "action", skip_serializing_if = "Option::is_none")]
-    pub action: Option<crate::models::Action>,
+    pub action: Option<Box<crate::models::Action>>,
     #[serde(
         rename = "changed_object_type",
         skip_serializing_if = "Option::is_none"

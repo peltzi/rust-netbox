@@ -36,19 +36,19 @@ pub enum Label {
     #[serde(rename = "RJ-45")]
     RJ45,
     #[serde(rename = "USB Type A")]
-    USB_Type_A,
+    USBTypeA,
     #[serde(rename = "USB Type B")]
-    USB_Type_B,
+    USBTypeB,
     #[serde(rename = "USB Type C")]
-    USB_Type_C,
+    USBTypeC,
     #[serde(rename = "USB Mini A")]
-    USB_Mini_A,
+    USBMiniA,
     #[serde(rename = "USB Mini B")]
-    USB_Mini_B,
+    USBMiniB,
     #[serde(rename = "USB Micro A")]
-    USB_Micro_A,
+    USBMicroA,
     #[serde(rename = "USB Micro B")]
-    USB_Micro_B,
+    USBMicroB,
     #[serde(rename = "Other")]
     Other,
 }

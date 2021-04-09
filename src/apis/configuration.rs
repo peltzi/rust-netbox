@@ -10,6 +10,7 @@
 
 use reqwest;
 
+#[derive(Debug, Clone)]
 pub struct Configuration {
     pub base_path: String,
     pub user_agent: Option<String>,
@@ -23,6 +24,7 @@ pub struct Configuration {
 
 pub type BasicAuth = (String, Option<String>);
 
+#[derive(Debug, Clone)]
 pub struct ApiKey {
     pub prefix: Option<String>,
     pub key: String,
@@ -37,7 +39,7 @@ impl Configuration {
 impl Default for Configuration {
     fn default() -> Self {
         Configuration {
-            base_path: "http://localhost:32771/api".to_owned(),
+            base_path: "http://localhost:49153/api".to_owned(),
             user_agent: Some("OpenAPI-Generator/2.7/rust".to_owned()),
             client: reqwest::Client::new(),
             basic_auth: None,

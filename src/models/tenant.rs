@@ -17,7 +17,7 @@ pub struct Tenant {
     #[serde(rename = "slug")]
     pub slug: String,
     #[serde(rename = "group", skip_serializing_if = "Option::is_none")]
-    pub group: Option<crate::models::NestedTenantGroup>,
+    pub group: Option<Box<crate::models::NestedTenantGroup>>,
     /// Long-form name (optional)
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,

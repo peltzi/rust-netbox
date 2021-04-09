@@ -13,18 +13,18 @@ pub struct ConsolePortTemplate {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device_type")]
-    pub device_type: crate::models::NestedDeviceType,
+    pub device_type: Box<crate::models::NestedDeviceType>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::ModelType>,
+    pub _type: Option<Box<crate::models::ModelType>>,
 }
 
 impl ConsolePortTemplate {
     pub fn new(device_type: crate::models::NestedDeviceType, name: String) -> ConsolePortTemplate {
         ConsolePortTemplate {
             id: None,
-            device_type,
+            device_type: Box::new(device_type),
             name,
             _type: None,
         }

@@ -13,9 +13,9 @@ pub struct PowerPanel {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "site")]
-    pub site: crate::models::NestedSite,
+    pub site: Box<crate::models::NestedSite>,
     #[serde(rename = "rack_group", skip_serializing_if = "Option::is_none")]
-    pub rack_group: Option<crate::models::NestedRackGroup>,
+    pub rack_group: Option<Box<crate::models::NestedRackGroup>>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "powerfeed_count", skip_serializing_if = "Option::is_none")]
@@ -26,7 +26,7 @@ impl PowerPanel {
     pub fn new(site: crate::models::NestedSite, name: String) -> PowerPanel {
         PowerPanel {
             id: None,
-            site,
+            site: Box::new(site),
             rack_group: None,
             name,
             powerfeed_count: None,

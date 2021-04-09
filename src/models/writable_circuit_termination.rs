@@ -40,7 +40,7 @@ pub struct WritableCircuitTermination {
     #[serde(rename = "connection_status", skip_serializing_if = "Option::is_none")]
     pub connection_status: Option<bool>,
     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
-    pub cable: Option<crate::models::NestedCable>,
+    pub cable: Option<Box<crate::models::NestedCable>>,
 }
 
 impl WritableCircuitTermination {

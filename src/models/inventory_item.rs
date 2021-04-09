@@ -13,13 +13,13 @@ pub struct InventoryItem {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device")]
-    pub device: crate::models::NestedDevice,
+    pub device: Box<crate::models::NestedDevice>,
     #[serde(rename = "parent", skip_serializing_if = "Option::is_none")]
     pub parent: Option<i32>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "manufacturer", skip_serializing_if = "Option::is_none")]
-    pub manufacturer: Option<crate::models::NestedManufacturer>,
+    pub manufacturer: Option<Box<crate::models::NestedManufacturer>>,
     #[serde(rename = "part_id", skip_serializing_if = "Option::is_none")]
     pub part_id: Option<String>,
     #[serde(rename = "serial", skip_serializing_if = "Option::is_none")]
@@ -39,7 +39,7 @@ impl InventoryItem {
     pub fn new(device: crate::models::NestedDevice, name: String) -> InventoryItem {
         InventoryItem {
             id: None,
-            device,
+            device: Box::new(device),
             parent: None,
             name,
             manufacturer: None,

@@ -13,11 +13,11 @@ pub struct VirtualMachineInterface {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "virtual_machine")]
-    pub virtual_machine: crate::models::NestedVirtualMachine,
+    pub virtual_machine: Box<crate::models::NestedVirtualMachine>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<crate::models::Type7>,
+    pub _type: Option<Box<crate::models::Type7>>,
     #[serde(rename = "enabled", skip_serializing_if = "Option::is_none")]
     pub enabled: Option<bool>,
     #[serde(rename = "mtu", skip_serializing_if = "Option::is_none")]
@@ -27,9 +27,9 @@ pub struct VirtualMachineInterface {
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(rename = "mode", skip_serializing_if = "Option::is_none")]
-    pub mode: Option<crate::models::Mode>,
+    pub mode: Option<Box<crate::models::Mode>>,
     #[serde(rename = "untagged_vlan", skip_serializing_if = "Option::is_none")]
-    pub untagged_vlan: Option<crate::models::NestedVlan>,
+    pub untagged_vlan: Option<Box<crate::models::NestedVlan>>,
     #[serde(rename = "tagged_vlans", skip_serializing_if = "Option::is_none")]
     pub tagged_vlans: Option<Vec<crate::models::NestedVlan>>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
@@ -43,7 +43,7 @@ impl VirtualMachineInterface {
     ) -> VirtualMachineInterface {
         VirtualMachineInterface {
             id: None,
-            virtual_machine,
+            virtual_machine: Box::new(virtual_machine),
             name,
             _type: None,
             enabled: None,

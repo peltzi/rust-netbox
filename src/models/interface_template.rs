@@ -13,11 +13,11 @@ pub struct InterfaceTemplate {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device_type")]
-    pub device_type: crate::models::NestedDeviceType,
+    pub device_type: Box<crate::models::NestedDeviceType>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type")]
-    pub _type: crate::models::Type2,
+    pub _type: Box<crate::models::Type2>,
     #[serde(rename = "mgmt_only", skip_serializing_if = "Option::is_none")]
     pub mgmt_only: Option<bool>,
 }
@@ -30,9 +30,9 @@ impl InterfaceTemplate {
     ) -> InterfaceTemplate {
         InterfaceTemplate {
             id: None,
-            device_type,
+            device_type: Box::new(device_type),
             name,
-            _type,
+            _type: Box::new(_type),
             mgmt_only: None,
         }
     }

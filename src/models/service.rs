@@ -13,15 +13,15 @@ pub struct Service {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device", skip_serializing_if = "Option::is_none")]
-    pub device: Option<crate::models::NestedDevice>,
+    pub device: Option<Box<crate::models::NestedDevice>>,
     #[serde(rename = "virtual_machine", skip_serializing_if = "Option::is_none")]
-    pub virtual_machine: Option<crate::models::NestedVirtualMachine>,
+    pub virtual_machine: Option<Box<crate::models::NestedVirtualMachine>>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "port")]
     pub port: i32,
     #[serde(rename = "protocol", skip_serializing_if = "Option::is_none")]
-    pub protocol: Option<crate::models::Protocol>,
+    pub protocol: Option<Box<crate::models::Protocol>>,
     #[serde(rename = "ipaddresses", skip_serializing_if = "Option::is_none")]
     pub ipaddresses: Option<Vec<crate::models::NestedIpAddress>>,
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]

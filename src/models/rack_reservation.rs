@@ -13,15 +13,15 @@ pub struct RackReservation {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "rack")]
-    pub rack: crate::models::NestedRack,
+    pub rack: Box<crate::models::NestedRack>,
     #[serde(rename = "units")]
     pub units: Vec<i32>,
     #[serde(rename = "created", skip_serializing_if = "Option::is_none")]
     pub created: Option<String>,
     #[serde(rename = "user")]
-    pub user: crate::models::NestedUser,
+    pub user: Box<crate::models::NestedUser>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "description")]
     pub description: String,
 }
@@ -35,10 +35,10 @@ impl RackReservation {
     ) -> RackReservation {
         RackReservation {
             id: None,
-            rack,
+            rack: Box::new(rack),
             units,
             created: None,
-            user,
+            user: Box::new(user),
             tenant: None,
             description,
         }

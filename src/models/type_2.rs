@@ -28,67 +28,67 @@ pub enum Label {
     #[serde(rename = "Virtual")]
     _Virtual,
     #[serde(rename = "Link Aggregation Group (LAG)")]
-    Link_Aggregation_Group__LAG,
+    LinkAggregationGroupLAG,
     #[serde(rename = "100BASE-TX (10/100ME)")]
-    _100BASETX__10100ME,
+    _100BASETX10100ME,
     #[serde(rename = "1000BASE-T (1GE)")]
-    _1000BASET__1GE,
+    _1000BASET1GE,
     #[serde(rename = "2.5GBASE-T (2.5GE)")]
-    _25GBASET__25GE,
+    _25GBASET25GE,
     #[serde(rename = "5GBASE-T (5GE)")]
-    _5GBASET__5GE,
+    _5GBASET5GE,
     #[serde(rename = "10GBASE-T (10GE)")]
-    _10GBASET__10GE,
+    _10GBASET10GE,
     #[serde(rename = "10GBASE-CX4 (10GE)")]
-    _10GBASECX4__10GE,
+    _10GBASECX410GE,
     #[serde(rename = "GBIC (1GE)")]
-    GBIC__1GE,
+    GBIC1GE,
     #[serde(rename = "SFP (1GE)")]
-    SFP__1GE,
+    SFP1GE,
     #[serde(rename = "SFP+ (10GE)")]
-    SFP__10GE,
+    SFP10GE,
     #[serde(rename = "XFP (10GE)")]
-    XFP__10GE,
+    XFP10GE,
     #[serde(rename = "XENPAK (10GE)")]
-    XENPAK__10GE,
+    XENPAK10GE,
     #[serde(rename = "X2 (10GE)")]
-    X2__10GE,
+    X210GE,
     #[serde(rename = "SFP28 (25GE)")]
-    SFP28__25GE,
+    SFP2825GE,
     #[serde(rename = "QSFP+ (40GE)")]
-    QSFP__40GE,
+    QSFP40GE,
     #[serde(rename = "QSFP28 (50GE)")]
-    QSFP28__50GE,
+    QSFP2850GE,
     #[serde(rename = "CFP (100GE)")]
-    CFP__100GE,
+    CFP100GE,
     #[serde(rename = "CFP2 (100GE)")]
-    CFP2__100GE,
+    CFP2100GE,
     #[serde(rename = "CFP2 (200GE)")]
-    CFP2__200GE,
+    CFP2200GE,
     #[serde(rename = "CFP4 (100GE)")]
-    CFP4__100GE,
+    CFP4100GE,
     #[serde(rename = "Cisco CPAK (100GE)")]
-    Cisco_CPAK__100GE,
+    CiscoCPAK100GE,
     #[serde(rename = "QSFP28 (100GE)")]
-    QSFP28__100GE,
+    QSFP28100GE,
     #[serde(rename = "QSFP56 (200GE)")]
-    QSFP56__200GE,
+    QSFP56200GE,
     #[serde(rename = "QSFP-DD (400GE)")]
-    QSFPDD__400GE,
+    QSFPDD400GE,
     #[serde(rename = "OSFP (400GE)")]
-    OSFP__400GE,
+    OSFP400GE,
     #[serde(rename = "IEEE 802.11a")]
-    IEEE_80211a,
+    IEEE80211a,
     #[serde(rename = "IEEE 802.11b/g")]
-    IEEE_80211bG,
+    IEEE80211bG,
     #[serde(rename = "IEEE 802.11n")]
-    IEEE_80211n,
+    IEEE80211n,
     #[serde(rename = "IEEE 802.11ac")]
-    IEEE_80211ac,
+    IEEE80211ac,
     #[serde(rename = "IEEE 802.11ad")]
-    IEEE_80211ad,
+    IEEE80211ad,
     #[serde(rename = "IEEE 802.11ax")]
-    IEEE_80211ax,
+    IEEE80211ax,
     #[serde(rename = "GSM")]
     GSM,
     #[serde(rename = "CDMA")]
@@ -110,63 +110,63 @@ pub enum Label {
     #[serde(rename = "OC-3840/STM-1234")]
     OC3840STM1234,
     #[serde(rename = "SFP (1GFC)")]
-    SFP__1GFC,
+    SFP1GFC,
     #[serde(rename = "SFP (2GFC)")]
-    SFP__2GFC,
+    SFP2GFC,
     #[serde(rename = "SFP (4GFC)")]
-    SFP__4GFC,
+    SFP4GFC,
     #[serde(rename = "SFP+ (8GFC)")]
-    SFP__8GFC,
+    SFP8GFC,
     #[serde(rename = "SFP+ (16GFC)")]
-    SFP__16GFC,
+    SFP16GFC,
     #[serde(rename = "SFP28 (32GFC)")]
-    SFP28__32GFC,
+    SFP2832GFC,
     #[serde(rename = "QSFP28 (128GFC)")]
-    QSFP28__128GFC,
+    QSFP28128GFC,
     #[serde(rename = "SDR (2 Gbps)")]
-    SDR__2_Gbps,
+    SDR2Gbps,
     #[serde(rename = "DDR (4 Gbps)")]
-    DDR__4_Gbps,
+    DDR4Gbps,
     #[serde(rename = "QDR (8 Gbps)")]
-    QDR__8_Gbps,
+    QDR8Gbps,
     #[serde(rename = "FDR10 (10 Gbps)")]
-    FDR10__10_Gbps,
+    FDR1010Gbps,
     #[serde(rename = "FDR (13.5 Gbps)")]
-    FDR__135_Gbps,
+    FDR135Gbps,
     #[serde(rename = "EDR (25 Gbps)")]
-    EDR__25_Gbps,
+    EDR25Gbps,
     #[serde(rename = "HDR (50 Gbps)")]
-    HDR__50_Gbps,
+    HDR50Gbps,
     #[serde(rename = "NDR (100 Gbps)")]
-    NDR__100_Gbps,
+    NDR100Gbps,
     #[serde(rename = "XDR (250 Gbps)")]
-    XDR__250_Gbps,
+    XDR250Gbps,
     #[serde(rename = "T1 (1.544 Mbps)")]
-    T1__1544_Mbps,
+    T11544Mbps,
     #[serde(rename = "E1 (2.048 Mbps)")]
-    E1__2048_Mbps,
+    E12048Mbps,
     #[serde(rename = "T3 (45 Mbps)")]
-    T3__45_Mbps,
+    T345Mbps,
     #[serde(rename = "E3 (34 Mbps)")]
-    E3__34_Mbps,
+    E334Mbps,
     #[serde(rename = "Cisco StackWise")]
-    Cisco_StackWise,
+    CiscoStackWise,
     #[serde(rename = "Cisco StackWise Plus")]
-    Cisco_StackWise_Plus,
+    CiscoStackWisePlus,
     #[serde(rename = "Cisco FlexStack")]
-    Cisco_FlexStack,
+    CiscoFlexStack,
     #[serde(rename = "Cisco FlexStack Plus")]
-    Cisco_FlexStack_Plus,
+    CiscoFlexStackPlus,
     #[serde(rename = "Juniper VCP")]
-    Juniper_VCP,
+    JuniperVCP,
     #[serde(rename = "Extreme SummitStack")]
-    Extreme_SummitStack,
+    ExtremeSummitStack,
     #[serde(rename = "Extreme SummitStack-128")]
-    Extreme_SummitStack128,
+    ExtremeSummitStack128,
     #[serde(rename = "Extreme SummitStack-256")]
-    Extreme_SummitStack256,
+    ExtremeSummitStack256,
     #[serde(rename = "Extreme SummitStack-512")]
-    Extreme_SummitStack512,
+    ExtremeSummitStack512,
     #[serde(rename = "Other")]
     Other,
 }

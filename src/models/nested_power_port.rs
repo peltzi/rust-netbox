@@ -15,13 +15,13 @@ pub struct NestedPowerPort {
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
     #[serde(rename = "device", skip_serializing_if = "Option::is_none")]
-    pub device: Option<crate::models::NestedDevice>,
+    pub device: Option<Box<crate::models::NestedDevice>>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
     pub cable: Option<i32>,
     #[serde(rename = "connection_status", skip_serializing_if = "Option::is_none")]
-    pub connection_status: Option<crate::models::ConnectionStatus>,
+    pub connection_status: Option<Box<crate::models::ConnectionStatus>>,
 }
 
 impl NestedPowerPort {

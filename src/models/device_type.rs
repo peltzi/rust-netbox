@@ -13,7 +13,7 @@ pub struct DeviceType {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "manufacturer")]
-    pub manufacturer: crate::models::NestedManufacturer,
+    pub manufacturer: Box<crate::models::NestedManufacturer>,
     #[serde(rename = "model")]
     pub model: String,
     #[serde(rename = "slug")]
@@ -29,7 +29,7 @@ pub struct DeviceType {
     #[serde(rename = "is_full_depth", skip_serializing_if = "Option::is_none")]
     pub is_full_depth: Option<bool>,
     #[serde(rename = "subdevice_role", skip_serializing_if = "Option::is_none")]
-    pub subdevice_role: Option<crate::models::SubdeviceRole>,
+    pub subdevice_role: Option<Box<crate::models::SubdeviceRole>>,
     #[serde(rename = "front_image", skip_serializing_if = "Option::is_none")]
     pub front_image: Option<String>,
     #[serde(rename = "rear_image", skip_serializing_if = "Option::is_none")]
@@ -56,7 +56,7 @@ impl DeviceType {
     ) -> DeviceType {
         DeviceType {
             id: None,
-            manufacturer,
+            manufacturer: Box::new(manufacturer),
             model,
             slug,
             display_name: None,

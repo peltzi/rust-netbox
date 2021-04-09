@@ -15,23 +15,23 @@ pub struct VirtualMachineWithConfigContext {
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<crate::models::Status9>,
+    pub status: Option<Box<crate::models::Status9>>,
     #[serde(rename = "site", skip_serializing_if = "Option::is_none")]
-    pub site: Option<crate::models::NestedSite>,
+    pub site: Option<Box<crate::models::NestedSite>>,
     #[serde(rename = "cluster")]
-    pub cluster: crate::models::NestedCluster,
+    pub cluster: Box<crate::models::NestedCluster>,
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
-    pub role: Option<crate::models::NestedDeviceRole>,
+    pub role: Option<Box<crate::models::NestedDeviceRole>>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     #[serde(rename = "platform", skip_serializing_if = "Option::is_none")]
-    pub platform: Option<crate::models::NestedPlatform>,
+    pub platform: Option<Box<crate::models::NestedPlatform>>,
     #[serde(rename = "primary_ip", skip_serializing_if = "Option::is_none")]
-    pub primary_ip: Option<crate::models::NestedIpAddress>,
+    pub primary_ip: Option<Box<crate::models::NestedIpAddress>>,
     #[serde(rename = "primary_ip4", skip_serializing_if = "Option::is_none")]
-    pub primary_ip4: Option<crate::models::NestedIpAddress>,
+    pub primary_ip4: Option<Box<crate::models::NestedIpAddress>>,
     #[serde(rename = "primary_ip6", skip_serializing_if = "Option::is_none")]
-    pub primary_ip6: Option<crate::models::NestedIpAddress>,
+    pub primary_ip6: Option<Box<crate::models::NestedIpAddress>>,
     #[serde(rename = "vcpus", skip_serializing_if = "Option::is_none")]
     pub vcpus: Option<i32>,
     #[serde(rename = "memory", skip_serializing_if = "Option::is_none")]
@@ -64,7 +64,7 @@ impl VirtualMachineWithConfigContext {
             name,
             status: None,
             site: None,
-            cluster,
+            cluster: Box::new(cluster),
             role: None,
             tenant: None,
             platform: None,

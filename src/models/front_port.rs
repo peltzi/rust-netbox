@@ -13,19 +13,19 @@ pub struct FrontPort {
     #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
     pub id: Option<i32>,
     #[serde(rename = "device")]
-    pub device: crate::models::NestedDevice,
+    pub device: Box<crate::models::NestedDevice>,
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "type")]
-    pub _type: crate::models::Type1,
+    pub _type: Box<crate::models::Type1>,
     #[serde(rename = "rear_port")]
-    pub rear_port: crate::models::FrontPortRearPort,
+    pub rear_port: Box<crate::models::FrontPortRearPort>,
     #[serde(rename = "rear_port_position", skip_serializing_if = "Option::is_none")]
     pub rear_port_position: Option<i32>,
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
-    pub cable: Option<crate::models::NestedCable>,
+    pub cable: Option<Box<crate::models::NestedCable>>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
     pub tags: Option<Vec<String>>,
 }
@@ -39,10 +39,10 @@ impl FrontPort {
     ) -> FrontPort {
         FrontPort {
             id: None,
-            device,
+            device: Box::new(device),
             name,
-            _type,
-            rear_port,
+            _type: Box::new(_type),
+            rear_port: Box::new(rear_port),
             rear_port_position: None,
             description: None,
             cable: None,

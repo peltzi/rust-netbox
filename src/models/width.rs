@@ -26,9 +26,9 @@ impl Width {
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum Label {
     #[serde(rename = "10 inches")]
-    _10_inches,
+    _10Inches,
     #[serde(rename = "19 inches")]
-    _19_inches,
+    _19Inches,
     #[serde(rename = "23 inches")]
-    _23_inches,
+    _23Inches,
 }

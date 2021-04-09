@@ -17,7 +17,7 @@ pub struct Vrf {
     #[serde(rename = "rd", skip_serializing_if = "Option::is_none")]
     pub rd: Option<String>,
     #[serde(rename = "tenant", skip_serializing_if = "Option::is_none")]
-    pub tenant: Option<crate::models::NestedTenant>,
+    pub tenant: Option<Box<crate::models::NestedTenant>>,
     /// Prevent duplicate prefixes/IP addresses within this VRF
     #[serde(rename = "enforce_unique", skip_serializing_if = "Option::is_none")]
     pub enforce_unique: Option<bool>,
