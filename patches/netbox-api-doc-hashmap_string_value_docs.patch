@@ -1,0 +1,416 @@
+diff -ur docs/Cable.md ../../docs/Cable.md
+--- docs/Cable.md	2021-11-30 15:02:34.143351066 +0200
++++ ../../docs/Cable.md	2021-11-30 15:07:05.618612365 +0200
+@@ -9,10 +9,10 @@
+ **display** | Option<**String**> |  | [optional][readonly]
+ **termination_a_type** | **String** |  | 
+ **termination_a_id** | **i32** |  | 
+-**termination_a** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**termination_a** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **termination_b_type** | **String** |  | 
+ **termination_b_id** | **i32** |  | 
+-**termination_b** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**termination_b** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **_type** | Option<**String**> |  | [optional]
+ **status** | Option<[**crate::models::Status1**](Status_1.md)> |  | [optional]
+ **label** | Option<**String**> |  | [optional]
+diff -ur docs/CircuitTermination.md ../../docs/CircuitTermination.md
+--- docs/CircuitTermination.md	2021-11-30 15:02:34.160017851 +0200
++++ ../../docs/CircuitTermination.md	2021-11-30 15:07:05.618612365 +0200
+@@ -18,7 +18,7 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+ **_occupied** | Option<**bool**> |  | [optional][readonly]
+ 
+diff -ur docs/ConsolePort.md ../../docs/ConsolePort.md
+--- docs/ConsolePort.md	2021-11-30 15:02:34.190018064 +0200
++++ ../../docs/ConsolePort.md	2021-11-30 15:07:05.618612365 +0200
+@@ -15,9 +15,9 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/ConsoleServerPort.md ../../docs/ConsoleServerPort.md
+--- docs/ConsoleServerPort.md	2021-11-30 15:02:34.196684778 +0200
++++ ../../docs/ConsoleServerPort.md	2021-11-30 15:07:05.618612365 +0200
+@@ -15,9 +15,9 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/DeviceNapalm.md ../../docs/DeviceNapalm.md
+--- docs/DeviceNapalm.md	2021-11-30 15:02:34.223351634 +0200
++++ ../../docs/DeviceNapalm.md	2021-11-30 15:07:05.618612365 +0200
+@@ -4,7 +4,7 @@
+ 
+ Name | Type | Description | Notes
+ ------------ | ------------- | ------------- | -------------
+-**method** | **::std::collections::HashMap<String, String>** |  | 
++**method** | **::std::collections::HashMap<String, Value>** |  | 
+ 
+ [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+ 
+diff -ur docs/DeviceWithConfigContext.md ../../docs/DeviceWithConfigContext.md
+--- docs/DeviceWithConfigContext.md	2021-11-30 15:02:34.233351705 +0200
++++ ../../docs/DeviceWithConfigContext.md	2021-11-30 15:07:05.618612365 +0200
+@@ -32,7 +32,7 @@
+ **local_context_data** | Option<**String**> |  | [optional]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+ **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+-**config_context** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**config_context** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **created** | Option<[**String**](string.md)> |  | [optional][readonly]
+ **last_updated** | Option<**String**> |  | [optional][readonly]
+ 
+diff -ur docs/FrontPort.md ../../docs/FrontPort.md
+--- docs/FrontPort.md	2021-11-30 15:02:34.253351847 +0200
++++ ../../docs/FrontPort.md	2021-11-30 15:07:05.618612365 +0200
+@@ -17,7 +17,7 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+ **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+diff -ur docs/ImageAttachment.md ../../docs/ImageAttachment.md
+--- docs/ImageAttachment.md	2021-11-30 15:02:34.263351918 +0200
++++ ../../docs/ImageAttachment.md	2021-11-30 15:07:05.618612365 +0200
+@@ -9,7 +9,7 @@
+ **display** | Option<**String**> |  | [optional][readonly]
+ **content_type** | **String** |  | 
+ **object_id** | **i32** |  | 
+-**parent** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**parent** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **name** | Option<**String**> |  | [optional]
+ **image** | Option<**String**> |  | [optional][readonly]
+ **image_height** | **i32** |  | 
+diff -ur docs/Interface.md ../../docs/Interface.md
+--- docs/Interface.md	2021-11-30 15:02:34.433353125 +0200
++++ ../../docs/Interface.md	2021-11-30 15:07:05.618612365 +0200
+@@ -23,9 +23,9 @@
+ **tagged_vlans** | Option<[**Vec<crate::models::NestedVlan>**](NestedVLAN.md)> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/IpAddress.md ../../docs/IpAddress.md
+--- docs/IpAddress.md	2021-11-30 15:02:34.443353196 +0200
++++ ../../docs/IpAddress.md	2021-11-30 15:07:05.618612365 +0200
+@@ -15,7 +15,7 @@
+ **role** | Option<[**crate::models::Role1**](Role_1.md)> |  | [optional]
+ **assigned_object_type** | Option<**String**> |  | [optional]
+ **assigned_object_id** | Option<**i32**> |  | [optional]
+-**assigned_object** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**assigned_object** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **nat_inside** | Option<[**crate::models::NestedIpAddress**](NestedIPAddress.md)> |  | [optional]
+ **nat_outside** | Option<[**crate::models::NestedIpAddress**](NestedIPAddress.md)> |  | [optional]
+ **dns_name** | Option<**String**> | Hostname or FQDN (not case-sensitive) | [optional]
+diff -ur docs/JournalEntry.md ../../docs/JournalEntry.md
+--- docs/JournalEntry.md	2021-11-30 15:02:34.450019910 +0200
++++ ../../docs/JournalEntry.md	2021-11-30 15:07:05.618612365 +0200
+@@ -9,7 +9,7 @@
+ **display** | Option<**String**> |  | [optional][readonly]
+ **assigned_object_type** | **String** |  | 
+ **assigned_object_id** | **i32** |  | 
+-**assigned_object** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**assigned_object** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **created** | Option<**String**> |  | [optional][readonly]
+ **created_by** | Option<**i32**> |  | [optional]
+ **kind** | Option<[**crate::models::Kind**](Kind.md)> |  | [optional]
+diff -ur docs/ObjectChange.md ../../docs/ObjectChange.md
+--- docs/ObjectChange.md	2021-11-30 15:02:34.553353978 +0200
++++ ../../docs/ObjectChange.md	2021-11-30 15:07:05.621945722 +0200
+@@ -14,7 +14,7 @@
+ **action** | Option<[**crate::models::Action**](Action.md)> |  | [optional]
+ **changed_object_type** | Option<**String**> |  | [optional][readonly]
+ **changed_object_id** | **i32** |  | 
+-**changed_object** | Option<**::std::collections::HashMap<String, String>**> |  Serialize a nested representation of the changed object.  | [optional][readonly]
++**changed_object** | Option<**::std::collections::HashMap<String, Value>**> |  Serialize a nested representation of the changed object.  | [optional][readonly]
+ **prechange_data** | Option<**String**> |  | [optional][readonly]
+ **postchange_data** | Option<**String**> |  | [optional][readonly]
+ 
+diff -ur docs/PowerFeed.md ../../docs/PowerFeed.md
+--- docs/PowerFeed.md	2021-11-30 15:02:34.563354049 +0200
++++ ../../docs/PowerFeed.md	2021-11-30 15:07:05.621945722 +0200
+@@ -20,9 +20,9 @@
+ **comments** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/PowerOutlet.md ../../docs/PowerOutlet.md
+--- docs/PowerOutlet.md	2021-11-30 15:02:34.566687405 +0200
++++ ../../docs/PowerOutlet.md	2021-11-30 15:07:05.621945722 +0200
+@@ -16,9 +16,9 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/PowerPort.md ../../docs/PowerPort.md
+--- docs/PowerPort.md	2021-11-30 15:02:34.573354120 +0200
++++ ../../docs/PowerPort.md	2021-11-30 15:07:05.621945722 +0200
+@@ -16,9 +16,9 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/RearPort.md ../../docs/RearPort.md
+--- docs/RearPort.md	2021-11-30 15:02:34.596687619 +0200
++++ ../../docs/RearPort.md	2021-11-30 15:07:05.621945722 +0200
+@@ -16,7 +16,7 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+ **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+diff -ur docs/VirtualMachineWithConfigContext.md ../../docs/VirtualMachineWithConfigContext.md
+--- docs/VirtualMachineWithConfigContext.md	2021-11-30 15:02:34.673354830 +0200
++++ ../../docs/VirtualMachineWithConfigContext.md	2021-11-30 15:07:05.621945722 +0200
+@@ -24,7 +24,7 @@
+ **local_context_data** | Option<**String**> |  | [optional]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+ **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+-**config_context** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**config_context** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **created** | Option<[**String**](string.md)> |  | [optional][readonly]
+ **last_updated** | Option<**String**> |  | [optional][readonly]
+ 
+diff -ur docs/WritableCable.md ../../docs/WritableCable.md
+--- docs/WritableCable.md	2021-11-30 15:02:34.690021614 +0200
++++ ../../docs/WritableCable.md	2021-11-30 15:07:05.621945722 +0200
+@@ -9,10 +9,10 @@
+ **display** | Option<**String**> |  | [optional][readonly]
+ **termination_a_type** | **String** |  | 
+ **termination_a_id** | **i32** |  | 
+-**termination_a** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**termination_a** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **termination_b_type** | **String** |  | 
+ **termination_b_id** | **i32** |  | 
+-**termination_b** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**termination_b** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **_type** | Option<**String**> |  | [optional]
+ **status** | Option<**String**> |  | [optional]
+ **label** | Option<**String**> |  | [optional]
+diff -ur docs/WritableCircuitTermination.md ../../docs/WritableCircuitTermination.md
+--- docs/WritableCircuitTermination.md	2021-11-30 15:02:34.696688329 +0200
++++ ../../docs/WritableCircuitTermination.md	2021-11-30 15:07:05.621945722 +0200
+@@ -18,7 +18,7 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+ **_occupied** | Option<**bool**> |  | [optional][readonly]
+ 
+diff -ur docs/WritableConsolePort.md ../../docs/WritableConsolePort.md
+--- docs/WritableConsolePort.md	2021-11-30 15:02:34.700021685 +0200
++++ ../../docs/WritableConsolePort.md	2021-11-30 15:07:05.621945722 +0200
+@@ -15,9 +15,9 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/WritableConsoleServerPort.md ../../docs/WritableConsoleServerPort.md
+--- docs/WritableConsoleServerPort.md	2021-11-30 15:02:34.706688400 +0200
++++ ../../docs/WritableConsoleServerPort.md	2021-11-30 15:07:05.621945722 +0200
+@@ -15,9 +15,9 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/WritableDeviceWithConfigContext.md ../../docs/WritableDeviceWithConfigContext.md
+--- docs/WritableDeviceWithConfigContext.md	2021-11-30 15:02:34.720021828 +0200
++++ ../../docs/WritableDeviceWithConfigContext.md	2021-11-30 15:07:05.621945722 +0200
+@@ -32,7 +32,7 @@
+ **local_context_data** | Option<**String**> |  | [optional]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+ **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+-**config_context** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**config_context** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **created** | Option<[**String**](string.md)> |  | [optional][readonly]
+ **last_updated** | Option<**String**> |  | [optional][readonly]
+ 
+diff -ur docs/WritableFrontPort.md ../../docs/WritableFrontPort.md
+--- docs/WritableFrontPort.md	2021-11-30 15:02:34.723355185 +0200
++++ ../../docs/WritableFrontPort.md	2021-11-30 15:07:05.621945722 +0200
+@@ -17,7 +17,7 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+ **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+diff -ur docs/WritableInterface.md ../../docs/WritableInterface.md
+--- docs/WritableInterface.md	2021-11-30 15:02:34.726688541 +0200
++++ ../../docs/WritableInterface.md	2021-11-30 15:07:05.625279079 +0200
+@@ -23,9 +23,9 @@
+ **tagged_vlans** | Option<**Vec<i32>**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/WritableIpAddress.md ../../docs/WritableIpAddress.md
+--- docs/WritableIpAddress.md	2021-11-30 15:02:34.733355256 +0200
++++ ../../docs/WritableIpAddress.md	2021-11-30 15:07:05.625279079 +0200
+@@ -15,7 +15,7 @@
+ **role** | Option<**String**> | The functional role of this IP | [optional]
+ **assigned_object_type** | Option<**String**> |  | [optional]
+ **assigned_object_id** | Option<**i32**> |  | [optional]
+-**assigned_object** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**assigned_object** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **nat_inside** | Option<**i32**> | The IP for which this address is the \"outside\" IP | [optional]
+ **nat_outside** | Option<**String**> |  | [optional][readonly]
+ **dns_name** | Option<**String**> | Hostname or FQDN (not case-sensitive) | [optional]
+diff -ur docs/WritableJournalEntry.md ../../docs/WritableJournalEntry.md
+--- docs/WritableJournalEntry.md	2021-11-30 15:02:34.736688612 +0200
++++ ../../docs/WritableJournalEntry.md	2021-11-30 15:07:05.625279079 +0200
+@@ -9,7 +9,7 @@
+ **display** | Option<**String**> |  | [optional][readonly]
+ **assigned_object_type** | **String** |  | 
+ **assigned_object_id** | **i32** |  | 
+-**assigned_object** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**assigned_object** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **created** | Option<**String**> |  | [optional][readonly]
+ **created_by** | Option<**i32**> |  | [optional]
+ **kind** | Option<**String**> |  | [optional]
+diff -ur docs/WritablePowerFeed.md ../../docs/WritablePowerFeed.md
+--- docs/WritablePowerFeed.md	2021-11-30 15:02:34.743355327 +0200
++++ ../../docs/WritablePowerFeed.md	2021-11-30 15:07:05.625279079 +0200
+@@ -20,9 +20,9 @@
+ **comments** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/WritablePowerOutlet.md ../../docs/WritablePowerOutlet.md
+--- docs/WritablePowerOutlet.md	2021-11-30 15:02:34.746688683 +0200
++++ ../../docs/WritablePowerOutlet.md	2021-11-30 15:07:05.625279079 +0200
+@@ -16,9 +16,9 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/WritablePowerPort.md ../../docs/WritablePowerPort.md
+--- docs/WritablePowerPort.md	2021-11-30 15:02:34.750022041 +0200
++++ ../../docs/WritablePowerPort.md	2021-11-30 15:07:05.625279079 +0200
+@@ -16,9 +16,9 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+-**connected_endpoint** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
++**connected_endpoint** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the type of connected object.  | [optional][readonly]
+ **connected_endpoint_type** | Option<**String**> |  | [optional][readonly]
+ **connected_endpoint_reachable** | Option<**bool**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+diff -ur docs/WritableRearPort.md ../../docs/WritableRearPort.md
+--- docs/WritableRearPort.md	2021-11-30 15:02:34.763355469 +0200
++++ ../../docs/WritableRearPort.md	2021-11-30 15:07:05.625279079 +0200
+@@ -16,7 +16,7 @@
+ **description** | Option<**String**> |  | [optional]
+ **mark_connected** | Option<**bool**> | Treat as if a cable is connected | [optional]
+ **cable** | Option<[**crate::models::NestedCable**](NestedCable.md)> |  | [optional]
+-**cable_peer** | Option<**::std::collections::HashMap<String, String>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
++**cable_peer** | Option<**::std::collections::HashMap<String, Value>**> |  Return the appropriate serializer for the cable termination model.  | [optional][readonly]
+ **cable_peer_type** | Option<**String**> |  | [optional][readonly]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+ **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+diff -ur docs/WritableVirtualMachineWithConfigContext.md ../../docs/WritableVirtualMachineWithConfigContext.md
+--- docs/WritableVirtualMachineWithConfigContext.md	2021-11-30 15:02:34.783355611 +0200
++++ ../../docs/WritableVirtualMachineWithConfigContext.md	2021-11-30 15:07:05.625279079 +0200
+@@ -24,7 +24,7 @@
+ **local_context_data** | Option<**String**> |  | [optional]
+ **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
+ **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+-**config_context** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
++**config_context** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
+ **created** | Option<[**String**](string.md)> |  | [optional][readonly]
+ **last_updated** | Option<**String**> |  | [optional][readonly]
+ 
