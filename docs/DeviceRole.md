@@ -5,11 +5,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **name** | **String** |  | 
 **slug** | **String** |  | 
-**color** | **String** |  | 
+**color** | Option<**String**> |  | [optional]
 **vm_role** | Option<**bool**> | Virtual machines may be assigned to this role | [optional]
 **description** | Option<**String**> |  | [optional]
+**custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+**created** | Option<[**String**](string.md)> |  | [optional][readonly]
+**last_updated** | Option<**String**> |  | [optional][readonly]
 **device_count** | Option<**i32**> |  | [optional][readonly]
 **virtualmachine_count** | Option<**i32**> |  | [optional][readonly]
 

@@ -6,9 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
 **url** | Option<**String**> |  | [optional][readonly]
-**site** | [**crate::models::NestedSite**](NestedSite.md) |  | 
-**connected_endpoint** | [**crate::models::NestedInterface**](NestedInterface.md) |  | 
-**port_speed** | **i32** |  | 
+**display** | Option<**String**> |  | [optional][readonly]
+**site** | Option<[**crate::models::NestedSite**](NestedSite.md)> |  | 
+**provider_network** | Option<[**crate::models::NestedProviderNetwork**](NestedProviderNetwork.md)> |  | 
+**port_speed** | Option<**i32**> |  | [optional]
 **upstream_speed** | Option<**i32**> | Upstream speed, if different from port speed | [optional]
 **xconnect_id** | Option<**String**> |  | [optional]
 

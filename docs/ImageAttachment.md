@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **content_type** | **String** |  | 
 **object_id** | **i32** |  | 
 **parent** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]

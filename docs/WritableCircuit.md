@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **cid** | **String** |  | 
 **provider** | **i32** |  | 
 **_type** | **i32** |  | 
@@ -13,10 +15,10 @@ Name | Type | Description | Notes
 **install_date** | Option<[**String**](string.md)> |  | [optional]
 **commit_rate** | Option<**i32**> |  | [optional]
 **description** | Option<**String**> |  | [optional]
-**termination_a** | Option<**String**> |  | [optional][readonly]
-**termination_z** | Option<**String**> |  | [optional][readonly]
+**termination_a** | Option<**i32**> |  | [optional][readonly]
+**termination_z** | Option<**i32**> |  | [optional][readonly]
 **comments** | Option<**String**> |  | [optional]
-**tags** | Option<**Vec<String>**> |  | [optional]
+**tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]
 **last_updated** | Option<**String**> |  | [optional][readonly]

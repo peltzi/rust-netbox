@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **name** | **String** |  | 
 **status** | Option<**String**> |  | [optional]
 **site** | Option<**String**> |  | [optional][readonly]
@@ -15,12 +17,12 @@ Name | Type | Description | Notes
 **primary_ip** | Option<**String**> |  | [optional][readonly]
 **primary_ip4** | Option<**i32**> |  | [optional]
 **primary_ip6** | Option<**i32**> |  | [optional]
-**vcpus** | Option<**i32**> |  | [optional]
+**vcpus** | Option<**f32**> |  | [optional]
 **memory** | Option<**i32**> |  | [optional]
 **disk** | Option<**i32**> |  | [optional]
 **comments** | Option<**String**> |  | [optional]
 **local_context_data** | Option<**String**> |  | [optional]
-**tags** | Option<**Vec<String>**> |  | [optional]
+**tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **config_context** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]

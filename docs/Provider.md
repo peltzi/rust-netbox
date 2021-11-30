@@ -5,15 +5,17 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **name** | **String** |  | 
 **slug** | **String** |  | 
-**asn** | Option<**i32**> |  | [optional]
+**asn** | Option<**i32**> | 32-bit autonomous system number | [optional]
 **account** | Option<**String**> |  | [optional]
 **portal_url** | Option<**String**> |  | [optional]
 **noc_contact** | Option<**String**> |  | [optional]
 **admin_contact** | Option<**String**> |  | [optional]
 **comments** | Option<**String**> |  | [optional]
-**tags** | Option<**Vec<String>**> |  | [optional]
+**tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]
 **last_updated** | Option<**String**> |  | [optional][readonly]

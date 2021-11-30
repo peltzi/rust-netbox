@@ -5,10 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **manufacturer** | [**crate::models::NestedManufacturer**](NestedManufacturer.md) |  | 
 **model** | **String** |  | 
 **slug** | **String** |  | 
-**display_name** | Option<**String**> |  | [optional][readonly]
 **part_number** | Option<**String**> | Discrete part number (optional) | [optional]
 **u_height** | Option<**i32**> |  | [optional]
 **is_full_depth** | Option<**bool**> | Device consumes both front and rear rack faces | [optional]
@@ -16,7 +17,7 @@ Name | Type | Description | Notes
 **front_image** | Option<**String**> |  | [optional][readonly]
 **rear_image** | Option<**String**> |  | [optional][readonly]
 **comments** | Option<**String**> |  | [optional]
-**tags** | Option<**Vec<String>**> |  | [optional]
+**tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]
 **last_updated** | Option<**String**> |  | [optional][readonly]

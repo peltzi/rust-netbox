@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **cid** | **String** |  | 
 **provider** | [**crate::models::NestedProvider**](NestedProvider.md) |  | 
 **_type** | [**crate::models::NestedCircuitType**](NestedCircuitType.md) |  | 
@@ -16,7 +18,7 @@ Name | Type | Description | Notes
 **termination_a** | Option<[**crate::models::CircuitCircuitTermination**](CircuitCircuitTermination.md)> |  | [optional]
 **termination_z** | Option<[**crate::models::CircuitCircuitTermination**](CircuitCircuitTermination.md)> |  | [optional]
 **comments** | Option<**String**> |  | [optional]
-**tags** | Option<**Vec<String>**> |  | [optional]
+**tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]
 **last_updated** | Option<**String**> |  | [optional][readonly]

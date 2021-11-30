@@ -5,8 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **name** | Option<**String**> |  | [optional]
-**display_name** | Option<**String**> |  | [optional][readonly]
 **device_type** | **i32** |  | 
 **device_role** | **i32** |  | 
 **tenant** | Option<**i32**> |  | [optional]
@@ -14,6 +15,7 @@ Name | Type | Description | Notes
 **serial** | Option<**String**> |  | [optional]
 **asset_tag** | Option<**String**> | A unique tag used to identify this device | [optional]
 **site** | **i32** |  | 
+**location** | Option<**i32**> |  | [optional]
 **rack** | Option<**i32**> |  | [optional]
 **position** | Option<**i32**> | The lowest-numbered unit occupied by the device | [optional]
 **face** | Option<**String**> |  | [optional]
@@ -28,7 +30,7 @@ Name | Type | Description | Notes
 **vc_priority** | Option<**i32**> |  | [optional]
 **comments** | Option<**String**> |  | [optional]
 **local_context_data** | Option<**String**> |  | [optional]
-**tags** | Option<**Vec<String>**> |  | [optional]
+**tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **config_context** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]

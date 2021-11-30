@@ -5,8 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **name** | **String** |  | 
 **slug** | **String** |  | 
+**description** | Option<**String**> |  | [optional]
+**custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+**created** | Option<[**String**](string.md)> |  | [optional][readonly]
+**last_updated** | Option<**String**> |  | [optional][readonly]
 **devicetype_count** | Option<**i32**> |  | [optional][readonly]
 **inventoryitem_count** | Option<**i32**> |  | [optional][readonly]
 **platform_count** | Option<**i32**> |  | [optional][readonly]

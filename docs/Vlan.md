@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **site** | Option<[**crate::models::NestedSite**](NestedSite.md)> |  | [optional]
 **group** | Option<[**crate::models::NestedVlanGroup**](NestedVLANGroup.md)> |  | [optional]
 **vid** | **i32** |  | 
@@ -13,8 +15,7 @@ Name | Type | Description | Notes
 **status** | Option<[**crate::models::Status8**](Status_8.md)> |  | [optional]
 **role** | Option<[**crate::models::NestedRole**](NestedRole.md)> |  | [optional]
 **description** | Option<**String**> |  | [optional]
-**tags** | Option<**Vec<String>**> |  | [optional]
-**display_name** | Option<**String**> |  | [optional][readonly]
+**tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]
 **last_updated** | Option<**String**> |  | [optional][readonly]

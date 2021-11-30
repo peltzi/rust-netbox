@@ -5,14 +5,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **device** | Option<[**crate::models::NestedDevice**](NestedDevice.md)> |  | [optional]
 **virtual_machine** | Option<[**crate::models::NestedVirtualMachine**](NestedVirtualMachine.md)> |  | [optional]
 **name** | **String** |  | 
-**port** | **i32** |  | 
+**ports** | **Vec<i32>** |  | 
 **protocol** | Option<[**crate::models::Protocol**](Protocol.md)> |  | [optional]
 **ipaddresses** | Option<[**Vec<crate::models::NestedIpAddress>**](NestedIPAddress.md)> |  | [optional]
 **description** | Option<**String**> |  | [optional]
-**tags** | Option<**Vec<String>**> |  | [optional]
+**tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]
 **last_updated** | Option<**String**> |  | [optional][readonly]

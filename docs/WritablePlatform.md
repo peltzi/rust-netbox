@@ -5,11 +5,17 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **name** | **String** |  | 
 **slug** | **String** |  | 
 **manufacturer** | Option<**i32**> | Optionally limit this platform to devices of a certain manufacturer | [optional]
 **napalm_driver** | Option<**String**> | The name of the NAPALM driver to use when interacting with devices | [optional]
 **napalm_args** | Option<**String**> | Additional arguments to pass when initiating the NAPALM driver (JSON format) | [optional]
+**description** | Option<**String**> |  | [optional]
+**custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
+**created** | Option<[**String**](string.md)> |  | [optional][readonly]
+**last_updated** | Option<**String**> |  | [optional][readonly]
 **device_count** | Option<**i32**> |  | [optional][readonly]
 **virtualmachine_count** | Option<**i32**> |  | [optional][readonly]
 

@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | Option<**i32**> |  | [optional][readonly]
+**url** | Option<**String**> |  | [optional][readonly]
+**display** | Option<**String**> |  | [optional][readonly]
 **site** | Option<**i32**> |  | [optional]
 **group** | Option<**i32**> |  | [optional]
 **vid** | **i32** |  | 
@@ -13,8 +15,7 @@ Name | Type | Description | Notes
 **status** | Option<**String**> |  | [optional]
 **role** | Option<**i32**> |  | [optional]
 **description** | Option<**String**> |  | [optional]
-**tags** | Option<**Vec<String>**> |  | [optional]
-**display_name** | Option<**String**> |  | [optional][readonly]
+**tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]
 **last_updated** | Option<**String**> |  | [optional][readonly]

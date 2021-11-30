@@ -65,8 +65,9 @@ pub mod circuits_api;
 pub mod dcim_api;
 pub mod extras_api;
 pub mod ipam_api;
-pub mod secrets_api;
+pub mod status_api;
 pub mod tenancy_api;
+pub mod users_api;
 pub mod virtualization_api;
 
 pub mod configuration;
