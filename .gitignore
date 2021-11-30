@@ -11,3 +11,5 @@ Cargo.lock
 
 # Ignore build dir
 /build/
+
+.idea/
