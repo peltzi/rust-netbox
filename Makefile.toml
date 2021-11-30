@@ -1,7 +1,7 @@
 [env]
-NETBOX_VERSION = "2.7"
-NETBOX_API_VERSION = "2.7"
-NETBOX_DOCKER_VERSION = "0.23.0"
+NETBOX_VERSION = "3.0"
+NETBOX_API_VERSION = "3.0"
+NETBOX_DOCKER_VERSION = "1.4.1"
 NETBOX_DOCKER_REPO_URL = "https://github.com/netbox-community/netbox-docker.git"
 OPENAPI_GENERATOR_DOCKER_IMAGE = "openapitools/openapi-generator-cli:v5.1.0"
 
