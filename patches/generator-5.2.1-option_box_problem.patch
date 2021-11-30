@@ -1,0 +1,209 @@
+diff -ur src/models/circuit_circuit_termination.rs ../client/src/models/circuit_circuit_termination.rs
+--- src/models/circuit_circuit_termination.rs	2021-11-30 11:50:54.772536043 +0200
++++ ../client/src/models/circuit_circuit_termination.rs	2021-11-30 11:54:36.527830645 +0200
+@@ -34,12 +34,22 @@
+         site: Option<crate::models::NestedSite>,
+         provider_network: Option<crate::models::NestedProviderNetwork>,
+     ) -> CircuitCircuitTermination {
++        let nested_site = match site {
++            Some(s) => Some(Box::new(s)),
++            None => None,
++        };
++
++        let nested_provider_network = match provider_network {
++            Some(n) => Some(Box::new(n)),
++            None => None,
++        };
++
+         CircuitCircuitTermination {
+             id: None,
+             url: None,
+             display: None,
+-            site: Box::new(site),
+-            provider_network: Box::new(provider_network),
++            site: nested_site,
++            provider_network: nested_provider_network,
+             port_speed: None,
+             upstream_speed: None,
+             xconnect_id: None,
+diff -ur src/models/device.rs ../client/src/models/device.rs
+--- src/models/device.rs	2021-11-30 11:50:54.772536043 +0200
++++ ../client/src/models/device.rs	2021-11-30 11:55:01.414705246 +0200
+@@ -80,6 +80,11 @@
+         device_role: crate::models::NestedDeviceRole,
+         site: Option<crate::models::NestedSite>,
+     ) -> Device {
++        let nested_site = match site {
++            Some(s) => Some(Box::new(s)),
++            None => None,
++        };
++
+         Device {
+             id: None,
+             url: None,
+@@ -91,7 +96,7 @@
+             platform: None,
+             serial: None,
+             asset_tag: None,
+-            site: Box::new(site),
++            site: nested_site,
+             location: None,
+             rack: None,
+             position: None,
+diff -ur src/models/device_with_config_context.rs ../client/src/models/device_with_config_context.rs
+--- src/models/device_with_config_context.rs	2021-11-30 11:50:54.772536043 +0200
++++ ../client/src/models/device_with_config_context.rs	2021-11-30 11:58:18.032950074 +0200
+@@ -82,6 +82,11 @@
+         device_role: crate::models::NestedDeviceRole,
+         site: Option<crate::models::NestedSite>,
+     ) -> DeviceWithConfigContext {
++        let nested_site = match site {
++            Some(s) => Some(Box::new(s)),
++            None => None,
++        };
++
+         DeviceWithConfigContext {
+             id: None,
+             url: None,
+@@ -93,7 +98,7 @@
+             platform: None,
+             serial: None,
+             asset_tag: None,
+-            site: Box::new(site),
++            site: nested_site,
+             location: None,
+             rack: None,
+             position: None,
+diff -ur src/models/location.rs ../client/src/models/location.rs
+--- src/models/location.rs	2021-11-30 11:50:54.782536136 +0200
++++ ../client/src/models/location.rs	2021-11-30 11:59:46.900299246 +0200
+@@ -42,13 +42,18 @@
+ 
+ impl Location {
+     pub fn new(name: String, slug: String, site: Option<crate::models::NestedSite>) -> Location {
++        let nested_site = match site {
++            Some(s) => Some(Box::new(s)),
++            None => None,
++        };
++
+         Location {
+             id: None,
+             url: None,
+             display: None,
+             name,
+             slug,
+-            site: Box::new(site),
++            site: nested_site,
+             parent: None,
+             description: None,
+             custom_fields: None,
+diff -ur src/models/power_panel.rs ../client/src/models/power_panel.rs
+--- src/models/power_panel.rs	2021-11-30 11:50:54.789202865 +0200
++++ ../client/src/models/power_panel.rs	2021-11-30 12:00:27.117269696 +0200
+@@ -32,11 +32,16 @@
+ 
+ impl PowerPanel {
+     pub fn new(site: Option<crate::models::NestedSite>, name: String) -> PowerPanel {
++        let nested_site = match site {
++            Some(s) => Some(Box::new(s)),
++            None => None,
++        };
++
+         PowerPanel {
+             id: None,
+             url: None,
+             display: None,
+-            site: Box::new(site),
++            site: nested_site,
+             location: None,
+             name,
+             tags: None,
+diff -ur src/models/rack_reservation.rs ../client/src/models/rack_reservation.rs
+--- src/models/rack_reservation.rs	2021-11-30 11:50:54.789202865 +0200
++++ ../client/src/models/rack_reservation.rs	2021-11-30 12:01:08.220910591 +0200
+@@ -41,11 +41,16 @@
+         user: crate::models::NestedUser,
+         description: String,
+     ) -> RackReservation {
++        let nested_rack = match rack {
++            Some(r) => Some(Box::new(r)),
++            None => None,
++        };
++
+         RackReservation {
+             id: None,
+             url: None,
+             display: None,
+-            rack: Box::new(rack),
++            rack: nested_rack,
+             units,
+             created: None,
+             user: Box::new(user),
+diff -ur src/models/rack.rs ../client/src/models/rack.rs
+--- src/models/rack.rs	2021-11-30 11:50:54.789202865 +0200
++++ ../client/src/models/rack.rs	2021-11-30 12:00:39.507362707 +0200
+@@ -72,13 +72,18 @@
+ 
+ impl Rack {
+     pub fn new(name: String, site: Option<crate::models::NestedSite>) -> Rack {
++        let nested_site = match site {
++            Some(s) => Some(Box::new(s)),
++            None => None,
++        };
++
+         Rack {
+             id: None,
+             url: None,
+             display: None,
+             name,
+             facility_id: None,
+-            site: Box::new(site),
++            site: nested_site,
+             location: None,
+             tenant: None,
+             status: None,
+diff -ur src/models/virtual_machine_with_config_context.rs ../client/src/models/virtual_machine_with_config_context.rs
+--- src/models/virtual_machine_with_config_context.rs	2021-11-30 11:50:54.792536230 +0200
++++ ../client/src/models/virtual_machine_with_config_context.rs	2021-11-30 12:01:33.641099418 +0200
+@@ -63,6 +63,11 @@
+         name: String,
+         cluster: Option<crate::models::NestedCluster>,
+     ) -> VirtualMachineWithConfigContext {
++        let nested_cluster = match cluster {
++            Some(c) => Some(Box::new(c)),
++            None => None,
++        };
++
+         VirtualMachineWithConfigContext {
+             id: None,
+             url: None,
+@@ -70,7 +75,7 @@
+             name,
+             status: None,
+             site: None,
+-            cluster: Box::new(cluster),
++            cluster: nested_cluster,
+             role: None,
+             tenant: None,
+             platform: None,
+diff -ur src/models/vm_interface.rs ../client/src/models/vm_interface.rs
+--- src/models/vm_interface.rs	2021-11-30 11:50:54.792536230 +0200
++++ ../client/src/models/vm_interface.rs	2021-11-30 12:02:02.867981969 +0200
+@@ -53,11 +53,16 @@
+         virtual_machine: Option<crate::models::NestedVirtualMachine>,
+         name: String,
+     ) -> VmInterface {
++        let nested_vm = match virtual_machine {
++            Some(v) => Some(Box::new(v)),
++            None => None,
++        };
++
+         VmInterface {
+             id: None,
+             url: None,
+             display: None,
+-            virtual_machine: Box::new(virtual_machine),
++            virtual_machine: nested_vm,
+             name,
+             enabled: None,
+             parent: None,

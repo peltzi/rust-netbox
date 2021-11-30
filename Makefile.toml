@@ -1,16 +1,16 @@
 [env]
-NETBOX_VERSION = "3.0"
+NETBOX_VERSION = "3.0.11"
 NETBOX_API_VERSION = "3.0"
 NETBOX_DOCKER_VERSION = "1.4.1"
 NETBOX_DOCKER_REPO_URL = "https://github.com/netbox-community/netbox-docker.git"
-OPENAPI_GENERATOR_DOCKER_IMAGE = "openapitools/openapi-generator-cli:v5.1.0"
+OPENAPI_GENERATOR_DOCKER_IMAGE = "openapitools/openapi-generator-cli:v5.2.1"
 
 # Tasks
 
 # Generate the client code, see ${PWD}/build for results
 [tasks.generate-client]
 run_task = [
-  { name = ["generate_spec_with_netbox_docker", "generate_code", "check_generated_code"], fork = true }
+  { name = ["generate_spec_with_netbox_docker", "generate_code", "apply_patches", "check_generated_code"], fork = true }
 ]
 
 # Clean the build depris from client code generation
@@ -119,9 +119,10 @@ script = [
   "mkdir -p ${PWD}/build/netbox-docker",
   "git clone --branch ${NETBOX_DOCKER_VERSION} ${NETBOX_DOCKER_REPO_URL} ${PWD}/build/netbox-docker",
   "cd ${PWD}/build/netbox-docker",
+  "cp docker-compose.override.yml.example docker-compose.override.yml",
   "VERSION=v${NETBOX_VERSION} docker-compose pull",
   "VERSION=v${NETBOX_VERSION} docker-compose up --detach",
-  "curl --connect-timeout 30 --retry 6 --retry-delay 10 --retry-connrefused http://localhost:$(docker-compose port nginx 8080 | cut -d':' -f 2)/api/swagger.json -o ../swagger.json",
+  "curl --connect-timeout 30 --retry 6 --retry-delay 10 --retry-all-errors http://localhost:$(docker-compose port netbox 8080 | cut -d':' -f 2)/api/swagger.json -o ../swagger.json",
   "docker-compose stop",
   "grep -E \"version.*${NETBOX_API_VERSION}\" ../swagger.json"
 ]
@@ -152,6 +153,15 @@ script = [
   [tasks.prettify_swagger_json.env]
   SWAGGER_SOURCE = "${PWD}/build/swagger.json"
   SWAGGER_TARGET = "${PWD}/build/swagger_pretty.json"
+
+# Apply required patches on top of the generated code
+[tasks.apply_patches]
+private = true
+dependencies = ["format_generated_code"]
+script = [
+  "cd ${PWD}/build/client",
+  "patch -p0 < ../../patches/generator-5.2.1-option_box_problem.patch"
+]
 
 # Rustfmt the generate code
 [tasks.format_generated_code]
