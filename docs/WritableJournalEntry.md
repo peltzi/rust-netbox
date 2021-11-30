@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **display** | Option<**String**> |  | [optional][readonly]
 **assigned_object_type** | **String** |  | 
 **assigned_object_id** | **i32** |  | 
-**assigned_object** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
+**assigned_object** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
 **created** | Option<**String**> |  | [optional][readonly]
 **created_by** | Option<**i32**> |  | [optional]
 **kind** | Option<**String**> |  | [optional]

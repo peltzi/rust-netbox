@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **role** | Option<**String**> | The functional role of this IP | [optional]
 **assigned_object_type** | Option<**String**> |  | [optional]
 **assigned_object_id** | Option<**i32**> |  | [optional]
-**assigned_object** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
+**assigned_object** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
 **nat_inside** | Option<**i32**> | The IP for which this address is the \"outside\" IP | [optional]
 **nat_outside** | Option<**String**> |  | [optional][readonly]
 **dns_name** | Option<**String**> | Hostname or FQDN (not case-sensitive) | [optional]

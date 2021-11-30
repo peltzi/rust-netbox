@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 **local_context_data** | Option<**String**> |  | [optional]
 **tags** | Option<[**Vec<crate::models::NestedTag>**](NestedTag.md)> |  | [optional]
 **custom_fields** | Option<[**serde_json::Value**](.md)> |  | [optional]
-**config_context** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
+**config_context** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
 **created** | Option<[**String**](string.md)> |  | [optional][readonly]
 **last_updated** | Option<**String**> |  | [optional][readonly]
 

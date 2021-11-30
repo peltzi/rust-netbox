@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **action** | Option<[**crate::models::Action**](Action.md)> |  | [optional]
 **changed_object_type** | Option<**String**> |  | [optional][readonly]
 **changed_object_id** | **i32** |  | 
-**changed_object** | Option<**::std::collections::HashMap<String, String>**> |  Serialize a nested representation of the changed object.  | [optional][readonly]
+**changed_object** | Option<**::std::collections::HashMap<String, Value>**> |  Serialize a nested representation of the changed object.  | [optional][readonly]
 **prechange_data** | Option<**String**> |  | [optional][readonly]
 **postchange_data** | Option<**String**> |  | [optional][readonly]
 

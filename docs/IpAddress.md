@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **role** | Option<[**crate::models::Role1**](Role_1.md)> |  | [optional]
 **assigned_object_type** | Option<**String**> |  | [optional]
 **assigned_object_id** | Option<**i32**> |  | [optional]
-**assigned_object** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
+**assigned_object** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
 **nat_inside** | Option<[**crate::models::NestedIpAddress**](NestedIPAddress.md)> |  | [optional]
 **nat_outside** | Option<[**crate::models::NestedIpAddress**](NestedIPAddress.md)> |  | [optional]
 **dns_name** | Option<**String**> | Hostname or FQDN (not case-sensitive) | [optional]

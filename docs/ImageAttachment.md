@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **display** | Option<**String**> |  | [optional][readonly]
 **content_type** | **String** |  | 
 **object_id** | **i32** |  | 
-**parent** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
+**parent** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
 **name** | Option<**String**> |  | [optional]
 **image** | Option<**String**> |  | [optional][readonly]
 **image_height** | **i32** |  | 

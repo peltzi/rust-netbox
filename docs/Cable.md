@@ -9,10 +9,10 @@ Name | Type | Description | Notes
 **display** | Option<**String**> |  | [optional][readonly]
 **termination_a_type** | **String** |  | 
 **termination_a_id** | **i32** |  | 
-**termination_a** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
+**termination_a** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
 **termination_b_type** | **String** |  | 
 **termination_b_id** | **i32** |  | 
-**termination_b** | Option<**::std::collections::HashMap<String, String>**> |  | [optional][readonly]
+**termination_b** | Option<**::std::collections::HashMap<String, Value>**> |  | [optional][readonly]
 **_type** | Option<**String**> |  | [optional]
 **status** | Option<[**crate::models::Status1**](Status_1.md)> |  | [optional]
 **label** | Option<**String**> |  | [optional]
