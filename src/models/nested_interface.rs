@@ -23,7 +23,7 @@ pub struct NestedInterface {
     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
     pub cable: Option<i32>,
     #[serde(rename = "_occupied", skip_serializing_if = "Option::is_none")]
-    pub _occupied: Option<String>,
+    pub _occupied: Option<bool>,
 }
 
 impl NestedInterface {
