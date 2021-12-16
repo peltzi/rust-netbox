@@ -1,0 +1,12 @@
+diff -ur docs/NestedInterface.md ../../docs/NestedInterface.md
+--- docs/NestedInterface.md	2021-12-16 17:31:13.592132668 +0200
++++ ../../docs/NestedInterface.md	2021-11-30 15:21:53.093861113 +0200
+@@ -10,7 +10,7 @@
+ **device** | Option<[**crate::models::NestedDevice**](NestedDevice.md)> |  | [optional]
+ **name** | **String** |  | 
+ **cable** | Option<**i32**> |  | [optional]
+-**_occupied** | Option<**String**> |  | [optional][readonly]
++**_occupied** | Option<**bool**> |  | [optional][readonly]
+ 
+ [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+ 

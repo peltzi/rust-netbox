@@ -1,0 +1,12 @@
+diff -ur src/models/nested_interface.rs ../../src/models/nested_interface.rs
+--- src/models/nested_interface.rs	2021-12-16 17:30:08.838541092 +0200
++++ ../../src/models/nested_interface.rs	2021-11-30 15:21:53.057194043 +0200
+@@ -23,7 +23,7 @@
+     #[serde(rename = "cable", skip_serializing_if = "Option::is_none")]
+     pub cable: Option<i32>,
+     #[serde(rename = "_occupied", skip_serializing_if = "Option::is_none")]
+-    pub _occupied: Option<String>,
++    pub _occupied: Option<bool>,
+ }
+ 
+ impl NestedInterface {

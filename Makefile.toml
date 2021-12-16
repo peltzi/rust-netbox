@@ -162,7 +162,9 @@ script = [
   "cd ${PWD}/build/client",
   "patch -p0 < ../../patches/generator-5.2.1-option_box_problem.patch",
   "patch -p0 < ../../patches/netbox-api-doc-hashmap_string_value.patch",
-  "patch -p0 < ../../patches/netbox-api-doc-hashmap_string_value_docs.patch"
+  "patch -p0 < ../../patches/netbox-api-doc-hashmap_string_value_docs.patch",
+  "patch -p0 < ../../patches/netbox-api-doc-nested-iface-occupied-bool.patch",
+  "patch -p0 < ../../patches/netbox-api-doc-nested-iface-occupied-bool_docs.patch",
 ]
 
 # Rustfmt the generate code
